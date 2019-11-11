@@ -1,4 +1,4 @@
-class HighscoresController < ApplicationController
+class Api::HighscoresController < ApplicationController
   def create
     @highscore = Highscore.new(highscore_params)
 
