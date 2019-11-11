@@ -7,12 +7,14 @@
 #  username   :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  mode       :string           not null
 #
 
 class Highscore < ApplicationRecord
-  validates :score, :username, presence: true
+  validates :score, :username, :mode, presence: true
+  validates :mode, inclusion: { in: ["easy", "competitive"] }
 
-  def self.get_top_10
-    Highscore.order(score: :desc).limit(10)
+  def self.get_top_10(mode)
+    Highscore.where(mode: mode).order(score: :desc).limit(10)
   end
 end
