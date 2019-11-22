@@ -166,79 +166,9 @@ document.addEventListener("DOMContentLoaded", function () {
   !*** ./frontend/components/game_play.jsx ***!
   \*******************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var GamePlay =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(GamePlay, _React$Component);
-
-  function GamePlay() {
-    _classCallCheck(this, GamePlay);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(GamePlay).apply(this, arguments));
-  }
-
-  _createClass(GamePlay, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        className: "links"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "medium icon",
-        href: "https://github.com/tiffythinhdang",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/github_icon_green.png",
-        alt: "github-icon"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "medium icon",
-        href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/linkedin_icon_green.png",
-        alt: "linkedin-icon"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "medium icon",
-        href: "https://tiffanytdang.com/",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/contact_icon_green.png",
-        alt: "contact-icon"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "game-title"
-      }, "bentoUp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA9 2019 Designed and Developed by Tiffany Dang")));
-    }
-  }]);
-
-  return GamePlay;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (GamePlay);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/tiffanydang/Desktop/bento_up/frontend/components/game_play.jsx: Unexpected token (6:4)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m  render() {\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m    \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m    )\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 9 | \u001b[39m\u001b[0m\n    at Object.raise (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:6930:17)\n    at Object.unexpected (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8323:16)\n    at Object.parseParenAndDistinguishExpression (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9752:12)\n    at Object.parseExprAtom (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9503:21)\n    at Object.parseExprAtom (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:4082:20)\n    at Object.parseExprSubscripts (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9165:23)\n    at Object.parseMaybeUnary (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9145:21)\n    at Object.parseExprOps (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9011:23)\n    at Object.parseMaybeConditional (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8984:23)\n    at Object.parseMaybeAssign (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8930:21)\n    at Object.parseExpression (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8880:23)\n    at Object.parseReturnStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10980:28)\n    at Object.parseStatementContent (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10659:21)\n    at Object.parseStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10611:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11187:25)\n    at Object.parseBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11174:10)\n    at Object.parseBlock (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11158:10)\n    at Object.parseFunctionBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10177:24)\n    at Object.parseFunctionBodyAndFinish (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10147:10)\n    at Object.parseMethod (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10101:10)\n    at Object.pushClassMethod (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11591:30)\n    at Object.parseClassMemberWithIsStatic (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11511:12)\n    at Object.parseClassMember (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11453:10)\n    at /Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11408:14\n    at Object.withTopicForbiddingContext (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10486:14)\n    at Object.parseClassBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11385:10)\n    at Object.parseClass (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11359:22)\n    at Object.parseStatementContent (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10653:21)\n    at Object.parseStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10611:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11187:25)");
 
 /***/ }),
 
