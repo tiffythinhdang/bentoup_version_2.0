@@ -1,11 +1,7 @@
 import React from 'react';
-import withRouter from 'react';
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
-  startGame() {
-    
-  }
-
   render() {
     return (
       <div id="introduction">
@@ -33,12 +29,13 @@ class Splash extends React.Component {
             </div>
 
           </div>
-          <button id="start-button">START GAME!</button>
+          <Link to={"/choose-mode"}>
+            <button id="start-button">START GAME!</button>
+          </Link>
         </div>
       </div >
     )
   }
 }
-
 
 export default Splash;
