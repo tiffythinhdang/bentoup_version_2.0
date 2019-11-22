@@ -787,6 +787,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _highscores_index_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highscores_index_item */ "./frontend/components/game/highscores_index_item.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -804,6 +805,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -832,8 +834,11 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "highscores-easy",
         className: "highscores"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Top 10 Scores in Easy Mode"), this.props.scores.map(function (score) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, score.username, ": ", score.score);
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Top 10 Scores in Easy Mode"), this.props.scores.map(function (score, idx) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          key: idx,
+          score: score
+        });
       }));
     }
   }]);
@@ -876,6 +881,32 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_highscores_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/game/highscores_index_item.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/game/highscores_index_item.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var HighScoreIndexItem = function HighScoreIndexItem(props) {
+  var _props$score = props.score,
+      username = _props$score.username,
+      score = _props$score.score;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "highscores-index-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, score));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HighScoreIndexItem);
 
 /***/ }),
 
@@ -1001,7 +1032,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    scores: state.scores
+    scores: Object.values(state.scores)
   };
 };
 
