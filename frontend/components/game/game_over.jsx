@@ -45,7 +45,7 @@ class GameOverComponent extends React.Component {
             </button>
           </div>
 
-          <SaveScoreFormContainer score="10" mode="easy"/>
+          <SaveScoreFormContainer score="10" mode="easy" closeModal={this.closeModal}/>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">

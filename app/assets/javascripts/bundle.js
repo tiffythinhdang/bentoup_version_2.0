@@ -415,7 +415,11 @@ function (_React$Component) {
         id: "highscores-competitive-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "highscores-competitive"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Competitive Mode Top Scores"), this.props.scores.map(function (score, idx) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Competitive Mode Top Scores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/scores/high-easy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "small button"
+      }, "EASY")), this.props.scores.map(function (score, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: idx,
           score: score
@@ -706,7 +710,11 @@ function (_React$Component) {
         id: "highscores-easy-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "highscores-easy"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Easy Mode Top Scores"), this.props.scores.map(function (score, idx) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Easy Mode Top Scores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/scores/high-competitive"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "small button"
+      }, "COMPETITIVE")), this.props.scores.map(function (score, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: idx,
           score: score
@@ -978,7 +986,8 @@ function (_React$Component) {
         onClick: this.openForm
       }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
         score: "10",
-        mode: "easy"
+        mode: "easy",
+        closeModal: this.closeModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1126,7 +1135,9 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.saveScore(this.state).then(function (score) {
-        return _this3.props.history.push("/scores/high-".concat(_this3.state.mode));
+        _this3.props.closeModal();
+
+        _this3.props.history.push("/scores/high-".concat(_this3.state.mode));
       });
     }
   }, {

@@ -19,10 +19,15 @@ class EasyHighScoresIndex extends React.Component {
       <div id="highscores-easy-container">
         <div id="highscores-easy">
           <h1>Easy Mode Top Scores</h1>
+          <Link to={"/scores/high-competitive"}>
+            <button className="small button">COMPETITIVE</button>
+          </Link>
+
           { this.props.scores.map((score, idx) =>
             <HighScoreIndexItem key={idx} score={score}/>
             )
           }
+
           <Link
             to={"/choose-mode"}
             onClick={this.closeModal} >

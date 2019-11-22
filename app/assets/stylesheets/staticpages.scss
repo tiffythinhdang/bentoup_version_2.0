@@ -1,3 +1,16 @@
 // Place all the styles related to the Staticpages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './util.scss';
+
+.small.button {
+  height: 36px;
+  padding: 0 20px;
+  font-size: 14px;
+  color: $white;
+  background-color: #F58248;
+  border-radius: 4px;
+  margin: 25px;
+  position: relative;
+}
