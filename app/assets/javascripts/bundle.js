@@ -833,8 +833,6 @@ function (_React$Component) {
 
       return function (e) {
         _this2.setState(_defineProperty({}, type, e.target.value));
-
-        console.log(_this2.state);
       };
     }
   }, {

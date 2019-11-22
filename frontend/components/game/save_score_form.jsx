@@ -21,12 +21,11 @@ class SaveScoreForm extends React.Component {
   handleChange(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });
-      console.log(this.state);
     };
   }
 
   handleSubmit() {
-
+    
   }
 
   render() {
