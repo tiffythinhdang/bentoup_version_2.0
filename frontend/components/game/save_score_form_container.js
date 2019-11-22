@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import SaveScoreForm from './save_score_form';
-import { saveScore, fetchTopTenScores } from '../../actions/save_score';
+import { saveScore, fetchTopTenScores } from '../../actions/score_actions';
 
 const mapStateToProps = state => {
   return {

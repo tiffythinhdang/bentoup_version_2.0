@@ -1,3 +1,3 @@
 json.set! @highscore.id do
-  json.extract! @highscore, :username, :score
+  json.extract! @highscore, :id, :username, :score
 end

@@ -24,10 +24,9 @@ class SaveScoreForm extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     this.props.saveScore(this.state)
-      .then(score => console.log(score))
+      .then(score => this.props.history.push(`/high-scores/${this.state.mode}`))
   }
 
   render() {
@@ -39,7 +38,7 @@ class SaveScoreForm extends React.Component {
             type="text"
             placeholder="Name"
             onChange={this.handleChange("username")}/>
-          <button 
+          <button
             id="submit-score"
             onClick={this.handleSubmit}
             >Submit

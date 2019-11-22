@@ -97,10 +97,10 @@ module.exports = "/assets/webpack-assets/cross_marka8c28ac7562e5f81593cf816f45ae
 
 /***/ }),
 
-/***/ "./frontend/actions/save_score.js":
-/*!****************************************!*\
-  !*** ./frontend/actions/save_score.js ***!
-  \****************************************/
+/***/ "./frontend/actions/score_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/score_actions.js ***!
+  \*******************************************/
 /*! exports provided: RECEIVE_SCORES, RECEIVE_A_SCORE, receiveScores, receiveAScore, receiveScoreErrors, clearScoreError, saveScore, fetchTopTenScores */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -836,10 +836,11 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      debugger;
+      var _this3 = this;
+
       e.preventDefault();
       this.props.saveScore(this.state).then(function (score) {
-        return console.log(score);
+        return _this3.props.history.push("/high-scores/".concat(_this3.state.mode));
       });
     }
   }, {
@@ -880,7 +881,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _save_score_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form */ "./frontend/components/game/save_score_form.jsx");
-/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/save_score */ "./frontend/actions/save_score.js");
+/* harmony import */ var _actions_score_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/score_actions */ "./frontend/actions/score_actions.js");
 
 
 
@@ -895,10 +896,10 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     saveScore: function saveScore(score) {
-      return dispatch(Object(_actions_save_score__WEBPACK_IMPORTED_MODULE_3__["saveScore"])(score));
+      return dispatch(Object(_actions_score_actions__WEBPACK_IMPORTED_MODULE_3__["saveScore"])(score));
     },
     fetchTopTenScores: function fetchTopTenScores(request) {
-      return dispatch(Object(_actions_save_score__WEBPACK_IMPORTED_MODULE_3__["fetchTopTenScores"])(request));
+      return dispatch(Object(_actions_score_actions__WEBPACK_IMPORTED_MODULE_3__["fetchTopTenScores"])(request));
     }
   };
 };
@@ -1102,7 +1103,7 @@ var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/save_score */ "./frontend/actions/save_score.js");
+/* harmony import */ var _actions_score_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/score_actions */ "./frontend/actions/score_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
@@ -1113,12 +1114,11 @@ var scoreReducer = function scoreReducer() {
   Object.freeze(state);
 
   switch (action.type) {
-    case _actions_save_score__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SCORES"]:
+    case _actions_score_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SCORES"]:
       return action.scores;
 
-    case _actions_save_score__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_A_SCORE"]:
+    case _actions_score_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_A_SCORE"]:
       return Object.assign({}, state, _defineProperty({}, action.score.id, action.score));
-    // return action;
 
     default:
       return state;
@@ -34413,7 +34413,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

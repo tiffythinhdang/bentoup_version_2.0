@@ -1,6 +1,5 @@
 class Api::HighscoresController < ApplicationController
   def create
-    debugger
     @highscore = Highscore.new(highscore_params)
 
     if @highscore.save
@@ -16,7 +15,7 @@ class Api::HighscoresController < ApplicationController
   end
 
   private
-  def highscore_params 
+  def highscore_params
     params.require(:request).permit(
       :username,
       :score,

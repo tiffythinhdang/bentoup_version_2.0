@@ -1,7 +1,7 @@
 import {
   RECEIVE_SCORES,
   RECEIVE_A_SCORE
-} from '../actions/save_score';
+} from '../actions/score_actions';
 
 const scoreReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -11,7 +11,6 @@ const scoreReducer = (state = {}, action) => {
 
     case RECEIVE_A_SCORE:
       return Object.assign( {}, state, {[action.score.id]: action.score} );
-      // return action;
 
     default:
       return state;
