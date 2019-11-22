@@ -29,7 +29,7 @@ class Splash extends React.Component {
             </div>
 
           </div>
-          <Link to={"/choose-mode"}>
+          <Link to={"/choose-mode"} className="start-button-container">
             <button id="start-button">START GAME!</button>
           </Link>
         </div>

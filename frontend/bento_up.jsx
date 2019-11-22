@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
 
-import GamePlay from './components/game_play';
+import Root from './components/root';
 import { Game } from './util/game';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store = configureStore();
 
-  ReactDOM.render(<GamePlay />, root)
+  ReactDOM.render(<Root store={store} />, root)
 
   // let game;
 
