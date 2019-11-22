@@ -1,319 +1,9 @@
-// import { Menu } from './menu';
-// import Bento from './bento';
-// import { Order } from './order';
-// import Timer from './timer';
+import { Menu } from './menu';
+import Bento from './bento';
+import { Order } from './order';
+import Timer from './timer';
 
-
-//Menu
-const MENU_ITEMS = {
-  "onigiri": "assets/images/menu_items/onigiri.png",
-  "sashimi": "assets/images/menu_items/sashimi.png",
-  "pickles": "assets/images/menu_items/pickles.png",
-  "tempura": "assets/images/menu_items/tempura.png",
-  "fish": "assets/images/menu_items/fish.png",
-  "tamago": "assets/images/menu_items/tamago.png",
-  "meatballs": "assets/images/menu_items/meatballs.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll.png"
-};
-
-const COMPETITIVE_MENU_ITEMS = {
-  "ramen": "assets/images/menu_items/ramen.png",
-  "dango": "assets/images/menu_items/dango.png",
-  "dumpling": "assets/images/menu_items/dumpling.png",
-  "mini-rolls": "assets/images/menu_items/mini-rolls.png",
-  "sticky-rice": "assets/images/menu_items/sticky-rice.png",
-  "chowfun": "assets/images/menu_items/chowfun.png",
-  "bao": "assets/images/menu_items/bao.png",
-  "crab": "assets/images/menu_items/crab.png",
-  "onigiri": "assets/images/menu_items/onigiri.png",
-  "sashimi": "assets/images/menu_items/sashimi.png",
-  "pickles": "assets/images/menu_items/pickles.png",
-  "tempura": "assets/images/menu_items/tempura.png",
-  "fish": "assets/images/menu_items/fish.png",
-  "tamago": "assets/images/menu_items/tamago.png",
-  "meatballs": "assets/images/menu_items/meatballs.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll.png",
-  "watermelon": "assets/images/menu_items/watermelon.png",
-  "naruto": "assets/images/menu_items/naruto.png",
-  "lemon": "assets/images/menu_items/lemon.png",
-  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry.png",
-  "corn-dog": "assets/images/menu_items/corn-dog.png",
-  "mochi": "assets/images/menu_items/mochi.png",
-  "sausage": "assets/images/menu_items/sausage.png",
-  "brocolli": "assets/images/menu_items/brocolli.png"
-};
-
-class MenuItem {
-  constructor(id, imagePath) {
-    this.id = id;
-    this.imagePath = imagePath;
-  }
-
-  render() {
-    let img = document.createElement("img");
-    img.src = this.imagePath;
-    img.alt = `${this.id}-icon`;
-    return img;
-  }
-}
-
-class Menu {
-  constructor(mode = "easy") {
-    this.menu = [];
-    this.mode = mode;
-
-    this.generateMenu(mode);
-  }
-
-  generateMenu(mode) {
-    let chosenMenu;
-    if (mode === "easy") {
-      chosenMenu = MENU_ITEMS;
-    } else {
-      chosenMenu = COMPETITIVE_MENU_ITEMS;
-    }
-
-    let menuItems = Array.from(document.getElementsByClassName(`${mode} menu-item`));
-    menuItems.forEach(item => {
-      let itemId = item.id;
-      let menuItem = new MenuItem(itemId, chosenMenu[itemId]);
-      this.menu.push(menuItem);
-      item.appendChild(menuItem.render());
-    });
-  }
-
-  deleteMenu() {
-    Array.from(document.getElementById(`${this.mode}-menu`)
-      .getElementsByTagName("img"))
-      .forEach(img => img.remove());
-    document.getElementById("modal").classList.add("hidden");
-  }
-}
-
-
-//Order
-const ORDER_ITEMS = {
-  "onigiri": "assets/images/menu_items/onigiri_order.png",
-  "sashimi": "assets/images/menu_items/sashimi_order.png",
-  "pickles": "assets/images/menu_items/pickles_order.png",
-  "tempura": "assets/images/menu_items/tempura_order.png",
-  "fish": "assets/images/menu_items/fish_order.png",
-  "tamago": "assets/images/menu_items/tamago_order.png",
-  "meatballs": "assets/images/menu_items/meatballs_order.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png"
-};
-
-const COMPETITIVE_ORDER_ITEMS = {
-  "ramen": "assets/images/menu_items/ramen_order.png",
-  "dango": "assets/images/menu_items/dango_order.png",
-  "dumpling": "assets/images/menu_items/dumpling_order.png",
-  "mini-rolls": "assets/images/menu_items/mini-rolls_order.png",
-  "sticky-rice": "assets/images/menu_items/sticky-rice_order.png",
-  "chowfun": "assets/images/menu_items/chowfun_order.png",
-  "bao": "assets/images/menu_items/bao_order.png",
-  "crab": "assets/images/menu_items/crab_order.png",
-  "onigiri": "assets/images/menu_items/onigiri_order.png",
-  "sashimi": "assets/images/menu_items/sashimi_order.png",
-  "pickles": "assets/images/menu_items/pickles_order.png",
-  "tempura": "assets/images/menu_items/tempura_order.png",
-  "fish": "assets/images/menu_items/fish_order.png",
-  "tamago": "assets/images/menu_items/tamago_order.png",
-  "meatballs": "assets/images/menu_items/meatballs_order.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png",
-  "watermelon": "assets/images/menu_items/watermelon_order.png",
-  "naruto": "assets/images/menu_items/naruto_order.png",
-  "lemon": "assets/images/menu_items/lemon_order.png",
-  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry_order.png",
-  "corn-dog": "assets/images/menu_items/corn-dog_order.png",
-  "mochi": "assets/images/menu_items/mochi_order.png",
-  "sausage": "assets/images/menu_items/sausage_order.png",
-  "brocolli": "assets/images/menu_items/brocolli_order.png"
-};
-
-const CUSTOMERS = {
-  1: "assets/images/customers/customer_1.png",
-  2: "assets/images/customers/customer_2.png",
-  3: "assets/images/customers/customer_3.png",
-  4: "assets/images/customers/customer_4.png",
-  5: "assets/images/customers/customer_5.png"
-};
-
-class Order {
-  constructor(numItems, numSeconds, mode) {
-    this.numItems = numItems;
-    this.order = [];
-    this.numSeconds = numSeconds;
-    this.mode = mode;
-
-    this.orderOptions = (mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS);
-
-    this.generateCustomer();
-    this.generateSpeechBubble();
-    this.generateOrder();
-    this.renderOrder();
-  }
-
-  generateOrder() {
-    let menuOptions = Object.keys(this.orderOptions);
-    let numOptions = menuOptions.length;
-
-    for (let i = 1; i <= this.numItems; i++) {
-      let idx = Math.floor(Math.random() * numOptions);
-      this.order.push(menuOptions[idx]);
-    }
-  }
-
-  generateCustomer() {
-    let customerOptions = [1, 2, 3, 4, 5];
-    let idx = customerOptions[Math.floor(Math.random() * 5)];
-    let img = document.createElement("img");
-    img.src = CUSTOMERS[idx];
-    img.alt = "customer-icon";
-    img.classList.add("bounceInRight");
-    let customerContainer = document.getElementById(`${this.mode}-customer-container`);
-    customerContainer.appendChild(img);
-  }
-
-  generateSpeechBubble() {
-    let speechContainer = document.getElementById(`${this.mode}-speech-container`);
-    let speechBubble = document.createElement("div");
-    speechBubble.classList.add("speech-bubble");
-    speechBubble.classList.add("fadeIn");
-    speechContainer.appendChild(speechBubble);
-  }
-
-  generateOrderItem(id) {
-    let img = document.createElement("img");
-    img.src = this.orderOptions[id];
-    img.alt = `${id}-icon`;
-    return img;
-  }
-
-  renderOrder() {
-    let orderContainer = document.createElement("div");
-    orderContainer.classList.add("order-container");
-    orderContainer.classList.add(`box-${this.numItems}`);
-    orderContainer.classList.add("fadeIn");
-
-    this.order.forEach(item => {
-      let orderItem = document.createElement("div");
-      orderItem.classList.add("order-item");
-      orderItem.appendChild(this.generateOrderItem(item));
-      orderContainer.appendChild(orderItem);
-    });
-    let speechContainer = document.getElementById(`${this.mode}-speech-container`);
-    speechContainer.appendChild(orderContainer);
-  }
-
-  deleteOrder() {
-    document.getElementById(`${this.mode}-speech-container`).innerHTML = "";
-    document.getElementById(`${this.mode}-customer-container`).innerHTML = "";
-  }
-}
-
-//Bento
-class Bento {
-  constructor(numItems, order, mode = "easy") {
-    this.numItems = numItems;
-    this.order = order;
-    this.bento = [];
-    this.mode = mode;
-
-    this.bentoOptions = (mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS)
-
-    this.generateBento();
-  }
-
-  generateBento() {
-    let bentoContainer = document.getElementById(`${this.mode}-bento-container`);
-    let bento = document.createElement("div");
-    bento.id = "bento";
-
-    if (this.numItems === 4) {
-      bento.classList.add("bento-4");
-    } else if (this.numItems === 6) {
-      bento.classList.add("bento-6");
-    }
-
-    for (let i = 1; i <= this.numItems; i++) {
-      let bentoItem = document.createElement("div");
-      bentoItem.classList.add(this.mode);
-      bentoItem.classList.add("bento-item");
-      bentoItem.classList.add(`${i}`);
-      bento.appendChild(bentoItem);
-    }
-
-    bentoContainer.appendChild(bento);
-  }
-
-  deleteBento() {
-    document.getElementById(`${this.mode}-bento-container`).innerHTML = "";
-  }
-
-  addItem(item) {
-    this.bento.push(item);
-    this.render();
-  }
-
-  removeItem() {
-    this.bento.pop();
-    this.render();
-  }
-
-  render() {
-    for (let i = 1; i <= this.numItems; i++) {
-      let bentoItem = document.getElementsByClassName(`${this.mode} bento-item ${i}`)[0];
-      bentoItem.innerHTML = "";
-      let item = this.bento[i - 1];
-      if (!item) break;
-      let img = document.createElement("img");
-      img.src = this.bentoOptions[item];
-      img.alt = `${item}-icon`;
-      bentoItem.appendChild(img);
-    }
-  }
-}
-
-
-//Timer
-class Timer {
-  constructor(numSeconds, timerEndCallback) {
-    this.interval = undefined;
-    this.countFrom = numSeconds;
-    this.count = this.countFrom;
-
-    this.timerEndCallback = timerEndCallback;
-  }
-
-  start() {
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
-    this.count = this.countFrom;
-    this.interval = setInterval((this.tick).bind(this), 1000);
-  }
-
-  stop() {
-    clearInterval(this.interval);
-  }
-
-  tick() {
-    this.count -= 1;
-    if (this.count <= 0) {
-      // console.log(this.count);
-      this.count = 0;
-      clearInterval(this.interval);
-      this.timerEndCallback();
-    }
-    let timer = document.getElementById("timer");
-    timer.innerHTML = this.count;
-  }
-
-  deleteTimer() {
-    document.getElementById("timer").remove();
-  }
-};
-
+import crossMark from 'assets/images/cross_mark.png';
 
 //Game
 const KEY_MAPPING = {
@@ -343,12 +33,12 @@ const KEY_MAPPING = {
   ",": "brocolli"
 }
 
-class Game {
+export class Game {
   constructor(mode="easy") {
     this.menu = new Menu(mode);
 
     this.mode = mode;
-    
+
     let numItems = this.generateRandomNum();
     this.order = new Order(numItems, numItems === 4 ? 6 : 8, mode);
     this.bento = new Bento(numItems, this.order, mode);
@@ -491,7 +181,6 @@ class Game {
     return JSON.stringify(this.order.order) === JSON.stringify(this.bento.bento);
   }
 
-  
   checkState() {
     if (this.lost()) {
       this.renderEndMessage();
@@ -548,7 +237,7 @@ class Game {
     customerLost.innerHTML = "";
     for (let i = 1; i <= this.customerLost; i++) {
       let cross = document.createElement("img");
-      cross.src = "assets/images/cross_mark.png";
+      cross.src = {crossMark};
       customerLost.appendChild(cross);
     }
   }
@@ -597,7 +286,7 @@ class Game {
   renderEndMessage() {
     clearInterval(this.levelUpInterval);
     const score = this.score;
-    
+
     this.removeListenerOnWindow();
     this.removeClickToMenuItems();
     this.removeClickToRemoveButton();

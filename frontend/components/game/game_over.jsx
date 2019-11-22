@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class GameOverComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.playAgain = this.playAgain.bind(this);
+  }
+
+  playAgain() {
+    document.getElementById("modal").classList.add("hidden");
+  }
+
   render() {
     return (
-      <div id="modal">
+      <div id="modal" className="hidden">
         <div className="modal-screen"></div>
         <div className="modal-content">
           <div className="modal-message"></div>
@@ -13,7 +23,12 @@ class GameOverComponent extends React.Component {
             <p id="ranking"></p>
           </div>
 
-          <button id="play-again-button">PLAY AGAIN</button>
+          {/* <button id="play-again-button">PLAY AGAIN</button> */}
+          <Link 
+            to={"/choose-mode"}
+            onClick={this.playAgain} >
+            <button id="play-again-button">PLAY AGAIN</button>
+          </Link>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">

@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/cross_mark.png":
+/*!******************************************!*\
+  !*** ./app/assets/images/cross_mark.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/cross_marka8c28ac7562e5f81593cf816f45ae9e6.png";
+
+/***/ }),
+
 /***/ "./frontend/bento_up.jsx":
 /*!*******************************!*\
   !*** ./frontend/bento_up.jsx ***!
@@ -102,7 +113,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.jsx");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
 /* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/game */ "./frontend/util/game.js");
-/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_util_game__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -191,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["HashRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_game_game_over__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/",
     component: _splash__WEBPACK_IMPORTED_MODULE_4__["default"]
@@ -207,10 +217,6 @@ var App = function App() {
     exact: true,
     path: "/competitive-mode",
     component: _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/game-over",
-    component: _game_game_over__WEBPACK_IMPORTED_MODULE_8__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
@@ -324,6 +330,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/game */ "./frontend/util/game.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -344,6 +351,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var CompetitiveModeComponent =
 /*#__PURE__*/
 function (_React$Component) {
@@ -356,6 +364,12 @@ function (_React$Component) {
   }
 
   _createClass(CompetitiveModeComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var game = new _util_game__WEBPACK_IMPORTED_MODULE_1__["Game"]("competitive");
+      game.start();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -491,6 +505,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/game */ "./frontend/util/game.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -511,6 +526,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var EasyModeComponent =
 /*#__PURE__*/
 function (_React$Component) {
@@ -523,6 +539,12 @@ function (_React$Component) {
   }
 
   _createClass(EasyModeComponent, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var game = new _util_game__WEBPACK_IMPORTED_MODULE_1__["Game"]("easy");
+      game.start();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -607,6 +629,7 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -617,13 +640,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -632,17 +656,27 @@ var GameOverComponent =
 function (_React$Component) {
   _inherits(GameOverComponent, _React$Component);
 
-  function GameOverComponent() {
+  function GameOverComponent(props) {
+    var _this;
+
     _classCallCheck(this, GameOverComponent);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(GameOverComponent).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(GameOverComponent).call(this, props));
+    _this.playAgain = _this.playAgain.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(GameOverComponent, [{
+    key: "playAgain",
+    value: function playAgain() {
+      document.getElementById("modal").classList.add("hidden");
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "modal"
+        id: "modal",
+        className: "hidden"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-screen"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -656,9 +690,12 @@ function (_React$Component) {
         alt: "chef-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "ranking"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/choose-mode",
+        onClick: this.playAgain
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "play-again-button"
-      }, "PLAY AGAIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "light medium icon",
@@ -916,263 +953,22 @@ var configureStore = function configureStore() {
 
 /***/ }),
 
-/***/ "./frontend/util/game.js":
-/*!*******************************!*\
-  !*** ./frontend/util/game.js ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./frontend/util/bento.js":
+/*!********************************!*\
+  !*** ./frontend/util/bento.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./order */ "./frontend/util/order.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-// import { Menu } from './menu';
-// import Bento from './bento';
-// import { Order } from './order';
-// import Timer from './timer';
-//Menu
-var MENU_ITEMS = {
-  "onigiri": "assets/images/menu_items/onigiri.png",
-  "sashimi": "assets/images/menu_items/sashimi.png",
-  "pickles": "assets/images/menu_items/pickles.png",
-  "tempura": "assets/images/menu_items/tempura.png",
-  "fish": "assets/images/menu_items/fish.png",
-  "tamago": "assets/images/menu_items/tamago.png",
-  "meatballs": "assets/images/menu_items/meatballs.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll.png"
-};
-var COMPETITIVE_MENU_ITEMS = {
-  "ramen": "assets/images/menu_items/ramen.png",
-  "dango": "assets/images/menu_items/dango.png",
-  "dumpling": "assets/images/menu_items/dumpling.png",
-  "mini-rolls": "assets/images/menu_items/mini-rolls.png",
-  "sticky-rice": "assets/images/menu_items/sticky-rice.png",
-  "chowfun": "assets/images/menu_items/chowfun.png",
-  "bao": "assets/images/menu_items/bao.png",
-  "crab": "assets/images/menu_items/crab.png",
-  "onigiri": "assets/images/menu_items/onigiri.png",
-  "sashimi": "assets/images/menu_items/sashimi.png",
-  "pickles": "assets/images/menu_items/pickles.png",
-  "tempura": "assets/images/menu_items/tempura.png",
-  "fish": "assets/images/menu_items/fish.png",
-  "tamago": "assets/images/menu_items/tamago.png",
-  "meatballs": "assets/images/menu_items/meatballs.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll.png",
-  "watermelon": "assets/images/menu_items/watermelon.png",
-  "naruto": "assets/images/menu_items/naruto.png",
-  "lemon": "assets/images/menu_items/lemon.png",
-  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry.png",
-  "corn-dog": "assets/images/menu_items/corn-dog.png",
-  "mochi": "assets/images/menu_items/mochi.png",
-  "sausage": "assets/images/menu_items/sausage.png",
-  "brocolli": "assets/images/menu_items/brocolli.png"
-};
-
-var MenuItem =
-/*#__PURE__*/
-function () {
-  function MenuItem(id, imagePath) {
-    _classCallCheck(this, MenuItem);
-
-    this.id = id;
-    this.imagePath = imagePath;
-  }
-
-  _createClass(MenuItem, [{
-    key: "render",
-    value: function render() {
-      var img = document.createElement("img");
-      img.src = this.imagePath;
-      img.alt = "".concat(this.id, "-icon");
-      return img;
-    }
-  }]);
-
-  return MenuItem;
-}();
-
-var Menu =
-/*#__PURE__*/
-function () {
-  function Menu() {
-    var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "easy";
-
-    _classCallCheck(this, Menu);
-
-    this.menu = [];
-    this.mode = mode;
-    this.generateMenu(mode);
-  }
-
-  _createClass(Menu, [{
-    key: "generateMenu",
-    value: function generateMenu(mode) {
-      var _this = this;
-
-      var chosenMenu;
-
-      if (mode === "easy") {
-        chosenMenu = MENU_ITEMS;
-      } else {
-        chosenMenu = COMPETITIVE_MENU_ITEMS;
-      }
-
-      var menuItems = Array.from(document.getElementsByClassName("".concat(mode, " menu-item")));
-      menuItems.forEach(function (item) {
-        var itemId = item.id;
-        var menuItem = new MenuItem(itemId, chosenMenu[itemId]);
-
-        _this.menu.push(menuItem);
-
-        item.appendChild(menuItem.render());
-      });
-    }
-  }, {
-    key: "deleteMenu",
-    value: function deleteMenu() {
-      Array.from(document.getElementById("".concat(this.mode, "-menu")).getElementsByTagName("img")).forEach(function (img) {
-        return img.remove();
-      });
-      document.getElementById("modal").classList.add("hidden");
-    }
-  }]);
-
-  return Menu;
-}(); //Order
-
-
-var ORDER_ITEMS = {
-  "onigiri": "assets/images/menu_items/onigiri_order.png",
-  "sashimi": "assets/images/menu_items/sashimi_order.png",
-  "pickles": "assets/images/menu_items/pickles_order.png",
-  "tempura": "assets/images/menu_items/tempura_order.png",
-  "fish": "assets/images/menu_items/fish_order.png",
-  "tamago": "assets/images/menu_items/tamago_order.png",
-  "meatballs": "assets/images/menu_items/meatballs_order.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png"
-};
-var COMPETITIVE_ORDER_ITEMS = {
-  "ramen": "assets/images/menu_items/ramen_order.png",
-  "dango": "assets/images/menu_items/dango_order.png",
-  "dumpling": "assets/images/menu_items/dumpling_order.png",
-  "mini-rolls": "assets/images/menu_items/mini-rolls_order.png",
-  "sticky-rice": "assets/images/menu_items/sticky-rice_order.png",
-  "chowfun": "assets/images/menu_items/chowfun_order.png",
-  "bao": "assets/images/menu_items/bao_order.png",
-  "crab": "assets/images/menu_items/crab_order.png",
-  "onigiri": "assets/images/menu_items/onigiri_order.png",
-  "sashimi": "assets/images/menu_items/sashimi_order.png",
-  "pickles": "assets/images/menu_items/pickles_order.png",
-  "tempura": "assets/images/menu_items/tempura_order.png",
-  "fish": "assets/images/menu_items/fish_order.png",
-  "tamago": "assets/images/menu_items/tamago_order.png",
-  "meatballs": "assets/images/menu_items/meatballs_order.png",
-  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png",
-  "watermelon": "assets/images/menu_items/watermelon_order.png",
-  "naruto": "assets/images/menu_items/naruto_order.png",
-  "lemon": "assets/images/menu_items/lemon_order.png",
-  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry_order.png",
-  "corn-dog": "assets/images/menu_items/corn-dog_order.png",
-  "mochi": "assets/images/menu_items/mochi_order.png",
-  "sausage": "assets/images/menu_items/sausage_order.png",
-  "brocolli": "assets/images/menu_items/brocolli_order.png"
-};
-var CUSTOMERS = {
-  1: "assets/images/customers/customer_1.png",
-  2: "assets/images/customers/customer_2.png",
-  3: "assets/images/customers/customer_3.png",
-  4: "assets/images/customers/customer_4.png",
-  5: "assets/images/customers/customer_5.png"
-};
-
-var Order =
-/*#__PURE__*/
-function () {
-  function Order(numItems, numSeconds, mode) {
-    _classCallCheck(this, Order);
-
-    this.numItems = numItems;
-    this.order = [];
-    this.numSeconds = numSeconds;
-    this.mode = mode;
-    this.orderOptions = mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS;
-    this.generateCustomer();
-    this.generateSpeechBubble();
-    this.generateOrder();
-    this.renderOrder();
-  }
-
-  _createClass(Order, [{
-    key: "generateOrder",
-    value: function generateOrder() {
-      var menuOptions = Object.keys(this.orderOptions);
-      var numOptions = menuOptions.length;
-
-      for (var i = 1; i <= this.numItems; i++) {
-        var idx = Math.floor(Math.random() * numOptions);
-        this.order.push(menuOptions[idx]);
-      }
-    }
-  }, {
-    key: "generateCustomer",
-    value: function generateCustomer() {
-      var customerOptions = [1, 2, 3, 4, 5];
-      var idx = customerOptions[Math.floor(Math.random() * 5)];
-      var img = document.createElement("img");
-      img.src = CUSTOMERS[idx];
-      img.alt = "customer-icon";
-      img.classList.add("bounceInRight");
-      var customerContainer = document.getElementById("".concat(this.mode, "-customer-container"));
-      customerContainer.appendChild(img);
-    }
-  }, {
-    key: "generateSpeechBubble",
-    value: function generateSpeechBubble() {
-      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
-      var speechBubble = document.createElement("div");
-      speechBubble.classList.add("speech-bubble");
-      speechBubble.classList.add("fadeIn");
-      speechContainer.appendChild(speechBubble);
-    }
-  }, {
-    key: "generateOrderItem",
-    value: function generateOrderItem(id) {
-      var img = document.createElement("img");
-      img.src = this.orderOptions[id];
-      img.alt = "".concat(id, "-icon");
-      return img;
-    }
-  }, {
-    key: "renderOrder",
-    value: function renderOrder() {
-      var _this2 = this;
-
-      var orderContainer = document.createElement("div");
-      orderContainer.classList.add("order-container");
-      orderContainer.classList.add("box-".concat(this.numItems));
-      orderContainer.classList.add("fadeIn");
-      this.order.forEach(function (item) {
-        var orderItem = document.createElement("div");
-        orderItem.classList.add("order-item");
-        orderItem.appendChild(_this2.generateOrderItem(item));
-        orderContainer.appendChild(orderItem);
-      });
-      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
-      speechContainer.appendChild(orderContainer);
-    }
-  }, {
-    key: "deleteOrder",
-    value: function deleteOrder() {
-      document.getElementById("".concat(this.mode, "-speech-container")).innerHTML = "";
-      document.getElementById("".concat(this.mode, "-customer-container")).innerHTML = "";
-    }
-  }]);
-
-  return Order;
-}(); //Bento
 
 
 var Bento =
@@ -1187,7 +983,7 @@ function () {
     this.order = order;
     this.bento = [];
     this.mode = mode;
-    this.bentoOptions = mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS;
+    this.bentoOptions = mode === "easy" ? _order__WEBPACK_IMPORTED_MODULE_0__["ORDER_ITEMS"] : _order__WEBPACK_IMPORTED_MODULE_0__["COMPETITIVE_ORDER_ITEMS"];
     this.generateBento();
   }
 
@@ -1248,62 +1044,39 @@ function () {
   }]);
 
   return Bento;
-}(); //Timer
-
-
-var Timer =
-/*#__PURE__*/
-function () {
-  function Timer(numSeconds, timerEndCallback) {
-    _classCallCheck(this, Timer);
-
-    this.interval = undefined;
-    this.countFrom = numSeconds;
-    this.count = this.countFrom;
-    this.timerEndCallback = timerEndCallback;
-  }
-
-  _createClass(Timer, [{
-    key: "start",
-    value: function start() {
-      if (this.interval) {
-        clearInterval(this.interval);
-      }
-
-      this.count = this.countFrom;
-      this.interval = setInterval(this.tick.bind(this), 1000);
-    }
-  }, {
-    key: "stop",
-    value: function stop() {
-      clearInterval(this.interval);
-    }
-  }, {
-    key: "tick",
-    value: function tick() {
-      this.count -= 1;
-
-      if (this.count <= 0) {
-        // console.log(this.count);
-        this.count = 0;
-        clearInterval(this.interval);
-        this.timerEndCallback();
-      }
-
-      var timer = document.getElementById("timer");
-      timer.innerHTML = this.count;
-    }
-  }, {
-    key: "deleteTimer",
-    value: function deleteTimer() {
-      document.getElementById("timer").remove();
-    }
-  }]);
-
-  return Timer;
 }();
 
-; //Game
+/* harmony default export */ __webpack_exports__["default"] = (Bento);
+
+/***/ }),
+
+/***/ "./frontend/util/game.js":
+/*!*******************************!*\
+  !*** ./frontend/util/game.js ***!
+  \*******************************/
+/*! exports provided: Game */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Game", function() { return Game; });
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu */ "./frontend/util/menu.js");
+/* harmony import */ var _bento__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bento */ "./frontend/util/bento.js");
+/* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./order */ "./frontend/util/order.js");
+/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./frontend/util/timer.js");
+/* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/cross_mark.png */ "./app/assets/images/cross_mark.png");
+/* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+
+ //Game
 
 var KEY_MAPPING = {
   "q": "ramen",
@@ -1331,7 +1104,6 @@ var KEY_MAPPING = {
   "m": "sausage",
   ",": "brocolli"
 };
-
 var Game =
 /*#__PURE__*/
 function () {
@@ -1340,12 +1112,12 @@ function () {
 
     _classCallCheck(this, Game);
 
-    this.menu = new Menu(mode);
+    this.menu = new _menu__WEBPACK_IMPORTED_MODULE_0__["Menu"](mode);
     this.mode = mode;
     var numItems = this.generateRandomNum();
-    this.order = new Order(numItems, numItems === 4 ? 6 : 8, mode);
-    this.bento = new Bento(numItems, this.order, mode);
-    this.timer = new Timer(this.order.numSeconds, this.checkState.bind(this));
+    this.order = new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 6 : 8, mode);
+    this.bento = new _bento__WEBPACK_IMPORTED_MODULE_1__["default"](numItems, this.order, mode);
+    this.timer = new _timer__WEBPACK_IMPORTED_MODULE_3__["default"](this.order.numSeconds, this.checkState.bind(this));
     this.score = 0;
     this.customerLost = 0;
     this.timeElapsed = new Date();
@@ -1389,15 +1161,15 @@ function () {
     value: function increaseDifficulty(numItems, mode) {
       if (this.checkTimeElapsed() > 200) {
         clearInterval(this.levelUpInterval);
-        return new Order(numItems, numItems === 4 ? 2 : 3, mode);
+        return new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 2 : 3, mode);
       } else if (this.checkTimeElapsed() > 150) {
-        return new Order(numItems, numItems === 4 ? 3 : 5, mode);
+        return new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 3 : 5, mode);
       } else if (this.checkTimeElapsed() > 100) {
-        return new Order(numItems, numItems === 4 ? 4 : 6, mode);
+        return new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 4 : 6, mode);
       } else if (this.checkTimeElapsed() >= 50) {
-        return new Order(numItems, numItems === 4 ? 5 : 7, mode);
+        return new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 5 : 7, mode);
       } else if (this.checkTimeElapsed() >= 0) {
-        return new Order(numItems, numItems === 4 ? 6 : 8, mode);
+        return new _order__WEBPACK_IMPORTED_MODULE_2__["Order"](numItems, numItems === 4 ? 6 : 8, mode);
       }
     }
   }, {
@@ -1456,21 +1228,21 @@ function () {
   }, {
     key: "addClickToMenuItems",
     value: function addClickToMenuItems() {
-      var _this3 = this;
+      var _this = this;
 
       var menuItems = Array.from(document.getElementsByClassName("".concat(this.mode, " menu-item")));
       menuItems.forEach(function (item) {
-        return item.addEventListener("click", _this3.clickMenuItems);
+        return item.addEventListener("click", _this.clickMenuItems);
       });
     }
   }, {
     key: "removeClickToMenuItems",
     value: function removeClickToMenuItems() {
-      var _this4 = this;
+      var _this2 = this;
 
       var menuItems = Array.from(document.getElementsByClassName("".concat(this.mode, " menu-item")));
       menuItems.forEach(function (item) {
-        return item.removeEventListener("click", _this4.clickMenuItems);
+        return item.removeEventListener("click", _this2.clickMenuItems);
       });
     }
   }, {
@@ -1556,8 +1328,8 @@ function () {
     value: function generateGameRound() {
       var numItems = this.generateRandomNum();
       this.order = this.increaseDifficulty(numItems, this.mode);
-      this.bento = new Bento(numItems, this.order, this.mode);
-      this.timer = new Timer(this.order.numSeconds, this.checkState.bind(this));
+      this.bento = new _bento__WEBPACK_IMPORTED_MODULE_1__["default"](numItems, this.order, this.mode);
+      this.timer = new _timer__WEBPACK_IMPORTED_MODULE_3__["default"](this.order.numSeconds, this.checkState.bind(this));
       this.startTimer();
     }
   }, {
@@ -1568,7 +1340,9 @@ function () {
 
       for (var i = 1; i <= this.customerLost; i++) {
         var cross = document.createElement("img");
-        cross.src = "assets/images/cross_mark.png";
+        cross.src = {
+          crossMark: assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default.a
+        };
         customerLost.appendChild(cross);
       }
     }
@@ -1582,7 +1356,7 @@ function () {
       this.bento.deleteBento();
       this.menu.deleteMenu();
       this.mode = mode;
-      this.menu = new Menu(mode);
+      this.menu = new _menu__WEBPACK_IMPORTED_MODULE_0__["Menu"](mode);
       this.addClickToMenuItems();
       this.addClickToRemoveButton();
       this.score = 0;
@@ -1644,6 +1418,356 @@ function () {
 
   return Game;
 }();
+
+/***/ }),
+
+/***/ "./frontend/util/menu.js":
+/*!*******************************!*\
+  !*** ./frontend/util/menu.js ***!
+  \*******************************/
+/*! exports provided: MENU_ITEMS, COMPETITIVE_MENU_ITEMS, MenuItem, Menu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MENU_ITEMS", function() { return MENU_ITEMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_MENU_ITEMS", function() { return COMPETITIVE_MENU_ITEMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuItem", function() { return MenuItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menu", function() { return Menu; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var MENU_ITEMS = {
+  "onigiri": "../assets/menu_items/onigiri.png",
+  "sashimi": "../assets/menu_items/sashimi.png",
+  "pickles": "../assets/menu_items/pickles.png",
+  "tempura": "../assets/menu_items/tempura.png",
+  "fish": "../assets/menu_items/fish.png",
+  "tamago": "../assets/menu_items/tamago.png",
+  "meatballs": "../assets/menu_items/meatballs.png",
+  "sushi-roll": "../assets/menu_items/sushi-roll.png"
+};
+var COMPETITIVE_MENU_ITEMS = {
+  "ramen": "../assets/menu_items/ramen.png",
+  "dango": "../assets/menu_items/dango.png",
+  "dumpling": "../assets/menu_items/dumpling.png",
+  "mini-rolls": "../assets/menu_items/mini-rolls.png",
+  "sticky-rice": "../assets/menu_items/sticky-rice.png",
+  "chowfun": "../assets/menu_items/chowfun.png",
+  "bao": "../assets/menu_items/bao.png",
+  "crab": "../assets/menu_items/crab.png",
+  "onigiri": "../assets/menu_items/onigiri.png",
+  "sashimi": "../assets/menu_items/sashimi.png",
+  "pickles": "../assets/menu_items/pickles.png",
+  "tempura": "../assets/menu_items/tempura.png",
+  "fish": "../assets/menu_items/fish.png",
+  "tamago": "../assets/menu_items/tamago.png",
+  "meatballs": "../assets/menu_items/meatballs.png",
+  "sushi-roll": "../assets/menu_items/sushi-roll.png",
+  "watermelon": "../assets/menu_items/watermelon.png",
+  "naruto": "../assets/menu_items/naruto.png",
+  "lemon": "../assets/menu_items/lemon.png",
+  "veggies-stir-fry": "../assets/menu_items/veggies-stir-fry.png",
+  "corn-dog": "../assets/menu_items/corn-dog.png",
+  "mochi": "../assets/menu_items/mochi.png",
+  "sausage": "../assets/menu_items/sausage.png",
+  "brocolli": "../assets/menu_items/brocolli.png"
+};
+var MenuItem =
+/*#__PURE__*/
+function () {
+  function MenuItem(id, imagePath) {
+    _classCallCheck(this, MenuItem);
+
+    this.id = id;
+    this.imagePath = imagePath;
+  }
+
+  _createClass(MenuItem, [{
+    key: "render",
+    value: function render() {
+      var img = document.createElement("img");
+      img.src = this.imagePath;
+      img.alt = "".concat(this.id, "-icon");
+      return img;
+    }
+  }]);
+
+  return MenuItem;
+}();
+var Menu =
+/*#__PURE__*/
+function () {
+  function Menu() {
+    var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "easy";
+
+    _classCallCheck(this, Menu);
+
+    this.menu = [];
+    this.mode = mode;
+    this.generateMenu(mode);
+  }
+
+  _createClass(Menu, [{
+    key: "generateMenu",
+    value: function generateMenu(mode) {
+      var _this = this;
+
+      var chosenMenu;
+
+      if (mode === "easy") {
+        chosenMenu = MENU_ITEMS;
+      } else {
+        chosenMenu = COMPETITIVE_MENU_ITEMS;
+      }
+
+      var menuItems = Array.from(document.getElementsByClassName("".concat(mode, " menu-item")));
+      menuItems.forEach(function (item) {
+        var itemId = item.id;
+        var menuItem = new MenuItem(itemId, chosenMenu[itemId]);
+
+        _this.menu.push(menuItem);
+
+        item.appendChild(menuItem.render());
+      });
+    }
+  }, {
+    key: "deleteMenu",
+    value: function deleteMenu() {
+      Array.from(document.getElementById("".concat(this.mode, "-menu")).getElementsByTagName("img")).forEach(function (img) {
+        return img.remove();
+      });
+      document.getElementById("modal").classList.add("hidden");
+    }
+  }]);
+
+  return Menu;
+}();
+
+/***/ }),
+
+/***/ "./frontend/util/order.js":
+/*!********************************!*\
+  !*** ./frontend/util/order.js ***!
+  \********************************/
+/*! exports provided: ORDER_ITEMS, COMPETITIVE_ORDER_ITEMS, CUSTOMERS, Order */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ORDER_ITEMS", function() { return ORDER_ITEMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_ORDER_ITEMS", function() { return COMPETITIVE_ORDER_ITEMS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUSTOMERS", function() { return CUSTOMERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Order", function() { return Order; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var ORDER_ITEMS = {
+  "onigiri": "../assets/menu_items/onigiri_order.png",
+  "sashimi": "../assets/menu_items/sashimi_order.png",
+  "pickles": "../assets/menu_items/pickles_order.png",
+  "tempura": "../assets/menu_items/tempura_order.png",
+  "fish": "../assets/menu_items/fish_order.png",
+  "tamago": "../assets/menu_items/tamago_order.png",
+  "meatballs": "../assets/menu_items/meatballs_order.png",
+  "sushi-roll": "../assets/menu_items/sushi-roll_order.png"
+};
+var COMPETITIVE_ORDER_ITEMS = {
+  "ramen": "../assets/menu_items/ramen_order.png",
+  "dango": "../assets/menu_items/dango_order.png",
+  "dumpling": "../assets/menu_items/dumpling_order.png",
+  "mini-rolls": "../assets/menu_items/mini-rolls_order.png",
+  "sticky-rice": "../assets/menu_items/sticky-rice_order.png",
+  "chowfun": "../assets/menu_items/chowfun_order.png",
+  "bao": "../assets/menu_items/bao_order.png",
+  "crab": "../assets/menu_items/crab_order.png",
+  "onigiri": "../assets/menu_items/onigiri_order.png",
+  "sashimi": "../assets/menu_items/sashimi_order.png",
+  "pickles": "../assets/menu_items/pickles_order.png",
+  "tempura": "../assets/menu_items/tempura_order.png",
+  "fish": "../assets/menu_items/fish_order.png",
+  "tamago": "../assets/menu_items/tamago_order.png",
+  "meatballs": "../assets/menu_items/meatballs_order.png",
+  "sushi-roll": "../assets/menu_items/sushi-roll_order.png",
+  "watermelon": "../assets/menu_items/watermelon_order.png",
+  "naruto": "../assets/menu_items/naruto_order.png",
+  "lemon": "../assets/menu_items/lemon_order.png",
+  "veggies-stir-fry": "../assets/menu_items/veggies-stir-fry_order.png",
+  "corn-dog": "../assets/menu_items/corn-dog_order.png",
+  "mochi": "../assets/menu_items/mochi_order.png",
+  "sausage": "../assets/menu_items/sausage_order.png",
+  "brocolli": "../assets/menu_items/brocolli_order.png"
+};
+var CUSTOMERS = {
+  1: "../assets/customers/customer_1.png",
+  2: "../assets/customers/customer_2.png",
+  3: "../assets/customers/customer_3.png",
+  4: "../assets/customers/customer_4.png",
+  5: "../assets/customers/customer_5.png"
+};
+var Order =
+/*#__PURE__*/
+function () {
+  function Order(numItems, numSeconds, mode) {
+    _classCallCheck(this, Order);
+
+    this.numItems = numItems;
+    this.order = [];
+    this.numSeconds = numSeconds;
+    this.mode = mode;
+    this.orderOptions = mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS;
+    this.generateCustomer();
+    this.generateSpeechBubble();
+    this.generateOrder();
+    this.renderOrder();
+  }
+
+  _createClass(Order, [{
+    key: "generateOrder",
+    value: function generateOrder() {
+      var menuOptions = Object.keys(this.orderOptions);
+      var numOptions = menuOptions.length;
+
+      for (var i = 1; i <= this.numItems; i++) {
+        var idx = Math.floor(Math.random() * numOptions);
+        this.order.push(menuOptions[idx]);
+      }
+    }
+  }, {
+    key: "generateCustomer",
+    value: function generateCustomer() {
+      var customerOptions = [1, 2, 3, 4, 5];
+      var idx = customerOptions[Math.floor(Math.random() * 5)];
+      var img = document.createElement("img");
+      img.src = CUSTOMERS[idx];
+      img.alt = "customer-icon";
+      img.classList.add("bounceInRight");
+      var customerContainer = document.getElementById("".concat(this.mode, "-customer-container"));
+      customerContainer.appendChild(img);
+    }
+  }, {
+    key: "generateSpeechBubble",
+    value: function generateSpeechBubble() {
+      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
+      var speechBubble = document.createElement("div");
+      speechBubble.classList.add("speech-bubble");
+      speechBubble.classList.add("fadeIn");
+      speechContainer.appendChild(speechBubble);
+    }
+  }, {
+    key: "generateOrderItem",
+    value: function generateOrderItem(id) {
+      var img = document.createElement("img");
+      img.src = this.orderOptions[id];
+      img.alt = "".concat(id, "-icon");
+      return img;
+    }
+  }, {
+    key: "renderOrder",
+    value: function renderOrder() {
+      var _this = this;
+
+      var orderContainer = document.createElement("div");
+      orderContainer.classList.add("order-container");
+      orderContainer.classList.add("box-".concat(this.numItems));
+      orderContainer.classList.add("fadeIn");
+      this.order.forEach(function (item) {
+        var orderItem = document.createElement("div");
+        orderItem.classList.add("order-item");
+        orderItem.appendChild(_this.generateOrderItem(item));
+        orderContainer.appendChild(orderItem);
+      });
+      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
+      speechContainer.appendChild(orderContainer);
+    }
+  }, {
+    key: "deleteOrder",
+    value: function deleteOrder() {
+      document.getElementById("".concat(this.mode, "-speech-container")).innerHTML = "";
+      document.getElementById("".concat(this.mode, "-customer-container")).innerHTML = "";
+    }
+  }]);
+
+  return Order;
+}();
+
+/***/ }),
+
+/***/ "./frontend/util/timer.js":
+/*!********************************!*\
+  !*** ./frontend/util/timer.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Timer =
+/*#__PURE__*/
+function () {
+  function Timer(numSeconds, timerEndCallback) {
+    _classCallCheck(this, Timer);
+
+    this.interval = undefined;
+    this.countFrom = numSeconds;
+    this.count = this.countFrom;
+    this.timerEndCallback = timerEndCallback;
+  }
+
+  _createClass(Timer, [{
+    key: "start",
+    value: function start() {
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+
+      this.count = this.countFrom;
+      this.interval = setInterval(this.tick.bind(this), 1000);
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      clearInterval(this.interval);
+    }
+  }, {
+    key: "tick",
+    value: function tick() {
+      this.count -= 1;
+
+      if (this.count <= 0) {
+        // console.log(this.count);
+        this.count = 0;
+        clearInterval(this.interval);
+        this.timerEndCallback();
+      }
+
+      var timer = document.getElementById("timer");
+      timer.innerHTML = this.count;
+    }
+  }, {
+    key: "deleteTimer",
+    value: function deleteTimer() {
+      document.getElementById("timer").remove();
+    }
+  }]);
+
+  return Timer;
+}();
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (Timer);
 
 /***/ }),
 

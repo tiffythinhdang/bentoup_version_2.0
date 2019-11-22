@@ -1,8 +1,14 @@
 import React from 'react';
+import { Game } from '../../util/game';
 
 class CompetitiveModeComponent extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    const game = new Game("competitive");
+    game.start();
   }
 
   render() {

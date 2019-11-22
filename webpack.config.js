@@ -19,7 +19,6 @@ module.exports = {
         },
       },
       {
-        // The important stuff
         test: /\.(jpg|jpeg|png)(\?.*)?$/, // Load only .jpg .jpeg, and .png files
         use: {
           loader: 'file-loader',

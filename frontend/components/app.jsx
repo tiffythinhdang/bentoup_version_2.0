@@ -12,12 +12,13 @@ import GameOverComponent from './game/game_over';
 const App = () => (
   <HashRouter>
     <Header/>
+    <GameOverComponent/>
     <Switch>
       <Route exact path='/' component={Splash} />
       <Route exact path='/choose-mode' component={ChooseModeComponent} />
       <Route exact path='/easy-mode' component={EasyModeComponent} />
       <Route exact path='/competitive-mode' component={CompetitiveModeComponent} />
-      <Route exact path='/game-over' component={GameOverComponent} />
+      {/* <Route exact path='/game-over' component={GameOverComponent} /> */}
     </Switch>
     <Footer/>
   </HashRouter>

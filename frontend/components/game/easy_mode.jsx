@@ -1,8 +1,14 @@
 import React from 'react';
+import { Game } from '../../util/game';
 
 class EasyModeComponent extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    const game = new Game("easy");
+    game.start();
   }
 
   render() {

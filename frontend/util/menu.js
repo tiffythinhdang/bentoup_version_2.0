@@ -65,7 +65,7 @@ export class Menu {
     } else {
       chosenMenu = COMPETITIVE_MENU_ITEMS;
     }
-    
+
     let menuItems = Array.from(document.getElementsByClassName(`${mode} menu-item`));
     menuItems.forEach(item => {
       let itemId = item.id;
