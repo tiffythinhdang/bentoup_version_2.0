@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header() {
+const Header = () => {
   return (
     <div>
       <header className="links">
@@ -27,6 +27,6 @@ function Header() {
       <h1 className="game-title">bentoUp</h1>
     </div>
   )
-}
+};
 
 export default Header;

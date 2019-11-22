@@ -111,52 +111,50 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_game_play__WEBPACK_IMPORTED_MODULE_3__["default"], null), root);
-  var game;
-  var easyMode = document.getElementById("easy-content");
-  var competitiveMode = document.getElementById("competitive-content");
-  var startButton = document.getElementById("start-button");
-  var playAgainButton = document.getElementById("play-again-button");
-  var competitveModeButton = document.getElementById("competitive-mode-button");
-  var easyModeButton = document.getElementById("easy-mode-button");
-  startButton.addEventListener("click", function () {
-    document.getElementById("introduction").classList.add("hidden");
-    document.getElementById("game-mode").classList.remove("hidden");
-  });
-  easyModeButton.addEventListener("click", function () {
-    document.getElementById("game-mode").classList.add("hidden");
-    if (easyMode.classList.contains("hidden")) easyMode.classList.remove("hidden");
-    if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
-
-    if (!game) {
-      debugger;
-      var test = new _util_game__WEBPACK_IMPORTED_MODULE_4__["Game"]("easy");
-      game = test; // game = new Game("easy");
-
-      console.log(game);
-      game.start();
-    } else {
-      game.restart("easy");
-    }
-  });
-  competitveModeButton.addEventListener("click", function () {
-    document.getElementById("game-mode").classList.add("hidden");
-    if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
-    if (competitiveMode.classList.contains("hidden")) competitiveMode.classList.remove("hidden");
-
-    if (!game) {
-      game = new _util_game__WEBPACK_IMPORTED_MODULE_4__["Game"]("competitive");
-      game.start();
-    } else {
-      game.restart("competitive");
-    }
-  });
-  playAgainButton.addEventListener("click", function () {
-    document.getElementById("modal").classList.add("hidden");
-    document.getElementById("game-mode").classList.remove("hidden");
-    if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
-    if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden"); // game.clear();
-  });
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_game_play__WEBPACK_IMPORTED_MODULE_3__["default"], null), root); // let game;
+  // let easyMode = document.getElementById("easy-content");
+  // let competitiveMode = document.getElementById("competitive-content");
+  // let startButton = document.getElementById("start-button");
+  // let playAgainButton = document.getElementById("play-again-button");
+  // let competitveModeButton = document.getElementById("competitive-mode-button");
+  // let easyModeButton = document.getElementById("easy-mode-button");
+  // startButton.addEventListener("click", () => {
+  //   document.getElementById("introduction").classList.add("hidden");
+  //   document.getElementById("game-mode").classList.remove("hidden");
+  // })
+  // easyModeButton.addEventListener("click", () => {
+  //   document.getElementById("game-mode").classList.add("hidden");
+  //   if (easyMode.classList.contains("hidden")) easyMode.classList.remove("hidden");
+  //   if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
+  //   if (!game) {
+  //     debugger;
+  //     let test = new Game("easy");
+  //     game = test;
+  //     // game = new Game("easy");
+  //     console.log(game)
+  //     game.start();
+  //   } else {
+  //     game.restart("easy")
+  //   }
+  // })
+  // competitveModeButton.addEventListener("click", () => {
+  //   document.getElementById("game-mode").classList.add("hidden");
+  //   if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
+  //   if (competitiveMode.classList.contains("hidden")) competitiveMode.classList.remove("hidden");
+  //   if (!game) {
+  //     game = new Game("competitive");
+  //     game.start();
+  //   } else {
+  //     game.restart("competitive")
+  //   }
+  // })
+  // playAgainButton.addEventListener("click", () => {
+  //   document.getElementById("modal").classList.add("hidden");
+  //   document.getElementById("game-mode").classList.remove("hidden");
+  //   if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
+  //   if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
+  //   // game.clear();
+  // })
 });
 
 /***/ }),
@@ -168,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/tiffanydang/Desktop/bento_up/frontend/components/game_play.jsx: Unexpected token (6:4)\n\n\u001b[0m \u001b[90m 4 | \u001b[39m  render() {\u001b[0m\n\u001b[0m \u001b[90m 5 | \u001b[39m    \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 | \u001b[39m    )\u001b[0m\n\u001b[0m \u001b[90m   | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 8 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m 9 | \u001b[39m\u001b[0m\n    at Object.raise (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:6930:17)\n    at Object.unexpected (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8323:16)\n    at Object.parseParenAndDistinguishExpression (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9752:12)\n    at Object.parseExprAtom (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9503:21)\n    at Object.parseExprAtom (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:4082:20)\n    at Object.parseExprSubscripts (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9165:23)\n    at Object.parseMaybeUnary (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9145:21)\n    at Object.parseExprOps (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:9011:23)\n    at Object.parseMaybeConditional (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8984:23)\n    at Object.parseMaybeAssign (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8930:21)\n    at Object.parseExpression (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:8880:23)\n    at Object.parseReturnStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10980:28)\n    at Object.parseStatementContent (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10659:21)\n    at Object.parseStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10611:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11187:25)\n    at Object.parseBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11174:10)\n    at Object.parseBlock (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11158:10)\n    at Object.parseFunctionBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10177:24)\n    at Object.parseFunctionBodyAndFinish (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10147:10)\n    at Object.parseMethod (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10101:10)\n    at Object.pushClassMethod (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11591:30)\n    at Object.parseClassMemberWithIsStatic (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11511:12)\n    at Object.parseClassMember (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11453:10)\n    at /Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11408:14\n    at Object.withTopicForbiddingContext (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10486:14)\n    at Object.parseClassBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11385:10)\n    at Object.parseClass (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11359:22)\n    at Object.parseStatementContent (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10653:21)\n    at Object.parseStatement (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:10611:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/tiffanydang/Desktop/bento_up/node_modules/@babel/parser/lib/index.js:11187:25)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/tiffanydang/Desktop/bento_up/frontend/components/game_play.jsx'");
 
 /***/ }),
 
