@@ -145,6 +145,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./game/competitive_mode */ "./frontend/components/game/competitive_mode.jsx");
 /* harmony import */ var _game_choose_mode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./game/choose_mode */ "./frontend/components/game/choose_mode.jsx");
 /* harmony import */ var _game_game_over__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./game/game_over */ "./frontend/components/game/game_over.jsx");
+/* harmony import */ var _game_save_score_form__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./game/save_score_form */ "./frontend/components/game/save_score_form.jsx");
+
 
 
 
@@ -161,17 +163,17 @@ var App = function App() {
     path: "/",
     component: _splash__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
     path: "/choose-mode",
     component: _game_choose_mode__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
     path: "/easy-mode",
     component: _game_easy_mode__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
     path: "/competitive-mode",
     component: _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/scores/save",
+    component: _game_save_score_form__WEBPACK_IMPORTED_MODULE_9__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
@@ -585,6 +587,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _save_score_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form */ "./frontend/components/game/save_score_form.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -606,6 +609,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var GameOverComponent =
 /*#__PURE__*/
 function (_React$Component) {
@@ -617,14 +621,20 @@ function (_React$Component) {
     _classCallCheck(this, GameOverComponent);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(GameOverComponent).call(this, props));
-    _this.playAgain = _this.playAgain.bind(_assertThisInitialized(_this));
+    _this.closeModal = _this.closeModal.bind(_assertThisInitialized(_this));
+    _this.openForm = _this.openForm.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(GameOverComponent, [{
-    key: "playAgain",
-    value: function playAgain() {
+    key: "closeModal",
+    value: function closeModal() {
       document.getElementById("modal").classList.add("hidden");
+    }
+  }, {
+    key: "openForm",
+    value: function openForm() {
+      document.getElementsByClassName("form-container")[0].classList.remove("hidden");
     }
   }, {
     key: "render",
@@ -649,14 +659,15 @@ function (_React$Component) {
         className: "buttons-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/choose-mode",
-        onClick: this.playAgain
+        onClick: this.closeModal
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "play-again-button"
-      }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/scores/save"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "save-score-button"
-      }, "SAVE SCORE"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "save-score-button",
+        onClick: this.openForm
+      }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        score: 10
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "light medium icon",
@@ -687,6 +698,75 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (GameOverComponent);
+
+/***/ }),
+
+/***/ "./frontend/components/game/save_score_form.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/game/save_score_form.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var SaveScoreForm =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(SaveScoreForm, _React$Component);
+
+  function SaveScoreForm(props) {
+    _classCallCheck(this, SaveScoreForm);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(SaveScoreForm).call(this, props));
+  }
+
+  _createClass(SaveScoreForm, [{
+    key: "handleSubmit",
+    value: function handleSubmit() {}
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-container hidden"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        id: "save-score-form"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form input",
+        type: "text",
+        placeholder: "Name"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "submit-score"
+      }, "Submit")));
+    }
+  }]);
+
+  return SaveScoreForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (SaveScoreForm);
 
 /***/ }),
 

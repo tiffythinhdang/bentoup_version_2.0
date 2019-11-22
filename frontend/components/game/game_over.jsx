@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SaveScoreForm from './save_score_form';
+
 class GameOverComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.playAgain = this.playAgain.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openForm = this.openForm.bind(this);
   }
 
-  playAgain() {
+  closeModal() {
     document.getElementById("modal").classList.add("hidden");
+  }
+
+  openForm() {
+    document.getElementsByClassName("form-container")[0].classList.remove("hidden");
   }
 
   render() {
@@ -26,14 +33,18 @@ class GameOverComponent extends React.Component {
           <div className="buttons-container">
             <Link
               to={"/choose-mode"}
-              onClick={this.playAgain} >
+              onClick={this.closeModal} >
               <button id="play-again-button">PLAY AGAIN</button>
             </Link>
 
-            <Link to={"/scores/save"}>
-              <button id="save-score-button">SAVE SCORE</button>
-            </Link>
+            <button
+              id="save-score-button"
+              onClick={this.openForm} >
+              SAVE SCORE
+            </button>
           </div>
+
+          <SaveScoreForm score={10}/>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">
