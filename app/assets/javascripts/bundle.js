@@ -100,14 +100,340 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.jsx");
+/* harmony import */ var _components_game_play__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/game_play */ "./frontend/components/game_play.jsx");
+/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/game */ "./frontend/util/game.js");
+/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_util_game__WEBPACK_IMPORTED_MODULE_4__);
+
+
 
 
 
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "React is working"), root);
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_game_play__WEBPACK_IMPORTED_MODULE_3__["default"], null), root);
+  var game;
+  var easyMode = document.getElementById("easy-content");
+  var competitiveMode = document.getElementById("competitive-content");
+  var startButton = document.getElementById("start-button");
+  var playAgainButton = document.getElementById("play-again-button");
+  var competitveModeButton = document.getElementById("competitive-mode-button");
+  var easyModeButton = document.getElementById("easy-mode-button");
+  startButton.addEventListener("click", function () {
+    document.getElementById("introduction").classList.add("hidden");
+    document.getElementById("game-mode").classList.remove("hidden");
+  });
+  easyModeButton.addEventListener("click", function () {
+    document.getElementById("game-mode").classList.add("hidden");
+    if (easyMode.classList.contains("hidden")) easyMode.classList.remove("hidden");
+    if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
+
+    if (!game) {
+      debugger;
+      var test = new _util_game__WEBPACK_IMPORTED_MODULE_4__["Game"]("easy");
+      game = test; // game = new Game("easy");
+
+      console.log(game);
+      game.start();
+    } else {
+      game.restart("easy");
+    }
+  });
+  competitveModeButton.addEventListener("click", function () {
+    document.getElementById("game-mode").classList.add("hidden");
+    if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
+    if (competitiveMode.classList.contains("hidden")) competitiveMode.classList.remove("hidden");
+
+    if (!game) {
+      game = new _util_game__WEBPACK_IMPORTED_MODULE_4__["Game"]("competitive");
+      game.start();
+    } else {
+      game.restart("competitive");
+    }
+  });
+  playAgainButton.addEventListener("click", function () {
+    document.getElementById("modal").classList.add("hidden");
+    document.getElementById("game-mode").classList.remove("hidden");
+    if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
+    if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden"); // game.clear();
+  });
 });
+
+/***/ }),
+
+/***/ "./frontend/components/game_play.jsx":
+/*!*******************************************!*\
+  !*** ./frontend/components/game_play.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var GamePlay =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(GamePlay, _React$Component);
+
+  function GamePlay() {
+    _classCallCheck(this, GamePlay);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(GamePlay).apply(this, arguments));
+  }
+
+  _createClass(GamePlay, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "introduction"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "introduction-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "small game-title"
+      }, "bentoUp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-description"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "inline-bold-text"
+      }, "bentoUp"), " is an food-themed matching game where the player takes the roll of an apprentice chef of a bento shop in Kyoto, Japan. Sharpen your skills as you prepare and serve delicious bento boxes to customers. Level up and become to the head chef of this popular shop in town!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-instruction"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "instruction-1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "get an order"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/introduction/intro_order.png",
+        alt: "order-image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "instruction-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "click or type to choose the item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/introduction/intro_choose_item.png",
+        alt: "choose-image"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "instruction-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "backspace or click \"Remove\" to deselect"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/introduction/intro_deselect_item.png",
+        alt: "deselect-image"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "start-button"
+      }, "START GAME!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-mode",
+        className: "hidden"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-mode-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-mode-message"
+      }, "What mode do you want to play?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "game-mode buttons-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "competitive-mode-button"
+      }, "Competitive"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "easy-mode-button"
+      }, "Easy")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "modal",
+        className: "hidden"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-screen"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-message"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "suhi-chef container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/sushi_chef.png",
+        alt: "chef-img"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "ranking"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "play-again-button"
+      }, "PLAY AGAIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "modal-links"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "light medium icon",
+        href: "https://github.com/tiffythinhdang",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/github_icon_green.png",
+        alt: "github-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "light medium icon",
+        href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/linkedin_icon_green.png",
+        alt: "linkedin-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "light medium icon",
+        href: "https://tiffanytdang.com/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/contact_icon_green.png",
+        alt: "contact-icon"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "links"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "medium icon",
+        href: "https://github.com/tiffythinhdang",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/github_icon_green.png",
+        alt: "github-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "medium icon",
+        href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/linkedin_icon_green.png",
+        alt: "linkedin-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "medium icon",
+        href: "https://tiffanytdang.com/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "../assets/contact_icon_green.png",
+        alt: "contact-icon"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "game-title"
+      }, "bentoUp"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-content",
+        className: "hidden"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+        className: "main-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "game-canvas-competitive"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "top-bar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-timer-container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-score"
+      }, "0 order"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-customer-lost"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "main-interaction-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "level-up"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "main-interaction"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-speech-container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-customer-container"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-counter"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-bento-container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "competitive-remove-item-button"
+      }, "Remove"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "competitive-menu",
+        className: "hidden"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "competitive-menu-first-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "ramen",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "dango",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "dumpling",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "mini-rolls",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sticky-rice",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "chowfun",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "bao",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "crab",
+        className: "competitive menu-item"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "competitive-menu-second-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "onigiri",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sashimi",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "pickles",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "tempura",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "fish",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "tamago",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "meatballs",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sushi-roll",
+        className: "competitive menu-item"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "competitive-menu-third-row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "watermelon",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "naruto",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "lemon",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "veggies-stir-fry",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "corn-dog",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "mochi",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sausage",
+        className: "competitive menu-item"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "brocolli",
+        className: "competitive menu-item"
+      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "\xA9 2019 Designed and Developed by Tiffany Dang")));
+    }
+  }]);
+
+  return GamePlay;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (GamePlay);
 
 /***/ }),
 
@@ -138,7 +464,7 @@ var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _reducers_root_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/root_reducer */ "./frontend/reducers/root_reducer.js");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_3__);
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -156,7 +482,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_4__["default"]];
+  var middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]];
 
   if (true) {
     middleware = [].concat(_toConsumableArray(middleware), [redux_logger__WEBPACK_IMPORTED_MODULE_3___default.a]);
@@ -166,6 +492,737 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/game.js":
+/*!*******************************!*\
+  !*** ./frontend/util/game.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+// import { Menu } from './menu';
+// import Bento from './bento';
+// import { Order } from './order';
+// import Timer from './timer';
+//Menu
+var MENU_ITEMS = {
+  "onigiri": "assets/images/menu_items/onigiri.png",
+  "sashimi": "assets/images/menu_items/sashimi.png",
+  "pickles": "assets/images/menu_items/pickles.png",
+  "tempura": "assets/images/menu_items/tempura.png",
+  "fish": "assets/images/menu_items/fish.png",
+  "tamago": "assets/images/menu_items/tamago.png",
+  "meatballs": "assets/images/menu_items/meatballs.png",
+  "sushi-roll": "assets/images/menu_items/sushi-roll.png"
+};
+var COMPETITIVE_MENU_ITEMS = {
+  "ramen": "assets/images/menu_items/ramen.png",
+  "dango": "assets/images/menu_items/dango.png",
+  "dumpling": "assets/images/menu_items/dumpling.png",
+  "mini-rolls": "assets/images/menu_items/mini-rolls.png",
+  "sticky-rice": "assets/images/menu_items/sticky-rice.png",
+  "chowfun": "assets/images/menu_items/chowfun.png",
+  "bao": "assets/images/menu_items/bao.png",
+  "crab": "assets/images/menu_items/crab.png",
+  "onigiri": "assets/images/menu_items/onigiri.png",
+  "sashimi": "assets/images/menu_items/sashimi.png",
+  "pickles": "assets/images/menu_items/pickles.png",
+  "tempura": "assets/images/menu_items/tempura.png",
+  "fish": "assets/images/menu_items/fish.png",
+  "tamago": "assets/images/menu_items/tamago.png",
+  "meatballs": "assets/images/menu_items/meatballs.png",
+  "sushi-roll": "assets/images/menu_items/sushi-roll.png",
+  "watermelon": "assets/images/menu_items/watermelon.png",
+  "naruto": "assets/images/menu_items/naruto.png",
+  "lemon": "assets/images/menu_items/lemon.png",
+  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry.png",
+  "corn-dog": "assets/images/menu_items/corn-dog.png",
+  "mochi": "assets/images/menu_items/mochi.png",
+  "sausage": "assets/images/menu_items/sausage.png",
+  "brocolli": "assets/images/menu_items/brocolli.png"
+};
+
+var MenuItem =
+/*#__PURE__*/
+function () {
+  function MenuItem(id, imagePath) {
+    _classCallCheck(this, MenuItem);
+
+    this.id = id;
+    this.imagePath = imagePath;
+  }
+
+  _createClass(MenuItem, [{
+    key: "render",
+    value: function render() {
+      var img = document.createElement("img");
+      img.src = this.imagePath;
+      img.alt = "".concat(this.id, "-icon");
+      return img;
+    }
+  }]);
+
+  return MenuItem;
+}();
+
+var Menu =
+/*#__PURE__*/
+function () {
+  function Menu() {
+    var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "easy";
+
+    _classCallCheck(this, Menu);
+
+    this.menu = [];
+    this.mode = mode;
+    this.generateMenu(mode);
+  }
+
+  _createClass(Menu, [{
+    key: "generateMenu",
+    value: function generateMenu(mode) {
+      var _this = this;
+
+      var chosenMenu;
+
+      if (mode === "easy") {
+        chosenMenu = MENU_ITEMS;
+      } else {
+        chosenMenu = COMPETITIVE_MENU_ITEMS;
+      }
+
+      var menuItems = Array.from(document.getElementsByClassName("".concat(mode, " menu-item")));
+      menuItems.forEach(function (item) {
+        var itemId = item.id;
+        var menuItem = new MenuItem(itemId, chosenMenu[itemId]);
+
+        _this.menu.push(menuItem);
+
+        item.appendChild(menuItem.render());
+      });
+    }
+  }, {
+    key: "deleteMenu",
+    value: function deleteMenu() {
+      Array.from(document.getElementById("".concat(this.mode, "-menu")).getElementsByTagName("img")).forEach(function (img) {
+        return img.remove();
+      });
+      document.getElementById("modal").classList.add("hidden");
+    }
+  }]);
+
+  return Menu;
+}(); //Order
+
+
+var ORDER_ITEMS = {
+  "onigiri": "assets/images/menu_items/onigiri_order.png",
+  "sashimi": "assets/images/menu_items/sashimi_order.png",
+  "pickles": "assets/images/menu_items/pickles_order.png",
+  "tempura": "assets/images/menu_items/tempura_order.png",
+  "fish": "assets/images/menu_items/fish_order.png",
+  "tamago": "assets/images/menu_items/tamago_order.png",
+  "meatballs": "assets/images/menu_items/meatballs_order.png",
+  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png"
+};
+var COMPETITIVE_ORDER_ITEMS = {
+  "ramen": "assets/images/menu_items/ramen_order.png",
+  "dango": "assets/images/menu_items/dango_order.png",
+  "dumpling": "assets/images/menu_items/dumpling_order.png",
+  "mini-rolls": "assets/images/menu_items/mini-rolls_order.png",
+  "sticky-rice": "assets/images/menu_items/sticky-rice_order.png",
+  "chowfun": "assets/images/menu_items/chowfun_order.png",
+  "bao": "assets/images/menu_items/bao_order.png",
+  "crab": "assets/images/menu_items/crab_order.png",
+  "onigiri": "assets/images/menu_items/onigiri_order.png",
+  "sashimi": "assets/images/menu_items/sashimi_order.png",
+  "pickles": "assets/images/menu_items/pickles_order.png",
+  "tempura": "assets/images/menu_items/tempura_order.png",
+  "fish": "assets/images/menu_items/fish_order.png",
+  "tamago": "assets/images/menu_items/tamago_order.png",
+  "meatballs": "assets/images/menu_items/meatballs_order.png",
+  "sushi-roll": "assets/images/menu_items/sushi-roll_order.png",
+  "watermelon": "assets/images/menu_items/watermelon_order.png",
+  "naruto": "assets/images/menu_items/naruto_order.png",
+  "lemon": "assets/images/menu_items/lemon_order.png",
+  "veggies-stir-fry": "assets/images/menu_items/veggies-stir-fry_order.png",
+  "corn-dog": "assets/images/menu_items/corn-dog_order.png",
+  "mochi": "assets/images/menu_items/mochi_order.png",
+  "sausage": "assets/images/menu_items/sausage_order.png",
+  "brocolli": "assets/images/menu_items/brocolli_order.png"
+};
+var CUSTOMERS = {
+  1: "assets/images/customers/customer_1.png",
+  2: "assets/images/customers/customer_2.png",
+  3: "assets/images/customers/customer_3.png",
+  4: "assets/images/customers/customer_4.png",
+  5: "assets/images/customers/customer_5.png"
+};
+
+var Order =
+/*#__PURE__*/
+function () {
+  function Order(numItems, numSeconds, mode) {
+    _classCallCheck(this, Order);
+
+    this.numItems = numItems;
+    this.order = [];
+    this.numSeconds = numSeconds;
+    this.mode = mode;
+    this.orderOptions = mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS;
+    this.generateCustomer();
+    this.generateSpeechBubble();
+    this.generateOrder();
+    this.renderOrder();
+  }
+
+  _createClass(Order, [{
+    key: "generateOrder",
+    value: function generateOrder() {
+      var menuOptions = Object.keys(this.orderOptions);
+      var numOptions = menuOptions.length;
+
+      for (var i = 1; i <= this.numItems; i++) {
+        var idx = Math.floor(Math.random() * numOptions);
+        this.order.push(menuOptions[idx]);
+      }
+    }
+  }, {
+    key: "generateCustomer",
+    value: function generateCustomer() {
+      var customerOptions = [1, 2, 3, 4, 5];
+      var idx = customerOptions[Math.floor(Math.random() * 5)];
+      var img = document.createElement("img");
+      img.src = CUSTOMERS[idx];
+      img.alt = "customer-icon";
+      img.classList.add("bounceInRight");
+      var customerContainer = document.getElementById("".concat(this.mode, "-customer-container"));
+      customerContainer.appendChild(img);
+    }
+  }, {
+    key: "generateSpeechBubble",
+    value: function generateSpeechBubble() {
+      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
+      var speechBubble = document.createElement("div");
+      speechBubble.classList.add("speech-bubble");
+      speechBubble.classList.add("fadeIn");
+      speechContainer.appendChild(speechBubble);
+    }
+  }, {
+    key: "generateOrderItem",
+    value: function generateOrderItem(id) {
+      var img = document.createElement("img");
+      img.src = this.orderOptions[id];
+      img.alt = "".concat(id, "-icon");
+      return img;
+    }
+  }, {
+    key: "renderOrder",
+    value: function renderOrder() {
+      var _this2 = this;
+
+      var orderContainer = document.createElement("div");
+      orderContainer.classList.add("order-container");
+      orderContainer.classList.add("box-".concat(this.numItems));
+      orderContainer.classList.add("fadeIn");
+      this.order.forEach(function (item) {
+        var orderItem = document.createElement("div");
+        orderItem.classList.add("order-item");
+        orderItem.appendChild(_this2.generateOrderItem(item));
+        orderContainer.appendChild(orderItem);
+      });
+      var speechContainer = document.getElementById("".concat(this.mode, "-speech-container"));
+      speechContainer.appendChild(orderContainer);
+    }
+  }, {
+    key: "deleteOrder",
+    value: function deleteOrder() {
+      document.getElementById("".concat(this.mode, "-speech-container")).innerHTML = "";
+      document.getElementById("".concat(this.mode, "-customer-container")).innerHTML = "";
+    }
+  }]);
+
+  return Order;
+}(); //Bento
+
+
+var Bento =
+/*#__PURE__*/
+function () {
+  function Bento(numItems, order) {
+    var mode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "easy";
+
+    _classCallCheck(this, Bento);
+
+    this.numItems = numItems;
+    this.order = order;
+    this.bento = [];
+    this.mode = mode;
+    this.bentoOptions = mode === "easy" ? ORDER_ITEMS : COMPETITIVE_ORDER_ITEMS;
+    this.generateBento();
+  }
+
+  _createClass(Bento, [{
+    key: "generateBento",
+    value: function generateBento() {
+      var bentoContainer = document.getElementById("".concat(this.mode, "-bento-container"));
+      var bento = document.createElement("div");
+      bento.id = "bento";
+
+      if (this.numItems === 4) {
+        bento.classList.add("bento-4");
+      } else if (this.numItems === 6) {
+        bento.classList.add("bento-6");
+      }
+
+      for (var i = 1; i <= this.numItems; i++) {
+        var bentoItem = document.createElement("div");
+        bentoItem.classList.add(this.mode);
+        bentoItem.classList.add("bento-item");
+        bentoItem.classList.add("".concat(i));
+        bento.appendChild(bentoItem);
+      }
+
+      bentoContainer.appendChild(bento);
+    }
+  }, {
+    key: "deleteBento",
+    value: function deleteBento() {
+      document.getElementById("".concat(this.mode, "-bento-container")).innerHTML = "";
+    }
+  }, {
+    key: "addItem",
+    value: function addItem(item) {
+      this.bento.push(item);
+      this.render();
+    }
+  }, {
+    key: "removeItem",
+    value: function removeItem() {
+      this.bento.pop();
+      this.render();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      for (var i = 1; i <= this.numItems; i++) {
+        var bentoItem = document.getElementsByClassName("".concat(this.mode, " bento-item ").concat(i))[0];
+        bentoItem.innerHTML = "";
+        var item = this.bento[i - 1];
+        if (!item) break;
+        var img = document.createElement("img");
+        img.src = this.bentoOptions[item];
+        img.alt = "".concat(item, "-icon");
+        bentoItem.appendChild(img);
+      }
+    }
+  }]);
+
+  return Bento;
+}(); //Timer
+
+
+var Timer =
+/*#__PURE__*/
+function () {
+  function Timer(numSeconds, timerEndCallback) {
+    _classCallCheck(this, Timer);
+
+    this.interval = undefined;
+    this.countFrom = numSeconds;
+    this.count = this.countFrom;
+    this.timerEndCallback = timerEndCallback;
+  }
+
+  _createClass(Timer, [{
+    key: "start",
+    value: function start() {
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+
+      this.count = this.countFrom;
+      this.interval = setInterval(this.tick.bind(this), 1000);
+    }
+  }, {
+    key: "stop",
+    value: function stop() {
+      clearInterval(this.interval);
+    }
+  }, {
+    key: "tick",
+    value: function tick() {
+      this.count -= 1;
+
+      if (this.count <= 0) {
+        // console.log(this.count);
+        this.count = 0;
+        clearInterval(this.interval);
+        this.timerEndCallback();
+      }
+
+      var timer = document.getElementById("timer");
+      timer.innerHTML = this.count;
+    }
+  }, {
+    key: "deleteTimer",
+    value: function deleteTimer() {
+      document.getElementById("timer").remove();
+    }
+  }]);
+
+  return Timer;
+}();
+
+; //Game
+
+var KEY_MAPPING = {
+  "q": "ramen",
+  "w": "dango",
+  "e": "dumpling",
+  "r": "mini-rolls",
+  "u": "sticky-rice",
+  "i": "chowfun",
+  "o": "bao",
+  "p": "crab",
+  "a": "onigiri",
+  "s": "sashimi",
+  "d": "pickles",
+  "f": "tempura",
+  "j": "fish",
+  "k": "tamago",
+  "l": "meatballs",
+  ";": "sushi-roll",
+  "z": "watermelon",
+  "x": "naruto",
+  "c": "lemon",
+  "v": "veggies-stir-fry",
+  "b": "corn-dog",
+  "n": "mochi",
+  "m": "sausage",
+  ",": "brocolli"
+};
+
+var Game =
+/*#__PURE__*/
+function () {
+  function Game() {
+    var mode = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "easy";
+
+    _classCallCheck(this, Game);
+
+    this.menu = new Menu(mode);
+    this.mode = mode;
+    var numItems = this.generateRandomNum();
+    this.order = new Order(numItems, numItems === 4 ? 6 : 8, mode);
+    this.bento = new Bento(numItems, this.order, mode);
+    this.timer = new Timer(this.order.numSeconds, this.checkState.bind(this));
+    this.score = 0;
+    this.customerLost = 0;
+    this.timeElapsed = new Date();
+    this.levelUpInterval = undefined;
+    this.addListenerOnWindow = this.addListenerOnWindow.bind(this);
+    this.removeListenerOnWindow = this.removeListenerOnWindow.bind(this);
+    this.addClickToMenuItems = this.addClickToMenuItems.bind(this);
+    this.addClickToRemoveButton = this.addClickToRemoveButton.bind(this);
+    this.checkTimeElapsed = this.checkTimeElapsed.bind(this);
+    this.flashLevelUpMessage = this.flashLevelUpMessage.bind(this);
+    this.tapItem = this.tapItem.bind(this);
+    this.clickMenuItems = this.clickMenuItems.bind(this);
+    this.clickRemoveButton = this.clickRemoveButton.bind(this);
+    this.start = this.start.bind(this);
+    this.renderScore();
+  }
+
+  _createClass(Game, [{
+    key: "start",
+    value: function start() {
+      this.addListenerOnWindow();
+      this.addClickToMenuItems();
+      this.addClickToRemoveButton();
+      this.startTimer();
+      this.flashLevelUpMessage();
+    }
+  }, {
+    key: "flashLevelUpMessage",
+    value: function flashLevelUpMessage() {
+      this.levelUpInterval = setInterval(function () {
+        var container = document.getElementById("level-up");
+        container.innerHTML = "";
+        var message = document.createElement("p");
+        message.classList.add("flash");
+        message.innerHTML = "Speed Up!";
+        container.appendChild(message);
+      }, 50000);
+    }
+  }, {
+    key: "increaseDifficulty",
+    value: function increaseDifficulty(numItems, mode) {
+      if (this.checkTimeElapsed() > 200) {
+        clearInterval(this.levelUpInterval);
+        return new Order(numItems, numItems === 4 ? 2 : 3, mode);
+      } else if (this.checkTimeElapsed() > 150) {
+        return new Order(numItems, numItems === 4 ? 3 : 5, mode);
+      } else if (this.checkTimeElapsed() > 100) {
+        return new Order(numItems, numItems === 4 ? 4 : 6, mode);
+      } else if (this.checkTimeElapsed() >= 50) {
+        return new Order(numItems, numItems === 4 ? 5 : 7, mode);
+      } else if (this.checkTimeElapsed() >= 0) {
+        return new Order(numItems, numItems === 4 ? 6 : 8, mode);
+      }
+    }
+  }, {
+    key: "checkTimeElapsed",
+    value: function checkTimeElapsed() {
+      return (new Date() - this.timeElapsed) / 1000;
+    }
+  }, {
+    key: "tapItem",
+    value: function tapItem(e) {
+      var key = e.key;
+
+      if (key === "Backspace") {
+        this.bento.removeItem();
+        return;
+      }
+
+      var item = document.getElementById("".concat(KEY_MAPPING[key]));
+      if (!item) return;
+      item.classList.add("hover");
+      this.bento.addItem(item.id);
+      this.checkState();
+    }
+  }, {
+    key: "untapItem",
+    value: function untapItem(e) {
+      var key = e.key;
+      var item = document.getElementById("".concat(KEY_MAPPING[key]));
+      if (!item) return;
+      item.classList.remove("hover");
+    }
+  }, {
+    key: "addListenerOnWindow",
+    value: function addListenerOnWindow() {
+      window.addEventListener("keydown", this.tapItem);
+      window.addEventListener("keyup", this.untapItem);
+    }
+  }, {
+    key: "removeListenerOnWindow",
+    value: function removeListenerOnWindow() {
+      window.removeEventListener("keydown", this.tapItem);
+      window.removeEventListener("keyup", this.untapItem);
+    }
+  }, {
+    key: "clickMenuItems",
+    value: function clickMenuItems(e) {
+      this.bento.addItem(e.currentTarget.id);
+      this.checkState();
+    }
+  }, {
+    key: "clickRemoveButton",
+    value: function clickRemoveButton() {
+      this.bento.removeItem();
+      this.checkState();
+    }
+  }, {
+    key: "addClickToMenuItems",
+    value: function addClickToMenuItems() {
+      var _this3 = this;
+
+      var menuItems = Array.from(document.getElementsByClassName("".concat(this.mode, " menu-item")));
+      menuItems.forEach(function (item) {
+        return item.addEventListener("click", _this3.clickMenuItems);
+      });
+    }
+  }, {
+    key: "removeClickToMenuItems",
+    value: function removeClickToMenuItems() {
+      var _this4 = this;
+
+      var menuItems = Array.from(document.getElementsByClassName("".concat(this.mode, " menu-item")));
+      menuItems.forEach(function (item) {
+        return item.removeEventListener("click", _this4.clickMenuItems);
+      });
+    }
+  }, {
+    key: "addClickToRemoveButton",
+    value: function addClickToRemoveButton() {
+      var removeBtn = document.getElementById("".concat(this.mode, "-remove-item-button"));
+      removeBtn.addEventListener("click", this.clickRemoveButton);
+    }
+  }, {
+    key: "removeClickToRemoveButton",
+    value: function removeClickToRemoveButton() {
+      var removeBtn = document.getElementById("".concat(this.mode, "-remove-item-button"));
+      removeBtn.removeEventListener("click", this.clickRemoveButton);
+    }
+  }, {
+    key: "startTimer",
+    value: function startTimer() {
+      var timerContainer = document.getElementById("".concat(this.mode, "-timer-container"));
+      var timer = document.createElement("div");
+      timer.id = "timer";
+      timer.innerHTML = this.timer.count;
+      timerContainer.appendChild(timer);
+      this.timer.start();
+    }
+  }, {
+    key: "renderScore",
+    value: function renderScore() {
+      var score = document.getElementById("".concat(this.mode, "-score"));
+      score.innerHTML = this.score > 1 ? "".concat(this.score, " orders") : "".concat(this.score, " order");
+    }
+  }, {
+    key: "correctBento",
+    value: function correctBento() {
+      return JSON.stringify(this.order.order) === JSON.stringify(this.bento.bento);
+    }
+  }, {
+    key: "checkState",
+    value: function checkState() {
+      if (this.lost()) {
+        this.renderEndMessage();
+        return;
+      }
+
+      if (this.timer.count > 0 && this.correctBento()) {
+        this.score += 1;
+        this.renderScore();
+        this.deleteGameRound();
+        this.generateGameRound();
+      } else if (this.timer.count <= 0 && !this.correctBento()) {
+        this.customerLost += 1;
+        this.renderCustomerLost();
+
+        if (this.lost()) {
+          this.renderEndMessage();
+          this.timer.stop();
+          return;
+        }
+
+        this.deleteGameRound();
+        this.generateGameRound();
+      }
+    }
+  }, {
+    key: "generateRandomNum",
+    value: function generateRandomNum() {
+      var num = [4, 6];
+      var idx = Math.floor(Math.random() * 2);
+      return num[idx];
+    }
+  }, {
+    key: "deleteGameRound",
+    value: function deleteGameRound() {
+      this.bento.deleteBento();
+      var customer = document.getElementsByClassName("bounceInRight")[0];
+      customer.classList.remove("bounceInRight");
+      customer.classList.add("lightSpeedOut");
+      this.order.deleteOrder();
+      this.timer.stop();
+      this.timer.deleteTimer();
+    }
+  }, {
+    key: "generateGameRound",
+    value: function generateGameRound() {
+      var numItems = this.generateRandomNum();
+      this.order = this.increaseDifficulty(numItems, this.mode);
+      this.bento = new Bento(numItems, this.order, this.mode);
+      this.timer = new Timer(this.order.numSeconds, this.checkState.bind(this));
+      this.startTimer();
+    }
+  }, {
+    key: "renderCustomerLost",
+    value: function renderCustomerLost() {
+      var customerLost = document.getElementById("".concat(this.mode, "-customer-lost"));
+      customerLost.innerHTML = "";
+
+      for (var i = 1; i <= this.customerLost; i++) {
+        var cross = document.createElement("img");
+        cross.src = "assets/images/cross_mark.png";
+        customerLost.appendChild(cross);
+      }
+    }
+  }, {
+    key: "restart",
+    value: function restart(mode) {
+      document.getElementById("".concat(this.mode, "-timer-container")).innerHTML = "";
+      document.getElementById("".concat(this.mode, "-score")).innerHTML = "";
+      document.getElementById("".concat(this.mode, "-customer-lost")).innerHTML = "";
+      this.order.deleteOrder();
+      this.bento.deleteBento();
+      this.menu.deleteMenu();
+      this.mode = mode;
+      this.menu = new Menu(mode);
+      this.addClickToMenuItems();
+      this.addClickToRemoveButton();
+      this.score = 0;
+      this.renderScore();
+      this.customerLost = 0;
+      this.timeElapsed = new Date();
+      document.getElementById("modal").classList.add("hidden");
+      this.addListenerOnWindow();
+      this.flashLevelUpMessage();
+      this.generateGameRound();
+    } // clear() {
+    //   document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
+    //   document.getElementById(`${this.mode}-score`).innerHTML = "";
+    //   document.getElementById(`${this.mode}-customer-lost`).innerHTML = "";
+    //   this.timer.stop();
+    //   this.order.deleteOrder();
+    //   this.bento.deleteBento();
+    //   this.menu.deleteMenu();
+    //   this.score = 0;
+    //   this.renderScore();
+    //   this.customerLost = 0;
+    // }
+
+  }, {
+    key: "lost",
+    value: function lost() {
+      return this.customerLost >= 3;
+    }
+  }, {
+    key: "renderEndMessage",
+    value: function renderEndMessage() {
+      clearInterval(this.levelUpInterval);
+      var score = this.score;
+      this.removeListenerOnWindow();
+      this.removeClickToMenuItems();
+      this.removeClickToRemoveButton();
+      var message = document.getElementsByClassName("modal-message")[0];
+      var ranking = document.getElementById("ranking");
+      var finalScore = score > 1 ? "".concat(score, " orders") : "".concat(score, " order");
+      var rank;
+
+      if (score >= 120) {
+        rank = "Master Chef";
+      } else if (score >= 90) {
+        rank = "Head Chef";
+      } else if (score >= 45) {
+        rank = "Sous Chef";
+      } else if (score >= 15) {
+        rank = "Junior Chef";
+      } else if (score >= 0) {
+        rank = "Apprentice";
+      }
+
+      message.innerHTML = "You served ".concat(finalScore, "!");
+      ranking.innerHTML = "Rank: ".concat(rank);
+      document.getElementById("modal").classList.remove("hidden");
+    }
+  }]);
+
+  return Game;
+}();
 
 /***/ }),
 
