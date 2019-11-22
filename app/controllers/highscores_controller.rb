@@ -9,14 +9,14 @@ class Api::HighscoresController < ApplicationController
     end
   end
 
-  def show
+  def index
     @top_10_scores = Highscore.get_top_10(highscore_params[:mode])
-    render :show
+    render :index
   end
 
   private
   def highscore_params 
-    params.require(:highscore).permit(
+    params.require(:request).permit(
       :username,
       :score,
       :mode

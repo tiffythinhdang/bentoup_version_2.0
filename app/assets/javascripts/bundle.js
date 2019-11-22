@@ -630,6 +630,7 @@ function (_React$Component) {
     key: "closeModal",
     value: function closeModal() {
       document.getElementById("modal").classList.add("hidden");
+      document.getElementsByClassName("form-container")[0].classList.add("hidden");
     }
   }, {
     key: "openForm",
@@ -744,6 +745,9 @@ function (_React$Component) {
   }
 
   _createClass(SaveScoreForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
     key: "handleSubmit",
     value: function handleSubmit() {}
   }, {

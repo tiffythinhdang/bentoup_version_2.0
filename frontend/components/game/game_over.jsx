@@ -12,6 +12,7 @@ class GameOverComponent extends React.Component {
 
   closeModal() {
     document.getElementById("modal").classList.add("hidden");
+    document.getElementsByClassName("form-container")[0].classList.add("hidden");
   }
 
   openForm() {

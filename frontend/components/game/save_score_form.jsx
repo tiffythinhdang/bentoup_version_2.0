@@ -5,6 +5,10 @@ class SaveScoreForm extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    
+  }
+
   handleSubmit() {
 
   }
