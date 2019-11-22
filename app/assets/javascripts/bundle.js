@@ -206,48 +206,7 @@ function (_React$Component) {
   _createClass(GamePlay, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "modal",
-        className: "hidden"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-screen"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-message"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "suhi-chef container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/sushi_chef.png",
-        alt: "chef-img"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        id: "ranking"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "play-again-button"
-      }, "PLAY AGAIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-links"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "light medium icon",
-        href: "https://github.com/tiffythinhdang",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/github_icon_green.png",
-        alt: "github-icon"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "light medium icon",
-        href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/linkedin_icon_green.png",
-        alt: "linkedin-icon"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "light medium icon",
-        href: "https://tiffanytdang.com/",
-        target: "_blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/contact_icon_green.png",
-        alt: "contact-icon"
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "medium icon",
