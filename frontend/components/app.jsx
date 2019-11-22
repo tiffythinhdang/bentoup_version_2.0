@@ -18,7 +18,6 @@ const App = () => (
       <Route exact path='/choose-mode' component={ChooseModeComponent} />
       <Route exact path='/easy-mode' component={EasyModeComponent} />
       <Route exact path='/competitive-mode' component={CompetitiveModeComponent} />
-      {/* <Route exact path='/game-over' component={GameOverComponent} /> */}
     </Switch>
     <Footer/>
   </HashRouter>

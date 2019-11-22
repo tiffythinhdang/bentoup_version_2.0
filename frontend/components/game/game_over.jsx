@@ -23,12 +23,17 @@ class GameOverComponent extends React.Component {
             <p id="ranking"></p>
           </div>
 
-          {/* <button id="play-again-button">PLAY AGAIN</button> */}
-          <Link 
-            to={"/choose-mode"}
-            onClick={this.playAgain} >
-            <button id="play-again-button">PLAY AGAIN</button>
-          </Link>
+          <div className="buttons-container">
+            <Link
+              to={"/choose-mode"}
+              onClick={this.playAgain} >
+              <button id="play-again-button">PLAY AGAIN</button>
+            </Link>
+
+            <Link to={"/scores/save"}>
+              <button id="save-score-button">SAVE SCORE</button>
+            </Link>
+          </div>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">

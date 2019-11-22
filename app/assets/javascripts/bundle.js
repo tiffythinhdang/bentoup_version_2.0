@@ -112,8 +112,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.jsx");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
-/* harmony import */ var _util_game__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util/game */ "./frontend/util/game.js");
-
 
 
 
@@ -123,50 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
-  }), root); // let game;
-  // let easyMode = document.getElementById("easy-content");
-  // let competitiveMode = document.getElementById("competitive-content");
-  // let startButton = document.getElementById("start-button");
-  // let playAgainButton = document.getElementById("play-again-button");
-  // let competitveModeButton = document.getElementById("competitive-mode-button");
-  // let easyModeButton = document.getElementById("easy-mode-button");
-  // startButton.addEventListener("click", () => {
-  //   document.getElementById("introduction").classList.add("hidden");
-  //   document.getElementById("game-mode").classList.remove("hidden");
-  // })
-  // easyModeButton.addEventListener("click", () => {
-  //   document.getElementById("game-mode").classList.add("hidden");
-  //   if (easyMode.classList.contains("hidden")) easyMode.classList.remove("hidden");
-  //   if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
-  //   if (!game) {
-  //     debugger;
-  //     let test = new Game("easy");
-  //     game = test;
-  //     // game = new Game("easy");
-  //     console.log(game)
-  //     game.start();
-  //   } else {
-  //     game.restart("easy")
-  //   }
-  // })
-  // competitveModeButton.addEventListener("click", () => {
-  //   document.getElementById("game-mode").classList.add("hidden");
-  //   if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
-  //   if (competitiveMode.classList.contains("hidden")) competitiveMode.classList.remove("hidden");
-  //   if (!game) {
-  //     game = new Game("competitive");
-  //     game.start();
-  //   } else {
-  //     game.restart("competitive")
-  //   }
-  // })
-  // playAgainButton.addEventListener("click", () => {
-  //   document.getElementById("modal").classList.add("hidden");
-  //   document.getElementById("game-mode").classList.remove("hidden");
-  //   if (!easyMode.classList.contains("hidden")) easyMode.classList.add("hidden");
-  //   if (!competitiveMode.classList.contains("hidden")) competitiveMode.classList.add("hidden");
-  //   // game.clear();
-  // })
+  }), root);
 });
 
 /***/ }),
@@ -690,12 +645,18 @@ function (_React$Component) {
         alt: "chef-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "ranking"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "buttons-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/choose-mode",
         onClick: this.playAgain
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "play-again-button"
-      }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/scores/save"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "save-score-button"
+      }, "SAVE SCORE"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "light medium icon",

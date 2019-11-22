@@ -253,15 +253,21 @@ input[type="submit"] {
   font-size: 26px;
 }
 
-#play-again-button {
+#play-again-button, #save-score-button {
   width: 200px;
   height: 54px;
   font-size: 25px;
   background-color: #4BAEA0;
   color: white;
   border-radius: 4px;
-  margin: 10px 0px;
+  margin: 20px;
   position: relative;
+}
+
+#save-score-button {
+  color: #4BAEA0;
+  background-color: white;
+  border: 2px solid #4BAEA0;
 }
 
 #play-again-button:hover {
