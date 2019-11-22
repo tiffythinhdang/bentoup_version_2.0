@@ -2,7 +2,7 @@ import React from 'react';
 
 class EasyModeComponent extends React.Component {
   constructor(props) {
-    super props;
+    super(props);
   }
 
   render() {
