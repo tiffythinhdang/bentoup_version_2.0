@@ -262,6 +262,7 @@ input[type="submit"] {
   border-radius: 4px;
   margin: 20px;
   position: relative;
+  text-align: center;
 }
 
 #save-score-button {

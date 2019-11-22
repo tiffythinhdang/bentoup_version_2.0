@@ -214,7 +214,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_choose_mode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./game/choose_mode */ "./frontend/components/game/choose_mode.jsx");
 /* harmony import */ var _game_game_over__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./game/game_over */ "./frontend/components/game/game_over.jsx");
 /* harmony import */ var _game_save_score_form_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./game/save_score_form_container */ "./frontend/components/game/save_score_form_container.js");
-/* harmony import */ var _game_highscores_index_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./game/highscores_index_container */ "./frontend/components/game/highscores_index_container.js");
+/* harmony import */ var _game_easy_highscores_index_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./game/easy_highscores_index_container */ "./frontend/components/game/easy_highscores_index_container.js");
+/* harmony import */ var _game_competitive_highscores_index_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./game/competitive_highscores_index_container */ "./frontend/components/game/competitive_highscores_index_container.js");
+
 
 
 
@@ -246,7 +248,10 @@ var App = function App() {
     component: _game_save_score_form_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/scores/high-easy",
-    component: _game_highscores_index_container__WEBPACK_IMPORTED_MODULE_10__["default"]
+    component: _game_easy_highscores_index_container__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/scores/high-competitive",
+    component: _game_competitive_highscores_index_container__WEBPACK_IMPORTED_MODULE_11__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
@@ -346,6 +351,122 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (ChooseModeComponent);
+
+/***/ }),
+
+/***/ "./frontend/components/game/competitive_highscores_index.jsx":
+/*!*******************************************************************!*\
+  !*** ./frontend/components/game/competitive_highscores_index.jsx ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _highscores_index_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./highscores_index_item */ "./frontend/components/game/highscores_index_item.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var CompetitiveHighScoresIndex =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CompetitiveHighScoresIndex, _React$Component);
+
+  function CompetitiveHighScoresIndex(props) {
+    _classCallCheck(this, CompetitiveHighScoresIndex);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(CompetitiveHighScoresIndex).call(this, props));
+  }
+
+  _createClass(CompetitiveHighScoresIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchTopTenScores({
+        "mode": "competitive"
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.props.scores.length === 0) return null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "highscores-competitive-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "highscores-competitive"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Competitive Mode Top Scores"), this.props.scores.map(function (score, idx) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: idx,
+          score: score
+        });
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/choose-mode",
+        onClick: this.closeModal
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "play-again-button"
+      }, "PLAY AGAIN"))));
+    }
+  }]);
+
+  return CompetitiveHighScoresIndex;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (CompetitiveHighScoresIndex);
+
+/***/ }),
+
+/***/ "./frontend/components/game/competitive_highscores_index_container.js":
+/*!****************************************************************************!*\
+  !*** ./frontend/components/game/competitive_highscores_index_container.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _competitive_highscores_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./competitive_highscores_index */ "./frontend/components/game/competitive_highscores_index.jsx");
+/* harmony import */ var _actions_score_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/score_actions */ "./frontend/actions/score_actions.js");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    scores: Object.values(state.scores)
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchTopTenScores: function fetchTopTenScores(request) {
+      return dispatch(Object(_actions_score_actions__WEBPACK_IMPORTED_MODULE_2__["fetchTopTenScores"])(request));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_competitive_highscores_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -521,6 +642,122 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (CompetitiveModeComponent);
+
+/***/ }),
+
+/***/ "./frontend/components/game/easy_highscores_index.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/game/easy_highscores_index.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _highscores_index_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./highscores_index_item */ "./frontend/components/game/highscores_index_item.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var EasyHighScoresIndex =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(EasyHighScoresIndex, _React$Component);
+
+  function EasyHighScoresIndex(props) {
+    _classCallCheck(this, EasyHighScoresIndex);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(EasyHighScoresIndex).call(this, props));
+  }
+
+  _createClass(EasyHighScoresIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchTopTenScores({
+        "mode": "easy"
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.props.scores.length === 0) return null;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "highscores-easy-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "highscores-easy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Easy Mode Top Scores"), this.props.scores.map(function (score, idx) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: idx,
+          score: score
+        });
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/choose-mode",
+        onClick: this.closeModal
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "play-again-button"
+      }, "PLAY AGAIN"))));
+    }
+  }]);
+
+  return EasyHighScoresIndex;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (EasyHighScoresIndex);
+
+/***/ }),
+
+/***/ "./frontend/components/game/easy_highscores_index_container.js":
+/*!*********************************************************************!*\
+  !*** ./frontend/components/game/easy_highscores_index_container.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _easy_highscores_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./easy_highscores_index */ "./frontend/components/game/easy_highscores_index.jsx");
+/* harmony import */ var _actions_score_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/score_actions */ "./frontend/actions/score_actions.js");
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    scores: Object.values(state.scores)
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchTopTenScores: function fetchTopTenScores(request) {
+      return dispatch(Object(_actions_score_actions__WEBPACK_IMPORTED_MODULE_2__["fetchTopTenScores"])(request));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_easy_highscores_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -776,114 +1013,6 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/game/highscores_index.jsx":
-/*!*******************************************************!*\
-  !*** ./frontend/components/game/highscores_index.jsx ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _highscores_index_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highscores_index_item */ "./frontend/components/game/highscores_index_item.jsx");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var HighScoresIndex =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(HighScoresIndex, _React$Component);
-
-  function HighScoresIndex(props) {
-    _classCallCheck(this, HighScoresIndex);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(HighScoresIndex).call(this, props));
-  }
-
-  _createClass(HighScoresIndex, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetchTopTenScores({
-        "mode": "easy"
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.props.scores.length === 0) return null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "highscores-easy",
-        className: "highscores"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Top 10 Scores in Easy Mode"), this.props.scores.map(function (score, idx) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          key: idx,
-          score: score
-        });
-      }));
-    }
-  }]);
-
-  return HighScoresIndex;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (HighScoresIndex);
-
-/***/ }),
-
-/***/ "./frontend/components/game/highscores_index_container.js":
-/*!****************************************************************!*\
-  !*** ./frontend/components/game/highscores_index_container.js ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _highscores_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highscores_index */ "./frontend/components/game/highscores_index.jsx");
-/* harmony import */ var _actions_score_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/score_actions */ "./frontend/actions/score_actions.js");
-
-
-
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    scores: Object.values(state.scores)
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    fetchTopTenScores: function fetchTopTenScores(request) {
-      return dispatch(Object(_actions_score_actions__WEBPACK_IMPORTED_MODULE_2__["fetchTopTenScores"])(request));
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_highscores_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
-
-/***/ }),
-
 /***/ "./frontend/components/game/highscores_index_item.jsx":
 /*!************************************************************!*\
   !*** ./frontend/components/game/highscores_index_item.jsx ***!
@@ -900,10 +1029,24 @@ __webpack_require__.r(__webpack_exports__);
 var HighScoreIndexItem = function HighScoreIndexItem(props) {
   var _props$score = props.score,
       username = _props$score.username,
-      score = _props$score.score;
+      score = _props$score.score,
+      rank = _props$score.rank;
+  var displayColor;
+
+  if (rank % 2 === 0) {
+    displayColor = "gray";
+  } else {
+    displayColor = "white";
+  }
+
+  var classname = "highscores-index-item ".concat(displayColor);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "highscores-index-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, score));
+    className: classname
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "highscores-index-item-username"
+  }, username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "highscores-index-item-score"
+  }, score));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HighScoreIndexItem);

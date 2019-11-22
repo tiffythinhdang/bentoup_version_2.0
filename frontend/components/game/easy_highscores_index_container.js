@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import HighScoresIndex from './highscores_index';
+import EasyHighScoresIndex from './easy_highscores_index';
 import { fetchTopTenScores } from '../../actions/score_actions';
 
 const mapStateToProps = state => {
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HighScoresIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(EasyHighScoresIndex);

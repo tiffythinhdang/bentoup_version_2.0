@@ -1,3 +1,68 @@
 // Place all the styles related to the Highscores controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './util.scss';
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.highscores-index-item {
+  width: 75%;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.highscores-index-item.white {
+  background: $white;
+}
+
+.highscores-index-item.gray {
+  background: $super_lightgray;
+}
+
+.highscores-index-item-score {
+  font-family: 'Mansalva', cursive;
+  color: #F58248;
+  font-size: 32px;
+  line-height: 50px;
+}
+
+.highscores-index-item-username {
+  font-size: 24px;
+  line-height: 50px;
+}
+
+#highscores-easy-container, #highscores-competitive-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#highscores-easy, #highscores-competitive {
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+  background: white;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#highscores-easy > h1, #highscores-competitive > h1 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: $lightgray;
+}
