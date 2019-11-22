@@ -97,6 +97,73 @@ module.exports = "/assets/webpack-assets/cross_marka8c28ac7562e5f81593cf816f45ae
 
 /***/ }),
 
+/***/ "./frontend/actions/save_score.js":
+/*!****************************************!*\
+  !*** ./frontend/actions/save_score.js ***!
+  \****************************************/
+/*! exports provided: RECEIVE_SCORES, RECEIVE_A_SCORE, receiveScores, receiveAScore, receiveScoreErrors, clearScoreError, saveScore, fetchTopTenScores */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SCORES", function() { return RECEIVE_SCORES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_A_SCORE", function() { return RECEIVE_A_SCORE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveScores", function() { return receiveScores; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAScore", function() { return receiveAScore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveScoreErrors", function() { return receiveScoreErrors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearScoreError", function() { return clearScoreError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "saveScore", function() { return saveScore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTopTenScores", function() { return fetchTopTenScores; });
+/* harmony import */ var _util_score_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/score_api_util */ "./frontend/util/score_api_util.js");
+
+var RECEIVE_SCORES = "RECEIVE_SCORES";
+var RECEIVE_A_SCORE = "RECEIVE_A_SCORE"; //actions
+
+var receiveScores = function receiveScores(scores) {
+  return {
+    type: RECEIVE_SCORES,
+    scores: scores
+  };
+};
+var receiveAScore = function receiveAScore(score) {
+  return {
+    type: RECEIVE_A_SCORE,
+    score: score
+  };
+};
+var receiveScoreErrors = function receiveScoreErrors(errors) {
+  return {
+    type: RECEIVE_SCORE_ERROR,
+    errors: errors
+  };
+};
+var clearScoreError = function clearScoreError() {
+  return {
+    type: CLEAR_SCORE_ERROR
+  };
+}; //thunk actions
+
+var saveScore = function saveScore(request) {
+  return function (dispatch) {
+    return _util_score_api_util__WEBPACK_IMPORTED_MODULE_0__["saveScore"](request).then(function (score) {
+      return dispatch(receiveAScore(score));
+    }).fail(function (errors) {
+      return dispatch(receiveScoreErrors(errors.responseJSON));
+    });
+  };
+};
+var fetchTopTenScores = function fetchTopTenScores(request) {
+  return function (dispatch) {
+    return _util_score_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchTopTenScores"](request).then(function (scores) {
+      return dispatch(receiveScores(scores));
+    }).fail(function (errors) {
+      return dispatch(receiveScoreErrors(errors.responseJSON));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/bento_up.jsx":
 /*!*******************************!*\
   !*** ./frontend/bento_up.jsx ***!
@@ -950,9 +1017,48 @@ function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _score_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./score_reducer */ "./frontend/reducers/score_reducer.js");
 
-var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({});
+
+var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  score: _score_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
 /* harmony default export */ __webpack_exports__["default"] = (RootReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/score_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/score_reducer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/save_score */ "./frontend/actions/save_score.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var scoreReducer = function scoreReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_save_score__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SCORES"]:
+      return action.scores;
+
+    case _actions_save_score__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_A_SCORE"]:
+      return Object.assign({}, state, _defineProperty({}, action.score.id, action.score));
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (scoreReducer);
 
 /***/ }),
 
@@ -1741,6 +1847,38 @@ function () {
 
   return Order;
 }();
+
+/***/ }),
+
+/***/ "./frontend/util/score_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/score_api_util.js ***!
+  \*****************************************/
+/*! exports provided: saveScore, fetchTopTenScores */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "saveScore", function() { return saveScore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTopTenScores", function() { return fetchTopTenScores; });
+var saveScore = function saveScore(request) {
+  return $.ajax({
+    url: '/api/highscores',
+    method: "POST",
+    data: {
+      request: request
+    }
+  });
+};
+var fetchTopTenScores = function fetchTopTenScores(request) {
+  return $.ajax({
+    url: '/api/highscores',
+    method: "GET",
+    data: {
+      request: request
+    }
+  });
+};
 
 /***/ }),
 
