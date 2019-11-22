@@ -213,7 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./game/competitive_mode */ "./frontend/components/game/competitive_mode.jsx");
 /* harmony import */ var _game_choose_mode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./game/choose_mode */ "./frontend/components/game/choose_mode.jsx");
 /* harmony import */ var _game_game_over__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./game/game_over */ "./frontend/components/game/game_over.jsx");
-/* harmony import */ var _game_save_score_form__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./game/save_score_form */ "./frontend/components/game/save_score_form.jsx");
+/* harmony import */ var _game_save_score_form_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./game/save_score_form_container */ "./frontend/components/game/save_score_form_container.js");
 
 
 
@@ -238,7 +238,7 @@ var App = function App() {
     component: _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/scores/save",
-    component: _game_save_score_form__WEBPACK_IMPORTED_MODULE_9__["default"]
+    component: _game_save_score_form_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 };
 
@@ -652,7 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _save_score_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form */ "./frontend/components/game/save_score_form.jsx");
+/* harmony import */ var _save_score_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form_container */ "./frontend/components/game/save_score_form_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -730,7 +730,7 @@ function (_React$Component) {
       }, "PLAY AGAIN")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "save-score-button",
         onClick: this.openForm
-      }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
         score: "10",
         mode: "easy"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -778,7 +778,6 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/save_score */ "./frontend/actions/save_score.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -798,7 +797,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -837,7 +835,13 @@ function (_React$Component) {
     }
   }, {
     key: "handleSubmit",
-    value: function handleSubmit() {}
+    value: function handleSubmit(e) {
+      debugger;
+      e.preventDefault();
+      this.props.saveScore(this.state).then(function (score) {
+        return console.log(score);
+      });
+    }
   }, {
     key: "render",
     value: function render() {
@@ -851,7 +855,8 @@ function (_React$Component) {
         placeholder: "Name",
         onChange: this.handleChange("username")
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "submit-score"
+        id: "submit-score",
+        onClick: this.handleSubmit
       }, "Submit")));
     }
   }]);
@@ -860,6 +865,45 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (SaveScoreForm);
+
+/***/ }),
+
+/***/ "./frontend/components/game/save_score_form_container.js":
+/*!***************************************************************!*\
+  !*** ./frontend/components/game/save_score_form_container.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _save_score_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form */ "./frontend/components/game/save_score_form.jsx");
+/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/save_score */ "./frontend/actions/save_score.js");
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    scores: state.scores
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    saveScore: function saveScore(score) {
+      return dispatch(Object(_actions_save_score__WEBPACK_IMPORTED_MODULE_3__["saveScore"])(score));
+    },
+    fetchTopTenScores: function fetchTopTenScores(request) {
+      return dispatch(Object(_actions_save_score__WEBPACK_IMPORTED_MODULE_3__["fetchTopTenScores"])(request));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_save_score_form__WEBPACK_IMPORTED_MODULE_2__["default"])));
 
 /***/ }),
 
@@ -1074,6 +1118,7 @@ var scoreReducer = function scoreReducer() {
 
     case _actions_save_score__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_A_SCORE"]:
       return Object.assign({}, state, _defineProperty({}, action.score.id, action.score));
+    // return action;
 
     default:
       return state;
@@ -34368,7 +34413,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

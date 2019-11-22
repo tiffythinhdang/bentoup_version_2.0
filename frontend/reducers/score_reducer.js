@@ -11,6 +11,7 @@ const scoreReducer = (state = {}, action) => {
 
     case RECEIVE_A_SCORE:
       return Object.assign( {}, state, {[action.score.id]: action.score} );
+      // return action;
 
     default:
       return state;

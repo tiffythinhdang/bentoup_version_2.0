@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SaveScoreForm from './save_score_form';
+import SaveScoreFormContainer from './save_score_form_container';
 
 class GameOverComponent extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class GameOverComponent extends React.Component {
             </button>
           </div>
 
-          <SaveScoreForm score="10" mode="easy"/>
+          <SaveScoreFormContainer score="10" mode="easy"/>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">

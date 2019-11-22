@@ -4,7 +4,7 @@ class Api::HighscoresController < ApplicationController
     @highscore = Highscore.new(highscore_params)
 
     if @highscore.save
-      render json: "Saved Success", status: 500
+      render :show
     else
       render json: @highscore.errors.full_messages, status: 422
     end

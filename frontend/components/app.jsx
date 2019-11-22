@@ -8,7 +8,7 @@ import EasyModeComponent from './game/easy_mode';
 import CompetitiveModeComponent from './game/competitive_mode';
 import ChooseModeComponent from './game/choose_mode';
 import GameOverComponent from './game/game_over';
-import SaveScoreForm from './game/save_score_form';
+import SaveScoreFormContainer from './game/save_score_form_container';
 
 const App = () => (
   <HashRouter>
@@ -19,7 +19,7 @@ const App = () => (
       <Route path='/choose-mode' component={ChooseModeComponent} />
       {/* <Route path='/easy-mode' component={EasyModeComponent} /> */}
       <Route path='/competitive-mode' component={CompetitiveModeComponent} />
-      <Route path='/scores/save' component={SaveScoreForm} />
+      <Route path='/scores/save' component={SaveScoreFormContainer} />
     </Switch>
     <Footer/>
   </HashRouter>

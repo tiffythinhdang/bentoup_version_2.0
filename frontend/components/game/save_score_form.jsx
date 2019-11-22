@@ -1,5 +1,4 @@
 import React from 'react';
-import { saveScore } from '../../actions/save_score';
 
 class SaveScoreForm extends React.Component {
   constructor(props) {
@@ -24,8 +23,11 @@ class SaveScoreForm extends React.Component {
     };
   }
 
-  handleSubmit() {
-    
+  handleSubmit(e) {
+    debugger
+    e.preventDefault();
+    this.props.saveScore(this.state)
+      .then(score => console.log(score))
   }
 
   render() {
@@ -37,7 +39,11 @@ class SaveScoreForm extends React.Component {
             type="text"
             placeholder="Name"
             onChange={this.handleChange("username")}/>
-          <button id="submit-score">Submit</button>
+          <button 
+            id="submit-score"
+            onClick={this.handleSubmit}
+            >Submit
+          </button>
         </form>
       </div>
     )
