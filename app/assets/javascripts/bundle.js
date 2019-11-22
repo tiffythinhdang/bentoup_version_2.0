@@ -189,6 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), root);
+  window.store = store;
 });
 
 /***/ }),
@@ -232,9 +233,6 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/choose-mode",
     component: _game_choose_mode__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/easy-mode",
-    component: _game_easy_mode__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/competitive-mode",
     component: _game_competitive_mode__WEBPACK_IMPORTED_MODULE_6__["default"]
@@ -708,8 +706,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "modal",
-        className: "hidden"
+        id: "modal"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-screen"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -734,7 +731,8 @@ function (_React$Component) {
         id: "save-score-button",
         onClick: this.openForm
       }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        score: 10
+        score: "10",
+        mode: "easy"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -780,7 +778,10 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actions_save_score__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/save_score */ "./frontend/actions/save_score.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -790,13 +791,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -806,14 +808,35 @@ function (_React$Component) {
   _inherits(SaveScoreForm, _React$Component);
 
   function SaveScoreForm(props) {
+    var _this;
+
     _classCallCheck(this, SaveScoreForm);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(SaveScoreForm).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SaveScoreForm).call(this, props));
+    _this.state = {
+      username: "",
+      score: _this.props.score,
+      mode: _this.props.mode
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(SaveScoreForm, [{
     key: "componentDidMount",
     value: function componentDidMount() {}
+  }, {
+    key: "handleChange",
+    value: function handleChange(type) {
+      var _this2 = this;
+
+      return function (e) {
+        _this2.setState(_defineProperty({}, type, e.target.value));
+
+        console.log(_this2.state);
+      };
+    }
   }, {
     key: "handleSubmit",
     value: function handleSubmit() {}
@@ -827,7 +850,8 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form input",
         type: "text",
-        placeholder: "Name"
+        placeholder: "Name",
+        onChange: this.handleChange("username")
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "submit-score"
       }, "Submit")));

@@ -17,7 +17,7 @@ const App = () => (
     <Switch>
       <Route exact path='/' component={Splash} />
       <Route path='/choose-mode' component={ChooseModeComponent} />
-      <Route path='/easy-mode' component={EasyModeComponent} />
+      {/* <Route path='/easy-mode' component={EasyModeComponent} /> */}
       <Route path='/competitive-mode' component={CompetitiveModeComponent} />
       <Route path='/scores/save' component={SaveScoreForm} />
     </Switch>

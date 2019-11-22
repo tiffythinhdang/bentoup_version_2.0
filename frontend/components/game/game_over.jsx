@@ -21,7 +21,7 @@ class GameOverComponent extends React.Component {
 
   render() {
     return (
-      <div id="modal" className="hidden">
+      <div id="modal">
         <div className="modal-screen"></div>
         <div className="modal-content">
           <div className="modal-message"></div>
@@ -45,7 +45,7 @@ class GameOverComponent extends React.Component {
             </button>
           </div>
 
-          <SaveScoreForm score={10}/>
+          <SaveScoreForm score="10" mode="easy"/>
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">

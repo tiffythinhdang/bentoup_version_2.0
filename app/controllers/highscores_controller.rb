@@ -1,5 +1,6 @@
 class Api::HighscoresController < ApplicationController
   def create
+    debugger
     @highscore = Highscore.new(highscore_params)
 
     if @highscore.save
