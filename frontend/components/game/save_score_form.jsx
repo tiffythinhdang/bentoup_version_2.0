@@ -26,7 +26,7 @@ class SaveScoreForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.saveScore(this.state)
-      .then(score => this.props.history.push(`/high-scores/${this.state.mode}`))
+      .then(score => this.props.history.push(`/scores/high-${this.state.mode}`))
   }
 
   render() {

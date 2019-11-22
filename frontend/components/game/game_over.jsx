@@ -21,7 +21,7 @@ class GameOverComponent extends React.Component {
 
   render() {
     return (
-      <div id="modal">
+      <div id="modal" className="hidden">
         <div className="modal-screen"></div>
         <div className="modal-content">
           <div className="modal-message"></div>
