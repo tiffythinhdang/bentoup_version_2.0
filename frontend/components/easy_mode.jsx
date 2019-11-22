@@ -7,7 +7,7 @@ class EasyModeComponent extends React.Component {
 
   render() {
     return (
-      <div id="easy-content" className="hidden">
+      <div id="easy-content">
         <main className="main-content">
           <div id="game-canvas">
 

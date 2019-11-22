@@ -4,17 +4,6 @@ class GamePlay extends React.Component {
   render() {
     return (
       <div>
-      {/*Choose Game Mode Modal*/}
-        <div id="game-mode" className="hidden">
-          <div id="game-mode-content">
-            <div id="game-mode-message">What mode do you want to play?</div>
-
-            <div className="game-mode buttons-container">
-              <button id="competitive-mode-button">Competitive</button>
-              <button id="easy-mode-button">Easy</button>
-            </div>
-          </div>
-        </div>
 
         {/*Play Again Modal*/}
         <div id="modal" className="hidden">

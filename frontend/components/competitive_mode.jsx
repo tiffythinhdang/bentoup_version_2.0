@@ -7,7 +7,7 @@ class CompetitiveModeComponent extends React.Component {
 
   render() {
     return (
-      <div id = "competitive-content" className = "hidden">
+      <div id = "competitive-content">
         <main className="main-content">
           <div id="game-canvas-competitive">
 

@@ -207,19 +207,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "game-mode",
-        className: "hidden"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "game-mode-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "game-mode-message"
-      }, "What mode do you want to play?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "game-mode buttons-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "competitive-mode-button"
-      }, "Competitive"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "easy-mode-button"
-      }, "Easy")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "modal",
         className: "hidden"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
