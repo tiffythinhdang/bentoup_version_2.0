@@ -214,12 +214,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var root = document.getElementById("root");
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  var root = document.getElementById("root"); // const store = configureStore();
+
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    store: store
+    store: _store_store__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), root);
-  window.store = store;
 });
 
 /***/ }),
@@ -1511,31 +1510,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_3__);
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 
 
 
-
-
-var configureStore = function configureStore() {
-  var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var middleware = [redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]];
-
-  if (true) {
-    middleware = [].concat(_toConsumableArray(middleware), [redux_logger__WEBPACK_IMPORTED_MODULE_3___default.a]);
-  }
-
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_1__["default"], preloadedState, redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"].apply(void 0, _toConsumableArray(middleware)));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (configureStore);
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_1__["default"], {}, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"], redux_logger__WEBPACK_IMPORTED_MODULE_3___default.a));
+/* harmony default export */ __webpack_exports__["default"] = (store);
 
 /***/ }),
 
@@ -1653,11 +1633,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/cross_mark.png */ "./app/assets/images/cross_mark.png");
 /* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/current_session_actions */ "./frontend/actions/current_session_actions.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/store */ "./frontend/store/store.jsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 
 
 
@@ -2001,7 +1983,7 @@ function () {
       message.innerHTML = "You served ".concat(finalScore, "!");
       ranking.innerHTML = "Rank: ".concat(rank);
       document.getElementById("modal").classList.remove("hidden");
-      store.dispatch(Object(_actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__["receiveSessionScore"])({
+      _store_store__WEBPACK_IMPORTED_MODULE_6__["default"].dispatch(Object(_actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__["receiveSessionScore"])({
         "score": score,
         "mode": this.mode
       }));

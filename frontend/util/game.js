@@ -5,6 +5,7 @@ import Timer from './timer';
 
 import crossMark from 'assets/images/cross_mark.png';
 import { receiveSessionScore } from '../actions/current_session_actions';
+import store from '../store/store';
 
 //Game
 const KEY_MAPPING = {
@@ -259,11 +260,11 @@ export class Game {
     this.renderScore();
     this.customerLost = 0;
     this.timeElapsed = new Date();
-    
+
     document.getElementById("modal").classList.add("hidden");
     this.addListenerOnWindow();
     this.flashLevelUpMessage();
-    
+
     this.generateGameRound()
   }
 
