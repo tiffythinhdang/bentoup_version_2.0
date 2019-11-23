@@ -23,7 +23,7 @@ import mochi from "assets/images/menu_items/mochi.png";
 import sausage from "assets/images/menu_items/sausage.png";
 import brocolli from "assets/images/menu_items/brocolli.png";
 
-export const MENU_ITEMS = {
+const MENU_ITEMS = {
   "onigiri": onigiri,
   "sashimi": sashimi,
   "pickles": pickles,
@@ -34,7 +34,7 @@ export const MENU_ITEMS = {
   "sushi_roll": sushi_roll
 };
 
-export const COMPETITIVE_MENU_ITEMS = {
+const COMPETITIVE_MENU_ITEMS = {
   "ramen": ramen,
   "dango": dango,
   "dumpling": dumpling,
@@ -61,7 +61,7 @@ export const COMPETITIVE_MENU_ITEMS = {
   "brocolli": brocolli
 };
 
-export class MenuItem {
+class MenuItem {
   constructor(id, imagePath) {
     this.id = id;
     this.imagePath = imagePath;

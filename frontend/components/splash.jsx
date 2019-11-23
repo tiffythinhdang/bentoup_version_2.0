@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import instruction1 from "assets/images/introduction/intro_order.png";
+import instruction2 from "assets/images/introduction/intro_choose_item.png";
+import instruction3 from "assets/images/introduction/intro_deselect_item.png";
+
 class Splash extends React.Component {
   render() {
     return (
@@ -14,17 +18,17 @@ class Splash extends React.Component {
             <div id="game-instruction">
               <div id="instruction-1">
                 <p>get an order</p>
-                <img src="../assets/introduction/intro_order.png" alt="order-image" />
+                <img src={instruction1} alt="order-image" />
               </div>
 
               <div id="instruction-2">
                 <p>click or type to choose the item</p>
-                <img src="../assets/introduction/intro_choose_item.png" alt="choose-image" />
+                <img src={instruction2} alt="choose-image" />
               </div>
 
               <div id="instruction-3">
                 <p>backspace or click "Remove" to deselect</p>
-                <img src="../assets/introduction/intro_deselect_item.png" alt="deselect-image" />
+                <img src={instruction3} alt="deselect-image" />
               </div>
             </div>
 

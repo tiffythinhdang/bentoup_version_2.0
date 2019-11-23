@@ -141,6 +141,39 @@ module.exports = "/assets/webpack-assets/customer_5d92396364e888d1389f640659a3f6
 
 /***/ }),
 
+/***/ "./app/assets/images/introduction/intro_choose_item.png":
+/*!**************************************************************!*\
+  !*** ./app/assets/images/introduction/intro_choose_item.png ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/intro_choose_item484e7f5db5a807cd9a570639003e74b3.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/introduction/intro_deselect_item.png":
+/*!****************************************************************!*\
+  !*** ./app/assets/images/introduction/intro_deselect_item.png ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/intro_deselect_itemc8ac63d33bce295b52d8e443db10db2e.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/introduction/intro_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/introduction/intro_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/intro_order486c7acb824c5bbe021b310bfb27f00e.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/bao.png":
 /*!**********************************************!*\
   !*** ./app/assets/images/menu_items/bao.png ***!
@@ -1899,6 +1932,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var assets_images_introduction_intro_order_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! assets/images/introduction/intro_order.png */ "./app/assets/images/introduction/intro_order.png");
+/* harmony import */ var assets_images_introduction_intro_order_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(assets_images_introduction_intro_order_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var assets_images_introduction_intro_choose_item_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! assets/images/introduction/intro_choose_item.png */ "./app/assets/images/introduction/intro_choose_item.png");
+/* harmony import */ var assets_images_introduction_intro_choose_item_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(assets_images_introduction_intro_choose_item_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var assets_images_introduction_intro_deselect_item_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/introduction/intro_deselect_item.png */ "./app/assets/images/introduction/intro_deselect_item.png");
+/* harmony import */ var assets_images_introduction_intro_deselect_item_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_introduction_intro_deselect_item_png__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1916,6 +1955,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -1949,17 +1991,17 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "instruction-1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "get an order"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/introduction/intro_order.png",
+        src: assets_images_introduction_intro_order_png__WEBPACK_IMPORTED_MODULE_2___default.a,
         alt: "order-image"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "instruction-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "click or type to choose the item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/introduction/intro_choose_item.png",
+        src: assets_images_introduction_intro_choose_item_png__WEBPACK_IMPORTED_MODULE_3___default.a,
         alt: "choose-image"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "instruction-3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "backspace or click \"Remove\" to deselect"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/introduction/intro_deselect_item.png",
+        src: assets_images_introduction_intro_deselect_item_png__WEBPACK_IMPORTED_MODULE_4___default.a,
         alt: "deselect-image"
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/choose-mode",
@@ -2215,7 +2257,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
- //Game
 
 var KEY_MAPPING = {
   "q": "ramen",
@@ -2564,14 +2605,11 @@ function () {
 /*!*******************************!*\
   !*** ./frontend/util/menu.js ***!
   \*******************************/
-/*! exports provided: MENU_ITEMS, COMPETITIVE_MENU_ITEMS, MenuItem, Menu */
+/*! exports provided: Menu */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MENU_ITEMS", function() { return MENU_ITEMS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_MENU_ITEMS", function() { return COMPETITIVE_MENU_ITEMS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuItem", function() { return MenuItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menu", function() { return Menu; });
 /* harmony import */ var assets_images_menu_items_ramen_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! assets/images/menu_items/ramen.png */ "./app/assets/images/menu_items/ramen.png");
 /* harmony import */ var assets_images_menu_items_ramen_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_ramen_png__WEBPACK_IMPORTED_MODULE_0__);
@@ -2687,6 +2725,7 @@ var COMPETITIVE_MENU_ITEMS = {
   "sausage": assets_images_menu_items_sausage_png__WEBPACK_IMPORTED_MODULE_22___default.a,
   "brocolli": assets_images_menu_items_brocolli_png__WEBPACK_IMPORTED_MODULE_23___default.a
 };
+
 var MenuItem =
 /*#__PURE__*/
 function () {
@@ -2709,6 +2748,7 @@ function () {
 
   return MenuItem;
 }();
+
 var Menu =
 /*#__PURE__*/
 function () {
@@ -2764,14 +2804,13 @@ function () {
 /*!********************************!*\
   !*** ./frontend/util/order.js ***!
   \********************************/
-/*! exports provided: ORDER_ITEMS, COMPETITIVE_ORDER_ITEMS, CUSTOMERS, Order */
+/*! exports provided: ORDER_ITEMS, COMPETITIVE_ORDER_ITEMS, Order */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ORDER_ITEMS", function() { return ORDER_ITEMS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_ORDER_ITEMS", function() { return COMPETITIVE_ORDER_ITEMS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUSTOMERS", function() { return CUSTOMERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Order", function() { return Order; });
 /* harmony import */ var assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! assets/images/menu_items/ramen_order.png */ "./app/assets/images/menu_items/ramen_order.png");
 /* harmony import */ var assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0__);

@@ -67,7 +67,7 @@ export const COMPETITIVE_ORDER_ITEMS = {
   "brocolli": brocolli
 };
 
-export const CUSTOMERS = {
+const CUSTOMERS = {
   1: customer1,
   2: customer2,
   3: customer3,
