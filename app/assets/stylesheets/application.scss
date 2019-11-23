@@ -15,6 +15,9 @@
  */
 
  /* css reset */
+ 
+@import './util.scss';
+
 html, body, header, nav, h1, h2, h3, h4, h5, h6, a,
 ul, li, strong, main, button, i,
 section, img, div, p, form,
@@ -441,11 +444,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Mansalva', cursive;
+  color: $main_red;
+  font-size: 54px;
 }
 
-#easy-customer-lost > img, #competitive-customer-lost > img {
-  width: 30%;
-  height: auto;
+#easy-customer-lost > p, #competitive-customer-lost > p {
+  margin: 0 5px;
 }
 
 #counter {

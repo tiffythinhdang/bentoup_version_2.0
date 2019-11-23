@@ -86,17 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/assets/images/cross_mark.png":
-/*!******************************************!*\
-  !*** ./app/assets/images/cross_mark.png ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/assets/webpack-assets/cross_marka8c28ac7562e5f81593cf816f45ae9e6.png";
-
-/***/ }),
-
 /***/ "./frontend/actions/current_session_actions.js":
 /*!*****************************************************!*\
   !*** ./frontend/actions/current_session_actions.js ***!
@@ -1630,16 +1619,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bento__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bento */ "./frontend/util/bento.js");
 /* harmony import */ var _order__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./order */ "./frontend/util/order.js");
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./frontend/util/timer.js");
-/* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/cross_mark.png */ "./app/assets/images/cross_mark.png");
-/* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/current_session_actions */ "./frontend/actions/current_session_actions.js");
-/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/store */ "./frontend/store/store.jsx");
+/* harmony import */ var _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../actions/current_session_actions */ "./frontend/actions/current_session_actions.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/store */ "./frontend/store/store.jsx");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 
 
 
@@ -1909,35 +1895,31 @@ function () {
       customerLost.innerHTML = "";
 
       for (var i = 1; i <= this.customerLost; i++) {
-        var cross = document.createElement("img");
-        cross.src = {
-          crossMark: assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default.a
-        };
+        var cross = document.createElement("p");
+        cross.innerHTML = "X";
         customerLost.appendChild(cross);
       }
-    }
-  }, {
-    key: "restart",
-    value: function restart(mode) {
-      document.getElementById("".concat(this.mode, "-timer-container")).innerHTML = "";
-      document.getElementById("".concat(this.mode, "-score")).innerHTML = "";
-      document.getElementById("".concat(this.mode, "-customer-lost")).innerHTML = "";
-      this.order.deleteOrder();
-      this.bento.deleteBento();
-      this.menu.deleteMenu();
-      this.mode = mode;
-      this.menu = new _menu__WEBPACK_IMPORTED_MODULE_0__["Menu"](mode);
-      this.addClickToMenuItems();
-      this.addClickToRemoveButton();
-      this.score = 0;
-      this.renderScore();
-      this.customerLost = 0;
-      this.timeElapsed = new Date();
-      document.getElementById("modal").classList.add("hidden");
-      this.addListenerOnWindow();
-      this.flashLevelUpMessage();
-      this.generateGameRound();
-    } // clear() {
+    } // restart(mode) {
+    //   document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
+    //   document.getElementById(`${this.mode}-score`).innerHTML = "";
+    //   document.getElementById(`${this.mode}-customer-lost`).innerHTML = "";
+    //   this.order.deleteOrder();
+    //   this.bento.deleteBento();
+    //   this.menu.deleteMenu();
+    //   this.mode = mode;
+    //   this.menu = new Menu(mode);
+    //   this.addClickToMenuItems();
+    //   this.addClickToRemoveButton();
+    //   this.score = 0;
+    //   this.renderScore();
+    //   this.customerLost = 0;
+    //   this.timeElapsed = new Date();
+    //   document.getElementById("modal").classList.add("hidden");
+    //   this.addListenerOnWindow();
+    //   this.flashLevelUpMessage();
+    //   this.generateGameRound()
+    // }
+    // clear() {
     //   document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
     //   document.getElementById(`${this.mode}-score`).innerHTML = "";
     //   document.getElementById(`${this.mode}-customer-lost`).innerHTML = "";
@@ -1983,7 +1965,7 @@ function () {
       message.innerHTML = "You served ".concat(finalScore, "!");
       ranking.innerHTML = "Rank: ".concat(rank);
       document.getElementById("modal").classList.remove("hidden");
-      _store_store__WEBPACK_IMPORTED_MODULE_6__["default"].dispatch(Object(_actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__["receiveSessionScore"])({
+      _store_store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch(Object(_actions_current_session_actions__WEBPACK_IMPORTED_MODULE_4__["receiveSessionScore"])({
         "score": score,
         "mode": this.mode
       }));

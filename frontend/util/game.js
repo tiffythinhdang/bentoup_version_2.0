@@ -3,7 +3,6 @@ import Bento from './bento';
 import { Order } from './order';
 import Timer from './timer';
 
-import crossMark from 'assets/images/cross_mark.png';
 import { receiveSessionScore } from '../actions/current_session_actions';
 import store from '../store/store';
 
@@ -238,35 +237,35 @@ export class Game {
     let customerLost = document.getElementById(`${this.mode}-customer-lost`);
     customerLost.innerHTML = "";
     for (let i = 1; i <= this.customerLost; i++) {
-      let cross = document.createElement("img");
-      cross.src = {crossMark};
+      let cross = document.createElement("p");
+      cross.innerHTML = "X";
       customerLost.appendChild(cross);
     }
   }
 
-  restart(mode) {
-    document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
-    document.getElementById(`${this.mode}-score`).innerHTML = "";
-    document.getElementById(`${this.mode}-customer-lost`).innerHTML = "";
-    this.order.deleteOrder();
-    this.bento.deleteBento();
-    this.menu.deleteMenu();
-    this.mode = mode;
-    this.menu = new Menu(mode);
+  // restart(mode) {
+  //   document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
+  //   document.getElementById(`${this.mode}-score`).innerHTML = "";
+  //   document.getElementById(`${this.mode}-customer-lost`).innerHTML = "";
+  //   this.order.deleteOrder();
+  //   this.bento.deleteBento();
+  //   this.menu.deleteMenu();
+  //   this.mode = mode;
+  //   this.menu = new Menu(mode);
 
-    this.addClickToMenuItems();
-    this.addClickToRemoveButton();
-    this.score = 0;
-    this.renderScore();
-    this.customerLost = 0;
-    this.timeElapsed = new Date();
+  //   this.addClickToMenuItems();
+  //   this.addClickToRemoveButton();
+  //   this.score = 0;
+  //   this.renderScore();
+  //   this.customerLost = 0;
+  //   this.timeElapsed = new Date();
 
-    document.getElementById("modal").classList.add("hidden");
-    this.addListenerOnWindow();
-    this.flashLevelUpMessage();
+  //   document.getElementById("modal").classList.add("hidden");
+  //   this.addListenerOnWindow();
+  //   this.flashLevelUpMessage();
 
-    this.generateGameRound()
-  }
+  //   this.generateGameRound()
+  // }
 
   // clear() {
   //   document.getElementById(`${this.mode}-timer-container`).innerHTML = "";
