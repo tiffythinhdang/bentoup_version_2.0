@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/contact_icon_green.png":
+/*!**************************************************!*\
+  !*** ./app/assets/images/contact_icon_green.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/contact_icon_green5a982f88b798c3a320ed0ab5947cd564.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/customers/customer_1.png":
 /*!****************************************************!*\
   !*** ./app/assets/images/customers/customer_1.png ***!
@@ -141,6 +152,17 @@ module.exports = "/assets/webpack-assets/customer_5d92396364e888d1389f640659a3f6
 
 /***/ }),
 
+/***/ "./app/assets/images/github_icon_green.png":
+/*!*************************************************!*\
+  !*** ./app/assets/images/github_icon_green.png ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/github_icon_green5d99d64d4aa20e658a855a46aa6abce1.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/introduction/intro_choose_item.png":
 /*!**************************************************************!*\
   !*** ./app/assets/images/introduction/intro_choose_item.png ***!
@@ -171,6 +193,17 @@ module.exports = "/assets/webpack-assets/intro_deselect_itemc8ac63d33bce295b52d8
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/intro_order486c7acb824c5bbe021b310bfb27f00e.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/linkedin_icon_green.png":
+/*!***************************************************!*\
+  !*** ./app/assets/images/linkedin_icon_green.png ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/linkedin_icon_greenf2369bf0021475cecebbb5f7b2063940.png";
 
 /***/ }),
 
@@ -699,6 +732,17 @@ module.exports = "/assets/webpack-assets/watermelon0a2839a9bb29488faea817c8708d9
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/watermelon_order378cc75901636c1796f088258bd99989.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/sushi_chef.png":
+/*!******************************************!*\
+  !*** ./app/assets/images/sushi_chef.png ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sushi_chef944611a8ca9e222e4a392d181673472e.png";
 
 /***/ }),
 
@@ -1539,6 +1583,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _save_score_form_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save_score_form_container */ "./frontend/components/game/save_score_form_container.js");
+/* harmony import */ var assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! assets/images/github_icon_green.png */ "./app/assets/images/github_icon_green.png");
+/* harmony import */ var assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/linkedin_icon_green.png */ "./app/assets/images/linkedin_icon_green.png");
+/* harmony import */ var assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! assets/images/contact_icon_green.png */ "./app/assets/images/contact_icon_green.png");
+/* harmony import */ var assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var assets_images_sushi_chef_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! assets/images/sushi_chef.png */ "./app/assets/images/sushi_chef.png");
+/* harmony import */ var assets_images_sushi_chef_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(assets_images_sushi_chef_png__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1556,6 +1608,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
 
 
 
@@ -1604,7 +1660,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "suhi-chef container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/sushi_chef.png",
+        src: assets_images_sushi_chef_png__WEBPACK_IMPORTED_MODULE_6___default.a,
         alt: "chef-img"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         id: "ranking"
@@ -1627,21 +1683,21 @@ function (_React$Component) {
         href: "https://github.com/tiffythinhdang",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/github_icon_green.png",
+        src: assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_3___default.a,
         alt: "github-icon"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "light medium icon",
         href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/linkedin_icon_green.png",
+        src: assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_4___default.a,
         alt: "linkedin-icon"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "light medium icon",
         href: "https://tiffanytdang.com/",
         target: "_blank"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "../assets/contact_icon_green.png",
+        src: assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_5___default.a,
         alt: "contact-icon"
       })))));
     }
@@ -1855,6 +1911,15 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! assets/images/github_icon_green.png */ "./app/assets/images/github_icon_green.png");
+/* harmony import */ var assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! assets/images/linkedin_icon_green.png */ "./app/assets/images/linkedin_icon_green.png");
+/* harmony import */ var assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! assets/images/contact_icon_green.png */ "./app/assets/images/contact_icon_green.png");
+/* harmony import */ var assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
 
 
 var Header = function Header() {
@@ -1865,21 +1930,21 @@ var Header = function Header() {
     href: "https://github.com/tiffythinhdang",
     target: "_blank"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../assets/github_icon_green.png",
+    src: assets_images_github_icon_green_png__WEBPACK_IMPORTED_MODULE_1___default.a,
     alt: "github-icon"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "medium icon",
     href: "https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/",
     target: "_blank"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../assets/linkedin_icon_green.png",
+    src: assets_images_linkedin_icon_green_png__WEBPACK_IMPORTED_MODULE_2___default.a,
     alt: "linkedin-icon"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "medium icon",
     href: "https://tiffanytdang.com/",
     target: "_blank"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "../assets/contact_icon_green.png",
+    src: assets_images_contact_icon_green_png__WEBPACK_IMPORTED_MODULE_3___default.a,
     alt: "contact-icon"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "game-title"
