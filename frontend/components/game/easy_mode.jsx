@@ -53,7 +53,7 @@ class EasyModeComponent extends React.Component {
                   <div id="fish" className="easy menu-item"></div>
                   <div id="tamago" className="easy menu-item"></div>
                   <div id="meatballs" className="easy menu-item"></div>
-                  <div id="sushi-roll" className="easy menu-item"></div>
+                  <div id="sushi_roll" className="easy menu-item"></div>
                 </div>
               </div>
             </div>

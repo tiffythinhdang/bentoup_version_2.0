@@ -1,3 +1,11 @@
+import ramen from "assets/images/menu_items/ramen.png";
+import dango from "assets/images/menu_items/dango.png";
+import dumpling from "assets/images/menu_items/dumpling.png";
+import mini_rolls from "assets/images/menu_items/mini_rolls.png";
+import sticky_rice from "assets/images/menu_items/sticky_rice.png";
+import chowfun from "assets/images/menu_items/chowfun.png";
+import bao from "assets/images/menu_items/bao.png";
+import crab from "assets/images/menu_items/crab.png";
 import onigiri from "assets/images/menu_items/onigiri.png";
 import sashimi from "assets/images/menu_items/sashimi.png";
 import pickles from "assets/images/menu_items/pickles.png";
@@ -5,52 +13,52 @@ import tempura from "assets/images/menu_items/tempura.png";
 import fish from "assets/images/menu_items/fish.png";
 import tamago from "assets/images/menu_items/tamago.png";
 import meatballs from "assets/images/menu_items/meatballs.png";
-import sushiRoll from "assets/images/menu_items/sushi-roll.png";
+import sushi_roll from "assets/images/menu_items/sushi_roll.png";
+import watermelon from "assets/images/menu_items/watermelon.png";
+import naruto from "assets/images/menu_items/naruto.png";
+import lemon from "assets/images/menu_items/lemon.png";
+import veggies_stirfry from "assets/images/menu_items/veggies_stirfry.png";
+import corn_dog from "assets/images/menu_items/corn_dog.png";
+import mochi from "assets/images/menu_items/mochi.png";
+import sausage from "assets/images/menu_items/sausage.png";
+import brocolli from "assets/images/menu_items/brocolli.png";
 
 export const MENU_ITEMS = {
-  // "onigiri": "../assets/menu_items/onigiri.png",
-  // "sashimi": "../assets/menu_items/sashimi.png",
-  // "pickles": "../assets/menu_items/pickles.png",
-  // "tempura": "../assets/menu_items/tempura.png",
-  // "fish": "../assets/menu_items/fish.png",
-  // "tamago": "../assets/menu_items/tamago.png",
-  // "meatballs": "../assets/menu_items/meatballs.png",
-  // "sushi-roll": "../assets/menu_items/sushi-roll.png"
-  "onigiri": {onigiri},
-  "sashimi": {sashimi},
-  "pickles": {pickles},
-  "tempura": {tempura},
-  "fish": {fish},
-  "tamago": {tamago},
-  "meatballs": {meatballs},
-  "sushi-roll": {sushiRoll}
+  "onigiri": onigiri,
+  "sashimi": sashimi,
+  "pickles": pickles,
+  "tempura": tempura,
+  "fish": fish,
+  "tamago": tamago,
+  "meatballs": meatballs,
+  "sushi_roll": sushi_roll
 };
 
 export const COMPETITIVE_MENU_ITEMS = {
-  "ramen": "../assets/menu_items/ramen.png",
-  "dango": "../assets/menu_items/dango.png",
-  "dumpling": "../assets/menu_items/dumpling.png",
-  "mini-rolls": "../assets/menu_items/mini-rolls.png",
-  "sticky-rice": "../assets/menu_items/sticky-rice.png",
-  "chowfun": "../assets/menu_items/chowfun.png",
-  "bao": "../assets/menu_items/bao.png",
-  "crab": "../assets/menu_items/crab.png",
-  "onigiri": "../assets/menu_items/onigiri.png",
-  "sashimi": "../assets/menu_items/sashimi.png",
-  "pickles": "../assets/menu_items/pickles.png",
-  "tempura": "../assets/menu_items/tempura.png",
-  "fish": "../assets/menu_items/fish.png",
-  "tamago": "../assets/menu_items/tamago.png",
-  "meatballs": "../assets/menu_items/meatballs.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll.png",
-  "watermelon": "../assets/menu_items/watermelon.png",
-  "naruto": "../assets/menu_items/naruto.png",
-  "lemon": "../assets/menu_items/lemon.png",
-  "veggies-stir-fry": "../assets/menu_items/veggies-stir-fry.png",
-  "corn-dog": "../assets/menu_items/corn-dog.png",
-  "mochi": "../assets/menu_items/mochi.png",
-  "sausage": "../assets/menu_items/sausage.png",
-  "brocolli": "../assets/menu_items/brocolli.png"
+  "ramen": ramen,
+  "dango": dango,
+  "dumpling": dumpling,
+  "mini_rolls": mini_rolls,
+  "sticky_rice": sticky_rice,
+  "chowfun": chowfun,
+  "bao": bao,
+  "crab":crab,
+  "onigiri": onigiri,
+  "sashimi": sashimi,
+  "pickles": pickles,
+  "tempura": tempura,
+  "fish": fish,
+  "tamago": tamago,
+  "meatballs": meatballs,
+  "sushi_roll": sushi_roll,
+  "watermelon": watermelon,
+  "naruto": naruto,
+  "lemon": lemon,
+  "veggies_stirfry": veggies_stirfry,
+  "corn_dog": corn_dog,
+  "mochi": mochi,
+  "sausage": sausage,
+  "brocolli": brocolli
 };
 
 export class MenuItem {

@@ -47,8 +47,8 @@ class CompetitiveModeComponent extends React.Component {
                   <div id="ramen" className="competitive menu-item"></div>
                   <div id="dango" className="competitive menu-item"></div>
                   <div id="dumpling" className="competitive menu-item"></div>
-                  <div id="mini-rolls" className="competitive menu-item"></div>
-                  <div id="sticky-rice" className="competitive menu-item"></div>
+                  <div id="mini_rolls" className="competitive menu-item"></div>
+                  <div id="sticky_rice" className="competitive menu-item"></div>
                   <div id="chowfun" className="competitive menu-item"></div>
                   <div id="bao" className="competitive menu-item"></div>
                   <div id="crab" className="competitive menu-item"></div>
@@ -62,15 +62,15 @@ class CompetitiveModeComponent extends React.Component {
                   <div id="fish" className="competitive menu-item"></div>
                   <div id="tamago" className="competitive menu-item"></div>
                   <div id="meatballs" className="competitive menu-item"></div>
-                  <div id="sushi-roll" className="competitive menu-item"></div>
+                  <div id="sushi_roll" className="competitive menu-item"></div>
                 </div>
 
                 <div className="competitive-menu-third-row">
                   <div id="watermelon" className="competitive menu-item"></div>
                   <div id="naruto" className="competitive menu-item"></div>
                   <div id="lemon" className="competitive menu-item"></div>
-                  <div id="veggies-stir-fry" className="competitive menu-item"></div>
-                  <div id="corn-dog" className="competitive menu-item"></div>
+                  <div id="veggies_stirfry" className="competitive menu-item"></div>
+                  <div id="corn_dog" className="competitive menu-item"></div>
                   <div id="mochi" className="competitive menu-item"></div>
                   <div id="sausage" className="competitive menu-item"></div>
                   <div id="brocolli" className="competitive menu-item"></div>
