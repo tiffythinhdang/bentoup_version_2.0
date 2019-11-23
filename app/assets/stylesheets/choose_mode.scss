@@ -1,0 +1,72 @@
+@import './util.scss';
+
+#game-mode {
+  z-index: 998;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgba(0, 0, 0, .3);
+}
+
+#game-mode-content {
+  z-index: 999;
+  position: fixed;
+  width: 60vw;
+  top: 30vh;
+  left: 20vw;
+  padding: 50px;
+  background: white;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #3E3E3E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#game-mode-message {
+  font-family: 'Mansalva', cursive;
+  color: $main_orange;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.game-mode.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#competitive-mode-button, #easy-mode-button {
+  width: 200px;
+  height: 54px;
+  font-size: 25px;
+  background-color: $main_teal;
+  color: $white;
+  border-radius: 4px;
+  margin: 10px 0px;
+  position: relative;
+  text-align: center;
+}
+
+#competitive-mode-button {
+  margin-right: 50px;
+}
+
+#competitive-mode-button:hover, #easy-mode-button:hover {
+  background: $hover_teal;
+}
+
+@media only screen and (max-width: 823px) {
+  #game-mode-content {
+    position: fixed;
+    width: 60vw;
+    top: 25vh;
+    left: 20vw;
+  }
+}

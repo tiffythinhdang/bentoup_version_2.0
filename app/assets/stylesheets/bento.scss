@@ -1,0 +1,40 @@
+
+@import './util.scss';
+
+#easy-bento-container, #competitive-bento-container {
+  width: 233px;
+  height: 160px;
+}
+
+#bento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  background: $main_brown;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bento-4 {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.bento-6 {
+  width: 233px;
+  height: 160px;
+  border-radius: 8px;
+}
+
+.bento-item {
+  width: 65px;
+  height: 65px;
+  background: $white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}

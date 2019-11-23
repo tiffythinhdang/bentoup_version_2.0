@@ -1,0 +1,44 @@
+@import './util.scss';
+
+.form-container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#save-score-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form.input {
+  width: 440px;
+  height: 54.5px;
+  border: 2px solid $lightgray;
+  border-radius: 4px;
+  font-size: 16px;
+  color: $main_teal;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.form.input::placeholder {
+  color: $lightgray;
+}
+
+.form.input:focus {
+  border: 2px solid $main_orange;
+}
+
+#submit-score {
+  width: 440px;
+  height: 54px;
+  background: $main_orange;
+  color: $white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

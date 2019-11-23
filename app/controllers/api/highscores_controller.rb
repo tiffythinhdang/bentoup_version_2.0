@@ -3,20 +3,20 @@ class Api::HighscoresController < ApplicationController
     @highscore = Highscore.new(highscore_params)
 
     if @highscore.save
-      render json: "Saved Success", status: 500
+      render :show
     else
       render json: @highscore.errors.full_messages, status: 422
     end
   end
 
-  def show
+  def index
     @top_10_scores = Highscore.get_top_10(highscore_params[:mode])
-    render :show
+    render :index
   end
 
   private
-  def highscore_params 
-    params.require(:highscore).permit(
+  def highscore_params
+    params.require(:request).permit(
       :username,
       :score,
       :mode

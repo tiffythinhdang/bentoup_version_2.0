@@ -4,7 +4,7 @@ module.exports = {
   entry: './frontend/bento_up.jsx',
   output: {
     filename: './bundle.js',
-    path: path.resolve(__dirname, "app", "assets", "javascripts")
+    path: path.resolve(__dirname, "app", "assets", "javascripts"),
   },
   module: {
     rules: [
@@ -19,7 +19,6 @@ module.exports = {
         },
       },
       {
-        // The important stuff
         test: /\.(jpg|jpeg|png)(\?.*)?$/, // Load only .jpg .jpeg, and .png files
         use: {
           loader: 'file-loader',

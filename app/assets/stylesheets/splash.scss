@@ -1,0 +1,213 @@
+@import './util.scss';
+
+#introduction {
+  z-index: 998;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgba(0, 0, 0, .3);
+}
+
+#introduction-content {
+  z-index: 999;
+  position: fixed;
+  width: 60vw;
+  top: 12.5vh;
+  left: 20vw;
+  padding: 50px;
+  background: $white;
+  box-shadow: 10px 10px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: $mediumgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#game-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#game-instruction {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 25px 0px;
+}
+
+#inline-bold-text {
+  font-family: 'Mansalva', cursive;
+  color: $main_orange;
+  font-size: 35px;
+}
+
+#instruction-1, #instruction-2, #instruction-3 {
+  height: 100%;
+  font-family: 'Mansalva', cursive;
+  color: $mediumgray;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#instruction-1 {
+  width: 20%;
+}
+
+#instruction-2, #instruction-3 {
+  width: 30%;
+}
+
+#instruction-1 > p, #instruction-2 > p, #instruction-3 > p {
+  margin-bottom: 15px;
+}
+
+#instruction-1 > img, #instruction-2 > img, #instruction-3 > img {
+  width: 80%;
+}
+
+.start-button-container {
+  width: 100%;
+}
+
+#start-button {
+  width: 100%;
+  height: 54px;
+  background: $main_teal;
+  color: $white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#start-button:hover {
+  background: $hover_teal;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+  background-image: url("../assets/web_background_4.png");
+  overflow: scroll;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  margin: 25px 0;
+}
+
+.game-title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Mansalva', cursive;
+  color: $main_orange;
+  font-size: 88px;
+  padding-bottom: 25px;
+}
+
+.small.game-title {
+  font-size: 64px;
+  padding-bottom: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 10%;
+  width: 100%;
+  margin: 25px 0;
+  color: $mediumgray;
+}
+
+.main-content{
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 823px) {
+  header {
+    margin: 15px 0;
+  }
+
+  .game-title {
+    font-size: 64px;
+  }
+
+  #introduction-content {
+    position: fixed;
+    width: 94vw;
+    top: 5vh;
+    left: 3vw;
+    padding: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .small.game-title {
+    display: none;
+  }
+
+  #inline-bold-text {
+    font-family: 'Mansalva', cursive;
+    color: $main_orange;
+    font-size: 22px;
+  }
+
+  #game-instruction {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  #instruction-1, #instruction-2, #instruction-3 {
+    font-size: 20px;
+  }
+
+  #instruction-1 {
+    width: 20%;
+  }
+
+  #instruction-2, #instruction-3 {
+    width: 32%;
+  }
+
+  #instruction-1 > img, #instruction-2 > img, #instruction-3 > img {
+    width: 70%;
+  }
+
+  #start-button {
+    height: 45px;
+    width: 60%;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+}
