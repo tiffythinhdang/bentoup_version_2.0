@@ -19,14 +19,16 @@ class CompetitiveHighScoresIndex extends React.Component {
       <div id="highscores-competitive-container">
         <div id="highscores-competitive">
           <h1>Competitive Mode Top Scores</h1>
-          <Link to={"/scores/high-easy"}>
-            <button className="small button">EASY</button>
-          </Link>
 
           {this.props.scores.map((score, idx) =>
             <HighScoreIndexItem key={idx} score={score} />
           )
           }
+
+          <Link to={"/scores/high-easy"}>
+            <button className="small button">SEE EASY SCORES</button>
+          </Link>
+
           <Link
             to={"/choose-mode"}
             onClick={this.closeModal} >

@@ -203,8 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var root = document.getElementById("root"); // const store = configureStore();
-
+  var root = document.getElementById("root");
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: _store_store__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), root);
@@ -433,16 +432,16 @@ function (_React$Component) {
         id: "highscores-competitive-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "highscores-competitive"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Competitive Mode Top Scores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/scores/high-easy"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "small button"
-      }, "EASY")), this.props.scores.map(function (score, idx) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Competitive Mode Top Scores"), this.props.scores.map(function (score, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: idx,
           score: score
         });
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/scores/high-easy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "small button"
+      }, "SEE EASY SCORES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/choose-mode",
         onClick: this.closeModal
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -728,16 +727,16 @@ function (_React$Component) {
         id: "highscores-easy-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "highscores-easy"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Easy Mode Top Scores"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/scores/high-competitive"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "small button"
-      }, "COMPETITIVE")), this.props.scores.map(function (score, idx) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Easy Mode Top Scores"), this.props.scores.map(function (score, idx) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_highscores_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: idx,
           score: score
         });
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/scores/high-competitive"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "small button"
+      }, "SEE COMPETITIVE SCORES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/choose-mode",
         onClick: this.closeModal
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -971,7 +970,8 @@ function (_React$Component) {
   }, {
     key: "openForm",
     value: function openForm() {
-      document.getElementsByClassName("form-container")[0].classList.remove("hidden");
+      var form = document.getElementsByClassName("form-container")[0];
+      form.classList.remove("hidden");
     }
   }, {
     key: "render",

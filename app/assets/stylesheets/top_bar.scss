@@ -1,0 +1,71 @@
+@import './util.scss';
+
+#top-bar {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#easy-timer-container, #competitive-timer-container {
+  height: 100%;
+  width: 150px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#competitive-score, #easy-score {
+  height: 100%;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Mansalva', cursive;
+  color: #59A565;
+  font-size: 40px;
+}
+
+#easy-customer-lost, #competitive-customer-lost{
+  height: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Mansalva', cursive;
+  color: $main_red;
+  font-size: 54px;
+}
+
+#easy-customer-lost > p, #competitive-customer-lost > p {
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 823px) {
+  #top-bar {
+    width: 100%;
+    height: 12%;
+  }
+
+  #easy-timer-container, #competitive-timer-container {
+    width: 20%;
+    font-size: 24px;
+  }
+
+  #competitive-score, #easy-score {
+    width: 30%;
+    font-size: 32px;
+  }
+
+  #competitive-customer-lost, #easy-customer-lost {
+    height: 100%;
+    width: 20%;
+  }
+
+  #competitive-customer-lost > img, #easy-customer-lost > img {
+    width: 30%;
+    height: auto;
+  }
+}

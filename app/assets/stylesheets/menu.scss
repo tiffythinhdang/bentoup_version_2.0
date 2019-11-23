@@ -1,0 +1,97 @@
+@import './util.scss';
+
+#easy-menu {
+  width: 363px;
+  height: 161px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#competitive-menu {
+  width: 690px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#easy-menu > .menu-first-row, #easy-menu > .menu-second-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.competitive-menu-first-row, .competitive-menu-second-row, .competitive-menu-third-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.menu-item {
+  width: 75px;
+  height: 75px;
+  background: $white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.menu-item:hover, .bento-item:hover, .hover, button:hover {
+  top: -5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-item > img, .bento-item > img {
+  width: 100%;
+}
+
+#competitive-remove-item-button, #easy-remove-item-button {
+  padding: 0 10px;
+  height: 54px;
+  border-radius: 4px;
+  background: $main_orange;
+  color: $white;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+
+#competitive-remove-item-button:hover, #easy-remove-item-button:hover {
+  background: $hover_orange;
+}
+
+@media only screen and (max-width: 823px) {
+  #easy-menu {
+    width: 50%;
+    height: 80%;
+  }
+
+  .menu-item {
+    width: 22%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  #bento-container {
+    height: 80%;
+    width: 35%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+  }
+
+  #competitive-remove-item-button, #easy-remove-item-button {
+    padding: 0 10px;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0 15px;
+  }
+}

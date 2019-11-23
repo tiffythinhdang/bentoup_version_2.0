@@ -1,0 +1,119 @@
+@import './util.scss';
+
+.modal-screen {
+  z-index: 998;
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background: rgba(0, 0, 0, .3);
+}
+
+.modal-content {
+  z-index: 999;
+  position: fixed;
+  background: $white;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 65%;
+  top: 10%;
+  left: 17.5%;
+  text-align: center;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.modal-message {
+  width: 100%;
+  font-family: 'Mansalva', cursive;
+  color: $main_orange;
+  font-size: 54px;
+  margin-bottom: 10px;
+}
+
+.suhi-chef.container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suhi-chef.container > img {
+  height: 100%;
+  width: auto;
+  margin-right: 30px;
+}
+
+#ranking {
+  font-size: 26px;
+}
+
+#play-again-button, #save-score-button {
+  width: 200px;
+  height: 54px;
+  font-size: 25px;
+  background-color: $main_teal;
+  color: $white;
+  border-radius: 4px;
+  margin: 20px;
+  position: relative;
+  text-align: center;
+}
+
+#save-score-button {
+  color: $main_teal;
+  background-color: $white;
+  border: 2px solid $main_teal;
+}
+
+#play-again-button:hover {
+  background: $hover_teal;
+}
+
+.modal-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+@media only screen and (max-width: 823px) {
+  .modal-content {
+    border-radius: 10px;
+    font-size: 14px;
+    width: 94vw;
+    top: 1vh;
+    left: 3vw;
+    padding: 20px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .modal-message {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+
+  .suhi-chef.container {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #ranking {
+    font-size: 22px;
+  }
+
+  #play-again-button {
+    width: 60%;
+    height: 45px;
+    font-size: 16px;
+  }
+}

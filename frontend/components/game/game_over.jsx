@@ -16,7 +16,8 @@ class GameOverComponent extends React.Component {
   }
 
   openForm() {
-    document.getElementsByClassName("form-container")[0].classList.remove("hidden");
+    const form = document.getElementsByClassName("form-container")[0];
+    form.classList.remove("hidden");
   }
 
   render() {
@@ -42,10 +43,10 @@ class GameOverComponent extends React.Component {
               id="save-score-button"
               onClick={this.openForm} >
               SAVE SCORE
-            </button>
+          </button>
           </div>
 
-          <SaveScoreFormContainer closeModal={this.closeModal}/>
+          <SaveScoreFormContainer closeModal={this.closeModal} />
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">
