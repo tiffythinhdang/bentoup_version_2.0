@@ -86,6 +86,94 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/menu_items/fish.png":
+/*!***********************************************!*\
+  !*** ./app/assets/images/menu_items/fish.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/fish86b3b96b98bb7c4970294e91b2a512ee.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/meatballs.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/menu_items/meatballs.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/meatballs09ad6936e02a993b31ef3e0421a35558.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/onigiri.png":
+/*!**************************************************!*\
+  !*** ./app/assets/images/menu_items/onigiri.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/onigirib6d4155c4df9c5dbb09ebce94ea5a28c.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/pickles.png":
+/*!**************************************************!*\
+  !*** ./app/assets/images/menu_items/pickles.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/pickles64b5274661c205228b3008d84239b1cf.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/sashimi.png":
+/*!**************************************************!*\
+  !*** ./app/assets/images/menu_items/sashimi.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sashimi6ff45b6efe87594cf58932a6e86a3cd8.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/sushi-roll.png":
+/*!*****************************************************!*\
+  !*** ./app/assets/images/menu_items/sushi-roll.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sushi-roll8882ccc1f4dd41bf783bf09b405f8b4a.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/tamago.png":
+/*!*************************************************!*\
+  !*** ./app/assets/images/menu_items/tamago.png ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/tamago2d646246b35448f07249a63b135cf1d8.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/tempura.png":
+/*!**************************************************!*\
+  !*** ./app/assets/images/menu_items/tempura.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/tempura5925ebd44dea87398bbdbe7744a3c453.png";
+
+/***/ }),
+
 /***/ "./frontend/actions/current_session_actions.js":
 /*!*****************************************************!*\
   !*** ./frontend/actions/current_session_actions.js ***!
@@ -1990,21 +2078,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_MENU_ITEMS", function() { return COMPETITIVE_MENU_ITEMS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuItem", function() { return MenuItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menu", function() { return Menu; });
+/* harmony import */ var assets_images_menu_items_onigiri_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! assets/images/menu_items/onigiri.png */ "./app/assets/images/menu_items/onigiri.png");
+/* harmony import */ var assets_images_menu_items_onigiri_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_onigiri_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var assets_images_menu_items_sashimi_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! assets/images/menu_items/sashimi.png */ "./app/assets/images/menu_items/sashimi.png");
+/* harmony import */ var assets_images_menu_items_sashimi_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sashimi_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var assets_images_menu_items_pickles_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! assets/images/menu_items/pickles.png */ "./app/assets/images/menu_items/pickles.png");
+/* harmony import */ var assets_images_menu_items_pickles_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_pickles_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var assets_images_menu_items_tempura_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! assets/images/menu_items/tempura.png */ "./app/assets/images/menu_items/tempura.png");
+/* harmony import */ var assets_images_menu_items_tempura_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_tempura_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var assets_images_menu_items_fish_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/menu_items/fish.png */ "./app/assets/images/menu_items/fish.png");
+/* harmony import */ var assets_images_menu_items_fish_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_fish_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var assets_images_menu_items_tamago_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! assets/images/menu_items/tamago.png */ "./app/assets/images/menu_items/tamago.png");
+/* harmony import */ var assets_images_menu_items_tamago_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_tamago_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var assets_images_menu_items_meatballs_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! assets/images/menu_items/meatballs.png */ "./app/assets/images/menu_items/meatballs.png");
+/* harmony import */ var assets_images_menu_items_meatballs_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_meatballs_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var assets_images_menu_items_sushi_roll_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! assets/images/menu_items/sushi-roll.png */ "./app/assets/images/menu_items/sushi-roll.png");
+/* harmony import */ var assets_images_menu_items_sushi_roll_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sushi_roll_png__WEBPACK_IMPORTED_MODULE_7__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+
+
+
+
+
+
+
+
 var MENU_ITEMS = {
-  "onigiri": "../assets/menu_items/onigiri.png",
-  "sashimi": "../assets/menu_items/sashimi.png",
-  "pickles": "../assets/menu_items/pickles.png",
-  "tempura": "../assets/menu_items/tempura.png",
-  "fish": "../assets/menu_items/fish.png",
-  "tamago": "../assets/menu_items/tamago.png",
-  "meatballs": "../assets/menu_items/meatballs.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll.png"
+  // "onigiri": "../assets/menu_items/onigiri.png",
+  // "sashimi": "../assets/menu_items/sashimi.png",
+  // "pickles": "../assets/menu_items/pickles.png",
+  // "tempura": "../assets/menu_items/tempura.png",
+  // "fish": "../assets/menu_items/fish.png",
+  // "tamago": "../assets/menu_items/tamago.png",
+  // "meatballs": "../assets/menu_items/meatballs.png",
+  // "sushi-roll": "../assets/menu_items/sushi-roll.png"
+  "onigiri": {
+    onigiri: assets_images_menu_items_onigiri_png__WEBPACK_IMPORTED_MODULE_0___default.a
+  },
+  "sashimi": {
+    sashimi: assets_images_menu_items_sashimi_png__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
+  "pickles": {
+    pickles: assets_images_menu_items_pickles_png__WEBPACK_IMPORTED_MODULE_2___default.a
+  },
+  "tempura": {
+    tempura: assets_images_menu_items_tempura_png__WEBPACK_IMPORTED_MODULE_3___default.a
+  },
+  "fish": {
+    fish: assets_images_menu_items_fish_png__WEBPACK_IMPORTED_MODULE_4___default.a
+  },
+  "tamago": {
+    tamago: assets_images_menu_items_tamago_png__WEBPACK_IMPORTED_MODULE_5___default.a
+  },
+  "meatballs": {
+    meatballs: assets_images_menu_items_meatballs_png__WEBPACK_IMPORTED_MODULE_6___default.a
+  },
+  "sushi-roll": {
+    sushiRoll: assets_images_menu_items_sushi_roll_png__WEBPACK_IMPORTED_MODULE_7___default.a
+  }
 };
 var COMPETITIVE_MENU_ITEMS = {
   "ramen": "../assets/menu_items/ramen.png",
@@ -34751,7 +34887,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

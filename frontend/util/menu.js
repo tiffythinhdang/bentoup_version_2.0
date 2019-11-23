@@ -1,12 +1,29 @@
+import onigiri from "assets/images/menu_items/onigiri.png";
+import sashimi from "assets/images/menu_items/sashimi.png";
+import pickles from "assets/images/menu_items/pickles.png";
+import tempura from "assets/images/menu_items/tempura.png";
+import fish from "assets/images/menu_items/fish.png";
+import tamago from "assets/images/menu_items/tamago.png";
+import meatballs from "assets/images/menu_items/meatballs.png";
+import sushiRoll from "assets/images/menu_items/sushi-roll.png";
+
 export const MENU_ITEMS = {
-  "onigiri": "../assets/menu_items/onigiri.png",
-  "sashimi": "../assets/menu_items/sashimi.png",
-  "pickles": "../assets/menu_items/pickles.png",
-  "tempura": "../assets/menu_items/tempura.png",
-  "fish": "../assets/menu_items/fish.png",
-  "tamago": "../assets/menu_items/tamago.png",
-  "meatballs": "../assets/menu_items/meatballs.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll.png"
+  // "onigiri": "../assets/menu_items/onigiri.png",
+  // "sashimi": "../assets/menu_items/sashimi.png",
+  // "pickles": "../assets/menu_items/pickles.png",
+  // "tempura": "../assets/menu_items/tempura.png",
+  // "fish": "../assets/menu_items/fish.png",
+  // "tamago": "../assets/menu_items/tamago.png",
+  // "meatballs": "../assets/menu_items/meatballs.png",
+  // "sushi-roll": "../assets/menu_items/sushi-roll.png"
+  "onigiri": {onigiri},
+  "sashimi": {sashimi},
+  "pickles": {pickles},
+  "tempura": {tempura},
+  "fish": {fish},
+  "tamago": {tamago},
+  "meatballs": {meatballs},
+  "sushi-roll": {sushiRoll}
 };
 
 export const COMPETITIVE_MENU_ITEMS = {
