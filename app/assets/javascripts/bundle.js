@@ -116,7 +116,7 @@ var CLEAR_SESSION_SCORE = "CLEAR_SESSION_SCORE"; //actions
 var receiveSessionScore = function receiveSessionScore(score) {
   return {
     type: RECEIVE_SESSION_SCORE,
-    scores: scores
+    score: score
   };
 };
 var clearSessionScore = function clearSessionScore() {
@@ -1015,8 +1015,6 @@ function (_React$Component) {
         id: "save-score-button",
         onClick: this.openForm
       }, "SAVE SCORE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_save_score_form_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        score: "10",
-        mode: "easy",
         closeModal: this.closeModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-links"
@@ -1137,9 +1135,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SaveScoreForm).call(this, props));
     _this.state = {
-      username: "",
-      score: _this.props.score,
-      mode: _this.props.mode
+      username: ""
     };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -1163,11 +1159,19 @@ function (_React$Component) {
     value: function handleSubmit(e) {
       var _this3 = this;
 
+      var _this$props$currentSe = this.props.currentSession,
+          score = _this$props$currentSe.score,
+          mode = _this$props$currentSe.mode;
+      var request = {
+        username: this.state.username,
+        score: score,
+        mode: mode
+      };
       e.preventDefault();
-      this.props.saveScore(this.state).then(function (score) {
+      this.props.saveScore(request).then(function (score) {
         _this3.props.closeModal();
 
-        _this3.props.history.push("/scores/high-".concat(_this3.state.mode));
+        _this3.props.history.push("/scores/high-".concat(mode));
       });
     }
   }, {
@@ -1216,7 +1220,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    scores: Object.values(state.scores)
+    scores: Object.values(state.scores),
+    currentSession: state.currentSession
   };
 };
 
@@ -1647,11 +1652,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./timer */ "./frontend/util/timer.js");
 /* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/cross_mark.png */ "./app/assets/images/cross_mark.png");
 /* harmony import */ var assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_cross_mark_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions/current_session_actions */ "./frontend/actions/current_session_actions.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 
 
 
@@ -1994,6 +2001,10 @@ function () {
       message.innerHTML = "You served ".concat(finalScore, "!");
       ranking.innerHTML = "Rank: ".concat(rank);
       document.getElementById("modal").classList.remove("hidden");
+      store.dispatch(Object(_actions_current_session_actions__WEBPACK_IMPORTED_MODULE_5__["receiveSessionScore"])({
+        "score": score,
+        "mode": this.mode
+      }));
     }
   }]);
 

@@ -6,7 +6,8 @@ import { saveScore, fetchTopTenScores } from '../../actions/score_actions';
 
 const mapStateToProps = state => {
   return {
-    scores: Object.values(state.scores)
+    scores: Object.values(state.scores),
+    currentSession: state.currentSession
   }
 };
 

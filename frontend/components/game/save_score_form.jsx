@@ -5,8 +5,6 @@ class SaveScoreForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      score: this.props.score,
-      mode: this.props.mode
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -24,11 +22,17 @@ class SaveScoreForm extends React.Component {
   }
 
   handleSubmit(e) {
+    const { score, mode } = this.props.currentSession;
+    const request = {
+      username: this.state.username,
+      score: score,
+      mode: mode
+    }
     e.preventDefault();
-    this.props.saveScore(this.state)
+    this.props.saveScore(request)
       .then(score => {
         this.props.closeModal();
-        this.props.history.push(`/scores/high-${this.state.mode}`);
+        this.props.history.push(`/scores/high-${mode}`);
       })
   }
 

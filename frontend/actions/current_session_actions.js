@@ -4,7 +4,7 @@ export const CLEAR_SESSION_SCORE = "CLEAR_SESSION_SCORE";
 //actions
 export const receiveSessionScore = (score) => ({
   type: RECEIVE_SESSION_SCORE,
-  scores
+  score
 });
 
 export const clearSessionScore = () => ({

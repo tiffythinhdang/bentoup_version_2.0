@@ -4,6 +4,7 @@ import { Order } from './order';
 import Timer from './timer';
 
 import crossMark from 'assets/images/cross_mark.png';
+import { receiveSessionScore } from '../actions/current_session_actions';
 
 //Game
 const KEY_MAPPING = {
@@ -309,5 +310,6 @@ export class Game {
     message.innerHTML = `You served ${finalScore}!`;
     ranking.innerHTML = `Rank: ${rank}`;
     document.getElementById("modal").classList.remove("hidden");
+    store.dispatch(receiveSessionScore({"score": score, "mode": this.mode}));
   }
 }
