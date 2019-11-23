@@ -86,6 +86,61 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./app/assets/images/customers/customer_1.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/customers/customer_1.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/customer_11077455f5662b73b76ee419af4c91e62.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/customers/customer_2.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/customers/customer_2.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/customer_2d75a7c0777e7e529d07512d6cc5422a2.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/customers/customer_3.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/customers/customer_3.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/customer_3ebb6993631e40664623d236ca4e1e497.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/customers/customer_4.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/customers/customer_4.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/customer_473922e38a00652510e60b27d07311a85.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/customers/customer_5.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/customers/customer_5.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/customer_5d92396364e888d1389f640659a3f664b.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/bao.png":
 /*!**********************************************!*\
   !*** ./app/assets/images/menu_items/bao.png ***!
@@ -94,6 +149,17 @@
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/bao09406c06735fcf020f0eb85a2538da6b.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/bao_order.png":
+/*!****************************************************!*\
+  !*** ./app/assets/images/menu_items/bao_order.png ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/bao_order0671f6dfd3ccd70b412df66dbd2949e2.png";
 
 /***/ }),
 
@@ -108,6 +174,17 @@ module.exports = "/assets/webpack-assets/brocolli40e8b8e0e373e003fd1234cc83b0a20
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/brocolli_order.png":
+/*!*********************************************************!*\
+  !*** ./app/assets/images/menu_items/brocolli_order.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/brocolli_orderb3ffab9555e6d9564c6defee2efd3d7e.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/chowfun.png":
 /*!**************************************************!*\
   !*** ./app/assets/images/menu_items/chowfun.png ***!
@@ -116,6 +193,17 @@ module.exports = "/assets/webpack-assets/brocolli40e8b8e0e373e003fd1234cc83b0a20
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/chowfuna281cfa0fd56c6eb84e9f7f5775ee0ae.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/chowfun_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/chowfun_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/chowfun_order9e6496ed232dd557a39c257b69788ee0.png";
 
 /***/ }),
 
@@ -130,6 +218,17 @@ module.exports = "/assets/webpack-assets/corn_dog20df5bd57255ec2ff402f4df2203864
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/corn_dog_order.png":
+/*!*********************************************************!*\
+  !*** ./app/assets/images/menu_items/corn_dog_order.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/corn_dog_order905d0e4623debdb7585742acec804a0b.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/crab.png":
 /*!***********************************************!*\
   !*** ./app/assets/images/menu_items/crab.png ***!
@@ -138,6 +237,17 @@ module.exports = "/assets/webpack-assets/corn_dog20df5bd57255ec2ff402f4df2203864
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/crab932713ab853974f02f21af221d257410.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/crab_order.png":
+/*!*****************************************************!*\
+  !*** ./app/assets/images/menu_items/crab_order.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/crab_orderc0da9bc12ee469b716f01816ebc8229b.png";
 
 /***/ }),
 
@@ -152,6 +262,17 @@ module.exports = "/assets/webpack-assets/dango4b6e6a7adbd86495c67de0d8fa410030.p
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/dango_order.png":
+/*!******************************************************!*\
+  !*** ./app/assets/images/menu_items/dango_order.png ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/dango_orderfed7f1e5c0477e58151e1e975bcfbec9.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/dumpling.png":
 /*!***************************************************!*\
   !*** ./app/assets/images/menu_items/dumpling.png ***!
@@ -160,6 +281,17 @@ module.exports = "/assets/webpack-assets/dango4b6e6a7adbd86495c67de0d8fa410030.p
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/dumpling312705c8592be5a1dbb3b6c4a90e28ff.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/dumpling_order.png":
+/*!*********************************************************!*\
+  !*** ./app/assets/images/menu_items/dumpling_order.png ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/dumpling_order1a7869768bf387a5b1c95a3bfddf854e.png";
 
 /***/ }),
 
@@ -174,6 +306,17 @@ module.exports = "/assets/webpack-assets/fish86b3b96b98bb7c4970294e91b2a512ee.pn
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/fish_order.png":
+/*!*****************************************************!*\
+  !*** ./app/assets/images/menu_items/fish_order.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/fish_order51b97198205f6329b44073fcc7d79f56.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/lemon.png":
 /*!************************************************!*\
   !*** ./app/assets/images/menu_items/lemon.png ***!
@@ -182,6 +325,17 @@ module.exports = "/assets/webpack-assets/fish86b3b96b98bb7c4970294e91b2a512ee.pn
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/lemonacf5962c4f253f0c098ea6ba6b8c0481.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/lemon_order.png":
+/*!******************************************************!*\
+  !*** ./app/assets/images/menu_items/lemon_order.png ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/lemon_order39b9ed2812e6a90159c2b96a5574501c.png";
 
 /***/ }),
 
@@ -196,6 +350,17 @@ module.exports = "/assets/webpack-assets/meatballs09ad6936e02a993b31ef3e0421a355
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/meatballs_order.png":
+/*!**********************************************************!*\
+  !*** ./app/assets/images/menu_items/meatballs_order.png ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/meatballs_order305f9f04153c2e2c364e361df678768d.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/mini_rolls.png":
 /*!*****************************************************!*\
   !*** ./app/assets/images/menu_items/mini_rolls.png ***!
@@ -204,6 +369,17 @@ module.exports = "/assets/webpack-assets/meatballs09ad6936e02a993b31ef3e0421a355
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/mini_rolls8126c78f8a29fe4911471eea8feab989.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/mini_rolls_order.png":
+/*!***********************************************************!*\
+  !*** ./app/assets/images/menu_items/mini_rolls_order.png ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/mini_rolls_order50b65ad92ff2242fec1f7ff2218fe858.png";
 
 /***/ }),
 
@@ -218,6 +394,17 @@ module.exports = "/assets/webpack-assets/mochi1aa81e55491d298cfe925635b046c109.p
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/mochi_order.png":
+/*!******************************************************!*\
+  !*** ./app/assets/images/menu_items/mochi_order.png ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/mochi_ordera40bed9bbee2a2d64ea30babd1e6d13d.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/naruto.png":
 /*!*************************************************!*\
   !*** ./app/assets/images/menu_items/naruto.png ***!
@@ -226,6 +413,17 @@ module.exports = "/assets/webpack-assets/mochi1aa81e55491d298cfe925635b046c109.p
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/naruto980745d932d8f2285aee6dd1f8665b39.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/naruto_order.png":
+/*!*******************************************************!*\
+  !*** ./app/assets/images/menu_items/naruto_order.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/naruto_order34df29419206d3bca76fc4dac12cc776.png";
 
 /***/ }),
 
@@ -240,6 +438,17 @@ module.exports = "/assets/webpack-assets/onigirib6d4155c4df9c5dbb09ebce94ea5a28c
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/onigiri_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/onigiri_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/onigiri_order18450c58529a6a205a4e2f898a282f34.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/pickles.png":
 /*!**************************************************!*\
   !*** ./app/assets/images/menu_items/pickles.png ***!
@@ -248,6 +457,17 @@ module.exports = "/assets/webpack-assets/onigirib6d4155c4df9c5dbb09ebce94ea5a28c
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/pickles64b5274661c205228b3008d84239b1cf.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/pickles_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/pickles_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/pickles_order63dcab8606489b117d7918fcaee15093.png";
 
 /***/ }),
 
@@ -262,6 +482,17 @@ module.exports = "/assets/webpack-assets/ramencd5f106a140d359f12d99f54f129717a.p
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/ramen_order.png":
+/*!******************************************************!*\
+  !*** ./app/assets/images/menu_items/ramen_order.png ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/ramen_ordere3433d6bdaf35a183efd72cf051f7c5a.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/sashimi.png":
 /*!**************************************************!*\
   !*** ./app/assets/images/menu_items/sashimi.png ***!
@@ -270,6 +501,17 @@ module.exports = "/assets/webpack-assets/ramencd5f106a140d359f12d99f54f129717a.p
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/sashimi6ff45b6efe87594cf58932a6e86a3cd8.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/sashimi_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/sashimi_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sashimi_order1bf1103e0bcb9ea3e9bf6b3b699f6d31.png";
 
 /***/ }),
 
@@ -284,6 +526,17 @@ module.exports = "/assets/webpack-assets/sausage0c5c88d99e18f72a51a7d3fc6a1454ff
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/sausage_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/sausage_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sausage_order28632bca147e88b8889a4195ce15cfa2.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/sticky_rice.png":
 /*!******************************************************!*\
   !*** ./app/assets/images/menu_items/sticky_rice.png ***!
@@ -292,6 +545,17 @@ module.exports = "/assets/webpack-assets/sausage0c5c88d99e18f72a51a7d3fc6a1454ff
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/sticky_rice10b95c9a0ac31c606c3c92ff4e80f529.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/sticky_rice_order.png":
+/*!************************************************************!*\
+  !*** ./app/assets/images/menu_items/sticky_rice_order.png ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sticky_rice_order03e6e0246c3344d5b77ff3c6b2a022cd.png";
 
 /***/ }),
 
@@ -306,6 +570,17 @@ module.exports = "/assets/webpack-assets/sushi_roll8882ccc1f4dd41bf783bf09b405f8
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/sushi_roll_order.png":
+/*!***********************************************************!*\
+  !*** ./app/assets/images/menu_items/sushi_roll_order.png ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/sushi_roll_orderc66643f73605bd285de4c59169a4fbbf.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/tamago.png":
 /*!*************************************************!*\
   !*** ./app/assets/images/menu_items/tamago.png ***!
@@ -314,6 +589,17 @@ module.exports = "/assets/webpack-assets/sushi_roll8882ccc1f4dd41bf783bf09b405f8
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/tamago2d646246b35448f07249a63b135cf1d8.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/tamago_order.png":
+/*!*******************************************************!*\
+  !*** ./app/assets/images/menu_items/tamago_order.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/tamago_order7020a38dbfe0cb58bdc070ff733fa4ec.png";
 
 /***/ }),
 
@@ -328,6 +614,17 @@ module.exports = "/assets/webpack-assets/tempura5925ebd44dea87398bbdbe7744a3c453
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/tempura_order.png":
+/*!********************************************************!*\
+  !*** ./app/assets/images/menu_items/tempura_order.png ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/tempura_order65a783e5267836de026ce6e5348d6253.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/veggies_stirfry.png":
 /*!**********************************************************!*\
   !*** ./app/assets/images/menu_items/veggies_stirfry.png ***!
@@ -339,6 +636,17 @@ module.exports = "/assets/webpack-assets/veggies_stirfry0c7fb3353a1b71f550175eac
 
 /***/ }),
 
+/***/ "./app/assets/images/menu_items/veggies_stirfry_order.png":
+/*!****************************************************************!*\
+  !*** ./app/assets/images/menu_items/veggies_stirfry_order.png ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/veggies_stirfry_order670c0c73fa91a1e0e5dfb7f6a9cc2927.png";
+
+/***/ }),
+
 /***/ "./app/assets/images/menu_items/watermelon.png":
 /*!*****************************************************!*\
   !*** ./app/assets/images/menu_items/watermelon.png ***!
@@ -347,6 +655,17 @@ module.exports = "/assets/webpack-assets/veggies_stirfry0c7fb3353a1b71f550175eac
 /***/ (function(module, exports) {
 
 module.exports = "/assets/webpack-assets/watermelon0a2839a9bb29488faea817c8708d985e.png";
+
+/***/ }),
+
+/***/ "./app/assets/images/menu_items/watermelon_order.png":
+/*!***********************************************************!*\
+  !*** ./app/assets/images/menu_items/watermelon_order.png ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/assets/webpack-assets/watermelon_order378cc75901636c1796f088258bd99989.png";
 
 /***/ }),
 
@@ -2454,54 +2773,141 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPETITIVE_ORDER_ITEMS", function() { return COMPETITIVE_ORDER_ITEMS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CUSTOMERS", function() { return CUSTOMERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Order", function() { return Order; });
+/* harmony import */ var assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! assets/images/menu_items/ramen_order.png */ "./app/assets/images/menu_items/ramen_order.png");
+/* harmony import */ var assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var assets_images_menu_items_dango_order_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! assets/images/menu_items/dango_order.png */ "./app/assets/images/menu_items/dango_order.png");
+/* harmony import */ var assets_images_menu_items_dango_order_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_dango_order_png__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var assets_images_menu_items_dumpling_order_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! assets/images/menu_items/dumpling_order.png */ "./app/assets/images/menu_items/dumpling_order.png");
+/* harmony import */ var assets_images_menu_items_dumpling_order_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_dumpling_order_png__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var assets_images_menu_items_mini_rolls_order_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! assets/images/menu_items/mini_rolls_order.png */ "./app/assets/images/menu_items/mini_rolls_order.png");
+/* harmony import */ var assets_images_menu_items_mini_rolls_order_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_mini_rolls_order_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var assets_images_menu_items_sticky_rice_order_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/menu_items/sticky_rice_order.png */ "./app/assets/images/menu_items/sticky_rice_order.png");
+/* harmony import */ var assets_images_menu_items_sticky_rice_order_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sticky_rice_order_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var assets_images_menu_items_chowfun_order_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! assets/images/menu_items/chowfun_order.png */ "./app/assets/images/menu_items/chowfun_order.png");
+/* harmony import */ var assets_images_menu_items_chowfun_order_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_chowfun_order_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var assets_images_menu_items_bao_order_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! assets/images/menu_items/bao_order.png */ "./app/assets/images/menu_items/bao_order.png");
+/* harmony import */ var assets_images_menu_items_bao_order_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_bao_order_png__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var assets_images_menu_items_crab_order_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! assets/images/menu_items/crab_order.png */ "./app/assets/images/menu_items/crab_order.png");
+/* harmony import */ var assets_images_menu_items_crab_order_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_crab_order_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var assets_images_menu_items_onigiri_order_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! assets/images/menu_items/onigiri_order.png */ "./app/assets/images/menu_items/onigiri_order.png");
+/* harmony import */ var assets_images_menu_items_onigiri_order_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_onigiri_order_png__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var assets_images_menu_items_sashimi_order_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! assets/images/menu_items/sashimi_order.png */ "./app/assets/images/menu_items/sashimi_order.png");
+/* harmony import */ var assets_images_menu_items_sashimi_order_png__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sashimi_order_png__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var assets_images_menu_items_pickles_order_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! assets/images/menu_items/pickles_order.png */ "./app/assets/images/menu_items/pickles_order.png");
+/* harmony import */ var assets_images_menu_items_pickles_order_png__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_pickles_order_png__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var assets_images_menu_items_tempura_order_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! assets/images/menu_items/tempura_order.png */ "./app/assets/images/menu_items/tempura_order.png");
+/* harmony import */ var assets_images_menu_items_tempura_order_png__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_tempura_order_png__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var assets_images_menu_items_fish_order_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! assets/images/menu_items/fish_order.png */ "./app/assets/images/menu_items/fish_order.png");
+/* harmony import */ var assets_images_menu_items_fish_order_png__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_fish_order_png__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var assets_images_menu_items_tamago_order_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! assets/images/menu_items/tamago_order.png */ "./app/assets/images/menu_items/tamago_order.png");
+/* harmony import */ var assets_images_menu_items_tamago_order_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_tamago_order_png__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var assets_images_menu_items_meatballs_order_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! assets/images/menu_items/meatballs_order.png */ "./app/assets/images/menu_items/meatballs_order.png");
+/* harmony import */ var assets_images_menu_items_meatballs_order_png__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_meatballs_order_png__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var assets_images_menu_items_sushi_roll_order_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! assets/images/menu_items/sushi_roll_order.png */ "./app/assets/images/menu_items/sushi_roll_order.png");
+/* harmony import */ var assets_images_menu_items_sushi_roll_order_png__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sushi_roll_order_png__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var assets_images_menu_items_watermelon_order_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! assets/images/menu_items/watermelon_order.png */ "./app/assets/images/menu_items/watermelon_order.png");
+/* harmony import */ var assets_images_menu_items_watermelon_order_png__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_watermelon_order_png__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var assets_images_menu_items_naruto_order_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! assets/images/menu_items/naruto_order.png */ "./app/assets/images/menu_items/naruto_order.png");
+/* harmony import */ var assets_images_menu_items_naruto_order_png__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_naruto_order_png__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var assets_images_menu_items_lemon_order_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! assets/images/menu_items/lemon_order.png */ "./app/assets/images/menu_items/lemon_order.png");
+/* harmony import */ var assets_images_menu_items_lemon_order_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_lemon_order_png__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var assets_images_menu_items_veggies_stirfry_order_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! assets/images/menu_items/veggies_stirfry_order.png */ "./app/assets/images/menu_items/veggies_stirfry_order.png");
+/* harmony import */ var assets_images_menu_items_veggies_stirfry_order_png__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_veggies_stirfry_order_png__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var assets_images_menu_items_corn_dog_order_png__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! assets/images/menu_items/corn_dog_order.png */ "./app/assets/images/menu_items/corn_dog_order.png");
+/* harmony import */ var assets_images_menu_items_corn_dog_order_png__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_corn_dog_order_png__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var assets_images_menu_items_mochi_order_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! assets/images/menu_items/mochi_order.png */ "./app/assets/images/menu_items/mochi_order.png");
+/* harmony import */ var assets_images_menu_items_mochi_order_png__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_mochi_order_png__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var assets_images_menu_items_sausage_order_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! assets/images/menu_items/sausage_order.png */ "./app/assets/images/menu_items/sausage_order.png");
+/* harmony import */ var assets_images_menu_items_sausage_order_png__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_sausage_order_png__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var assets_images_menu_items_brocolli_order_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! assets/images/menu_items/brocolli_order.png */ "./app/assets/images/menu_items/brocolli_order.png");
+/* harmony import */ var assets_images_menu_items_brocolli_order_png__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(assets_images_menu_items_brocolli_order_png__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var assets_images_customers_customer_1_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! assets/images/customers/customer_1.png */ "./app/assets/images/customers/customer_1.png");
+/* harmony import */ var assets_images_customers_customer_1_png__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(assets_images_customers_customer_1_png__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var assets_images_customers_customer_2_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! assets/images/customers/customer_2.png */ "./app/assets/images/customers/customer_2.png");
+/* harmony import */ var assets_images_customers_customer_2_png__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(assets_images_customers_customer_2_png__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var assets_images_customers_customer_3_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! assets/images/customers/customer_3.png */ "./app/assets/images/customers/customer_3.png");
+/* harmony import */ var assets_images_customers_customer_3_png__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(assets_images_customers_customer_3_png__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var assets_images_customers_customer_4_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! assets/images/customers/customer_4.png */ "./app/assets/images/customers/customer_4.png");
+/* harmony import */ var assets_images_customers_customer_4_png__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(assets_images_customers_customer_4_png__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var assets_images_customers_customer_5_png__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! assets/images/customers/customer_5.png */ "./app/assets/images/customers/customer_5.png");
+/* harmony import */ var assets_images_customers_customer_5_png__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(assets_images_customers_customer_5_png__WEBPACK_IMPORTED_MODULE_28__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var ORDER_ITEMS = {
-  "onigiri": "../assets/menu_items/onigiri_order.png",
-  "sashimi": "../assets/menu_items/sashimi_order.png",
-  "pickles": "../assets/menu_items/pickles_order.png",
-  "tempura": "../assets/menu_items/tempura_order.png",
-  "fish": "../assets/menu_items/fish_order.png",
-  "tamago": "../assets/menu_items/tamago_order.png",
-  "meatballs": "../assets/menu_items/meatballs_order.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll_order.png"
+  "onigiri": assets_images_menu_items_onigiri_order_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+  "sashimi": assets_images_menu_items_sashimi_order_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+  "pickles": assets_images_menu_items_pickles_order_png__WEBPACK_IMPORTED_MODULE_10___default.a,
+  "tempura": assets_images_menu_items_tempura_order_png__WEBPACK_IMPORTED_MODULE_11___default.a,
+  "fish": assets_images_menu_items_fish_order_png__WEBPACK_IMPORTED_MODULE_12___default.a,
+  "tamago": assets_images_menu_items_tamago_order_png__WEBPACK_IMPORTED_MODULE_13___default.a,
+  "meatballs": assets_images_menu_items_meatballs_order_png__WEBPACK_IMPORTED_MODULE_14___default.a,
+  "sushi_roll": assets_images_menu_items_sushi_roll_order_png__WEBPACK_IMPORTED_MODULE_15___default.a
 };
 var COMPETITIVE_ORDER_ITEMS = {
-  "ramen": "../assets/menu_items/ramen_order.png",
-  "dango": "../assets/menu_items/dango_order.png",
-  "dumpling": "../assets/menu_items/dumpling_order.png",
-  "mini-rolls": "../assets/menu_items/mini-rolls_order.png",
-  "sticky-rice": "../assets/menu_items/sticky-rice_order.png",
-  "chowfun": "../assets/menu_items/chowfun_order.png",
-  "bao": "../assets/menu_items/bao_order.png",
-  "crab": "../assets/menu_items/crab_order.png",
-  "onigiri": "../assets/menu_items/onigiri_order.png",
-  "sashimi": "../assets/menu_items/sashimi_order.png",
-  "pickles": "../assets/menu_items/pickles_order.png",
-  "tempura": "../assets/menu_items/tempura_order.png",
-  "fish": "../assets/menu_items/fish_order.png",
-  "tamago": "../assets/menu_items/tamago_order.png",
-  "meatballs": "../assets/menu_items/meatballs_order.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll_order.png",
-  "watermelon": "../assets/menu_items/watermelon_order.png",
-  "naruto": "../assets/menu_items/naruto_order.png",
-  "lemon": "../assets/menu_items/lemon_order.png",
-  "veggies-stir-fry": "../assets/menu_items/veggies-stir-fry_order.png",
-  "corn-dog": "../assets/menu_items/corn-dog_order.png",
-  "mochi": "../assets/menu_items/mochi_order.png",
-  "sausage": "../assets/menu_items/sausage_order.png",
-  "brocolli": "../assets/menu_items/brocolli_order.png"
+  "ramen": assets_images_menu_items_ramen_order_png__WEBPACK_IMPORTED_MODULE_0___default.a,
+  "dango": assets_images_menu_items_dango_order_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+  "dumpling": assets_images_menu_items_dumpling_order_png__WEBPACK_IMPORTED_MODULE_2___default.a,
+  "mini_rolls": assets_images_menu_items_mini_rolls_order_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+  "sticky_rice": assets_images_menu_items_sticky_rice_order_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+  "chowfun": assets_images_menu_items_chowfun_order_png__WEBPACK_IMPORTED_MODULE_5___default.a,
+  "bao": assets_images_menu_items_bao_order_png__WEBPACK_IMPORTED_MODULE_6___default.a,
+  "crab": assets_images_menu_items_crab_order_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+  "onigiri": assets_images_menu_items_onigiri_order_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+  "sashimi": assets_images_menu_items_sashimi_order_png__WEBPACK_IMPORTED_MODULE_9___default.a,
+  "pickles": assets_images_menu_items_pickles_order_png__WEBPACK_IMPORTED_MODULE_10___default.a,
+  "tempura": assets_images_menu_items_tempura_order_png__WEBPACK_IMPORTED_MODULE_11___default.a,
+  "fish": assets_images_menu_items_fish_order_png__WEBPACK_IMPORTED_MODULE_12___default.a,
+  "tamago": assets_images_menu_items_tamago_order_png__WEBPACK_IMPORTED_MODULE_13___default.a,
+  "meatballs": assets_images_menu_items_meatballs_order_png__WEBPACK_IMPORTED_MODULE_14___default.a,
+  "sushi_roll": assets_images_menu_items_sushi_roll_order_png__WEBPACK_IMPORTED_MODULE_15___default.a,
+  "watermelon": assets_images_menu_items_watermelon_order_png__WEBPACK_IMPORTED_MODULE_16___default.a,
+  "naruto": assets_images_menu_items_naruto_order_png__WEBPACK_IMPORTED_MODULE_17___default.a,
+  "lemon": assets_images_menu_items_lemon_order_png__WEBPACK_IMPORTED_MODULE_18___default.a,
+  "veggies_stirfry": assets_images_menu_items_veggies_stirfry_order_png__WEBPACK_IMPORTED_MODULE_19___default.a,
+  "corn_dog": assets_images_menu_items_corn_dog_order_png__WEBPACK_IMPORTED_MODULE_20___default.a,
+  "mochi": assets_images_menu_items_mochi_order_png__WEBPACK_IMPORTED_MODULE_21___default.a,
+  "sausage": assets_images_menu_items_sausage_order_png__WEBPACK_IMPORTED_MODULE_22___default.a,
+  "brocolli": assets_images_menu_items_brocolli_order_png__WEBPACK_IMPORTED_MODULE_23___default.a
 };
 var CUSTOMERS = {
-  1: "../assets/customers/customer_1.png",
-  2: "../assets/customers/customer_2.png",
-  3: "../assets/customers/customer_3.png",
-  4: "../assets/customers/customer_4.png",
-  5: "../assets/customers/customer_5.png"
+  1: assets_images_customers_customer_1_png__WEBPACK_IMPORTED_MODULE_24___default.a,
+  2: assets_images_customers_customer_2_png__WEBPACK_IMPORTED_MODULE_25___default.a,
+  3: assets_images_customers_customer_3_png__WEBPACK_IMPORTED_MODULE_26___default.a,
+  4: assets_images_customers_customer_4_png__WEBPACK_IMPORTED_MODULE_27___default.a,
+  5: assets_images_customers_customer_5_png__WEBPACK_IMPORTED_MODULE_28___default.a
 };
 var Order =
 /*#__PURE__*/

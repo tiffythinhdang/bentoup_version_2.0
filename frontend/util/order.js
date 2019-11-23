@@ -1,47 +1,78 @@
+import ramen from "assets/images/menu_items/ramen_order.png";
+import dango from "assets/images/menu_items/dango_order.png";
+import dumpling from "assets/images/menu_items/dumpling_order.png";
+import mini_rolls from "assets/images/menu_items/mini_rolls_order.png";
+import sticky_rice from "assets/images/menu_items/sticky_rice_order.png";
+import chowfun from "assets/images/menu_items/chowfun_order.png";
+import bao from "assets/images/menu_items/bao_order.png";
+import crab from "assets/images/menu_items/crab_order.png";
+import onigiri from "assets/images/menu_items/onigiri_order.png";
+import sashimi from "assets/images/menu_items/sashimi_order.png";
+import pickles from "assets/images/menu_items/pickles_order.png";
+import tempura from "assets/images/menu_items/tempura_order.png";
+import fish from "assets/images/menu_items/fish_order.png";
+import tamago from "assets/images/menu_items/tamago_order.png";
+import meatballs from "assets/images/menu_items/meatballs_order.png";
+import sushi_roll from "assets/images/menu_items/sushi_roll_order.png";
+import watermelon from "assets/images/menu_items/watermelon_order.png";
+import naruto from "assets/images/menu_items/naruto_order.png";
+import lemon from "assets/images/menu_items/lemon_order.png";
+import veggies_stirfry from "assets/images/menu_items/veggies_stirfry_order.png";
+import corn_dog from "assets/images/menu_items/corn_dog_order.png";
+import mochi from "assets/images/menu_items/mochi_order.png";
+import sausage from "assets/images/menu_items/sausage_order.png";
+import brocolli from "assets/images/menu_items/brocolli_order.png";
+
+import customer1 from "assets/images/customers/customer_1.png";
+import customer2 from "assets/images/customers/customer_2.png";
+import customer3 from "assets/images/customers/customer_3.png";
+import customer4 from "assets/images/customers/customer_4.png";
+import customer5 from "assets/images/customers/customer_5.png";
+
 export const ORDER_ITEMS = {
-  "onigiri": "../assets/menu_items/onigiri_order.png",
-  "sashimi": "../assets/menu_items/sashimi_order.png",
-  "pickles": "../assets/menu_items/pickles_order.png",
-  "tempura": "../assets/menu_items/tempura_order.png",
-  "fish": "../assets/menu_items/fish_order.png",
-  "tamago": "../assets/menu_items/tamago_order.png",
-  "meatballs": "../assets/menu_items/meatballs_order.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll_order.png"
+  "onigiri": onigiri,
+  "sashimi": sashimi,
+  "pickles": pickles,
+  "tempura": tempura,
+  "fish": fish,
+  "tamago": tamago,
+  "meatballs": meatballs,
+  "sushi_roll": sushi_roll
 };
 
 export const COMPETITIVE_ORDER_ITEMS = {
-  "ramen": "../assets/menu_items/ramen_order.png",
-  "dango": "../assets/menu_items/dango_order.png",
-  "dumpling": "../assets/menu_items/dumpling_order.png",
-  "mini-rolls": "../assets/menu_items/mini-rolls_order.png",
-  "sticky-rice": "../assets/menu_items/sticky-rice_order.png",
-  "chowfun": "../assets/menu_items/chowfun_order.png",
-  "bao": "../assets/menu_items/bao_order.png",
-  "crab": "../assets/menu_items/crab_order.png",
-  "onigiri": "../assets/menu_items/onigiri_order.png",
-  "sashimi": "../assets/menu_items/sashimi_order.png",
-  "pickles": "../assets/menu_items/pickles_order.png",
-  "tempura": "../assets/menu_items/tempura_order.png",
-  "fish": "../assets/menu_items/fish_order.png",
-  "tamago": "../assets/menu_items/tamago_order.png",
-  "meatballs": "../assets/menu_items/meatballs_order.png",
-  "sushi-roll": "../assets/menu_items/sushi-roll_order.png",
-  "watermelon": "../assets/menu_items/watermelon_order.png",
-  "naruto": "../assets/menu_items/naruto_order.png",
-  "lemon": "../assets/menu_items/lemon_order.png",
-  "veggies-stir-fry": "../assets/menu_items/veggies-stir-fry_order.png",
-  "corn-dog": "../assets/menu_items/corn-dog_order.png",
-  "mochi": "../assets/menu_items/mochi_order.png",
-  "sausage": "../assets/menu_items/sausage_order.png",
-  "brocolli": "../assets/menu_items/brocolli_order.png"
+  "ramen": ramen,
+  "dango": dango,
+  "dumpling": dumpling,
+  "mini_rolls": mini_rolls,
+  "sticky_rice": sticky_rice,
+  "chowfun": chowfun,
+  "bao": bao,
+  "crab": crab,
+  "onigiri": onigiri,
+  "sashimi": sashimi,
+  "pickles": pickles,
+  "tempura": tempura,
+  "fish": fish,
+  "tamago": tamago,
+  "meatballs": meatballs,
+  "sushi_roll": sushi_roll,
+  "watermelon": watermelon,
+  "naruto": naruto,
+  "lemon": lemon,
+  "veggies_stirfry": veggies_stirfry,
+  "corn_dog": corn_dog,
+  "mochi": mochi,
+  "sausage": sausage,
+  "brocolli": brocolli
 };
 
 export const CUSTOMERS = {
-  1: "../assets/customers/customer_1.png",
-  2: "../assets/customers/customer_2.png",
-  3: "../assets/customers/customer_3.png",
-  4: "../assets/customers/customer_4.png",
-  5: "../assets/customers/customer_5.png"
+  1: customer1,
+  2: customer2,
+  3: customer3,
+  4: customer4,
+  5: customer5
 };
 
 export class Order {
