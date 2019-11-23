@@ -97,6 +97,36 @@ module.exports = "/assets/webpack-assets/cross_marka8c28ac7562e5f81593cf816f45ae
 
 /***/ }),
 
+/***/ "./frontend/actions/current_session_actions.js":
+/*!*****************************************************!*\
+  !*** ./frontend/actions/current_session_actions.js ***!
+  \*****************************************************/
+/*! exports provided: RECEIVE_SESSION_SCORE, CLEAR_SESSION_SCORE, receiveSessionScore, clearSessionScore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SESSION_SCORE", function() { return RECEIVE_SESSION_SCORE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CLEAR_SESSION_SCORE", function() { return CLEAR_SESSION_SCORE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveSessionScore", function() { return receiveSessionScore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearSessionScore", function() { return clearSessionScore; });
+var RECEIVE_SESSION_SCORE = "RECEIVE_SESSION_SCORE";
+var CLEAR_SESSION_SCORE = "CLEAR_SESSION_SCORE"; //actions
+
+var receiveSessionScore = function receiveSessionScore(score) {
+  return {
+    type: RECEIVE_SESSION_SCORE,
+    scores: scores
+  };
+};
+var clearSessionScore = function clearSessionScore() {
+  return {
+    type: CLEAR_SESSION_SCORE
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/score_actions.js":
 /*!*******************************************!*\
   !*** ./frontend/actions/score_actions.js ***!
@@ -1371,6 +1401,39 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./frontend/reducers/current_session_reducer.js":
+/*!******************************************************!*\
+  !*** ./frontend/reducers/current_session_reducer.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/current_session_actions */ "./frontend/actions/current_session_actions.js");
+
+
+var currentSessionReducer = function currentSessionReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_SCORE"]:
+      return action.score;
+
+    case _actions_current_session_actions__WEBPACK_IMPORTED_MODULE_0__["CLEAR_SESSION_SCORE"]:
+      return null;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (currentSessionReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/root_reducer.js":
 /*!*******************************************!*\
   !*** ./frontend/reducers/root_reducer.js ***!
@@ -1382,10 +1445,13 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _score_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./score_reducer */ "./frontend/reducers/score_reducer.js");
+/* harmony import */ var _current_session_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./current_session_reducer */ "./frontend/reducers/current_session_reducer.js");
+
 
 
 var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  scores: _score_reducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  scores: _score_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  currentSession: _current_session_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (RootReducer);
 
