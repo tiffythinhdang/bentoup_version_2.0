@@ -1,12 +1,17 @@
 import React from 'react';
 import { Game } from '../../util/game';
 
+import background from 'assets/images/background.png';
+
 class CompetitiveModeComponent extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
+    const gameCanvas = document.getElementById("game-canvas-competitive");
+    gameCanvas.style.backgroundImage = `url(${background})`;
+
     const game = new Game("competitive");
     game.start();
   }

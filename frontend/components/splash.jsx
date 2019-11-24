@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import webBackground from "assets/images/web_background_4.png";
 import instruction1 from "assets/images/introduction/intro_order.png";
 import instruction2 from "assets/images/introduction/intro_choose_item.png";
 import instruction3 from "assets/images/introduction/intro_deselect_item.png";
