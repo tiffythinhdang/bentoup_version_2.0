@@ -26,5 +26,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore webpack assets
-/app/assets/javascripts/webpack-assets
+# TODO: Ignore webpack assets
+# /app/assets/javascripts/webpack-assets
+# /app/assets/javascripts/bundle.js
+# /app/assets/javascripts/bundle.js.map
