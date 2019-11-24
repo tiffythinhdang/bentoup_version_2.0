@@ -6,7 +6,6 @@ import Timer from './timer';
 import { receiveSessionScore } from '../actions/current_session_actions';
 import store from '../store/store';
 
-//Game
 const KEY_MAPPING = {
   "q": "ramen",
   "w": "dango",

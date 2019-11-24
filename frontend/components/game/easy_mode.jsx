@@ -1,12 +1,17 @@
 import React from 'react';
 import { Game } from '../../util/game';
 
+import background from 'assets/images/background.png';
+
 class EasyModeComponent extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
+    const gameCanvas = document.getElementById("game-canvas");
+    gameCanvas.style.backgroundImage = `url(${background})`;
+
     const game = new Game("easy");
     game.start();
   }
@@ -53,7 +58,7 @@ class EasyModeComponent extends React.Component {
                   <div id="fish" className="easy menu-item"></div>
                   <div id="tamago" className="easy menu-item"></div>
                   <div id="meatballs" className="easy menu-item"></div>
-                  <div id="sushi-roll" className="easy menu-item"></div>
+                  <div id="sushi_roll" className="easy menu-item"></div>
                 </div>
               </div>
             </div>

@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import SaveScoreFormContainer from './save_score_form_container';
+import iconGihub from "assets/images/github_icon_green.png";
+import iconLinkedin from "assets/images/linkedin_icon_green.png";
+import iconContact from "assets/images/contact_icon_green.png";
+import sushiChef from "assets/images/sushi_chef.png";
 
 class GameOverComponent extends React.Component {
   constructor(props) {
@@ -28,7 +32,7 @@ class GameOverComponent extends React.Component {
           <div className="modal-message"></div>
 
           <div className="suhi-chef container">
-            <img src='../assets/sushi_chef.png' alt="chef-img" />
+            <img src={sushiChef} alt="chef-img" />
             <p id="ranking"></p>
           </div>
 
@@ -50,13 +54,13 @@ class GameOverComponent extends React.Component {
 
           <div className="modal-links">
             <a className="light medium icon" href="https://github.com/tiffythinhdang" target="_blank">
-              <img src="../assets/github_icon_green.png" alt="github-icon" />
+              <img src={iconGihub} alt="github-icon" />
             </a>
             <a className="light medium icon" href="https://www.linkedin.com/in/tiffany-thinh-dang-8bb07562/" target="_blank">
-              <img src="../assets/linkedin_icon_green.png" alt="linkedin-icon" />
+              <img src={iconLinkedin} alt="linkedin-icon" />
             </a>
             <a className="light medium icon" href="https://tiffanytdang.com/" target="_blank">
-              <img src="../assets/contact_icon_green.png" alt="contact-icon" />
+              <img src={iconContact} alt="contact-icon" />
             </a>
           </div>
         </div>
